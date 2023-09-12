@@ -24,4 +24,14 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+
+  /* Default font size for smaller screens */
+  font-size: 16px;
+}
+
+@media (min-width: 768px) {
+  body {
+    /* Default font size for larger screens */
+    font-size: 20px;
+  }
 }
