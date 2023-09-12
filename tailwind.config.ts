@@ -1,5 +1,6 @@
 import type { Config } from "tailwindcss";
 
+const { fontFamily } = require("tailwindcss/defaultTheme");
 const config: Config = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -65,10 +66,9 @@ const config: Config = {
       h1: "3.052rem",
     },
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      fontFamily: {
+        header: ["var(--font-montserrat)", ...fontFamily.sans],
+        body: ["var(--font-kumbh-sans)", ...fontFamily.sans],
       },
     },
   },
