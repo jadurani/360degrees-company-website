@@ -3,11 +3,11 @@ type LogoSize = "default" | "small" | "large";
 type SizeTypes = Record<LogoSize, Record<"height" | "width", string>>;
 
 interface LogoProps {
-  color: LogoColor;
-  hasIcon: boolean;
-  hasText: boolean;
-  size: LogoSize;
-  topDown: boolean;
+  color?: LogoColor;
+  hasIcon?: boolean;
+  hasText?: boolean;
+  size?: LogoSize;
+  topDown?: boolean;
 }
 
 const ICON_SIZE: SizeTypes = {
