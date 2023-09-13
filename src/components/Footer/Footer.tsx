@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Logo } from "@components/Logo/Logo";
+import { FontKumbhSans, FontMontserrat } from "@lib/fonts";
 
 import atSignIcon from "@assets/icons/at-sign.svg";
 import fbIcon from "@assets/icons/facebook.svg";
@@ -9,7 +10,7 @@ import phoneIcon from "@assets/icons/phone.svg";
 import ytIcon from "@assets/icons/youtube.svg";
 
 export const Footer = () => (
-  <footer className="w-screen bg-neutral-900 text-neutral-50 font-body">
+  <footer className={`w-screen bg-neutral-900 text-neutral-50 ${FontKumbhSans.variable} ${FontMontserrat.variable}`}>
     <div className="container max-w-6xl mx-auto py-6 flex flex-col lg:flex-row justify-evenly items-center lg:items-start">
       {/* Logo */}
       <span className="hidden lg:inline-block">
@@ -37,7 +38,7 @@ export const Footer = () => (
         <h1 className="font-header font-bold uppercase text-center py-2">
           Contact Us
         </h1>
-        <ul>
+        <ul className="font-body">
           <li>
             <a
               className="flex gap-2 items-center text-body2 my-1.5"
@@ -77,7 +78,7 @@ export const Footer = () => (
         <h1 className="font-header font-bold uppercase text-center py-2">
           Follow Us
         </h1>
-        <ul>
+        <ul className="font-body">
           <li>
             <a
               className="flex gap-2 items-center text-body2 my-1.5"
@@ -111,7 +112,7 @@ export const Footer = () => (
 
     <hr className="border-t text-neutral-50 border-solid my-2" />
 
-    <div className="container max-w-6xl mx-auto py-2 pb-4 flex flex-col lg:flex-row justify-evenly items-center text-body2">
+    <div className="container max-w-6xl mx-auto py-2 pb-4 flex flex-col lg:flex-row justify-evenly items-center text-body2 font-body">
       © 360degrees Systems Corporation 2023
     </div>
   </footer>
