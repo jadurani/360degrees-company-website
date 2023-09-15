@@ -1,4 +1,3 @@
-import { Footer } from "@components/Footer/Footer";
 import { FontKumbhSans, FontMontserrat } from "@lib/fonts";
 import "@styles/globals.css";
 import type { Metadata } from "next";
@@ -16,7 +15,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${FontMontserrat.variable} ${FontKumbhSans.variable}`}>{children}</body>
-      <Footer />
     </html>
   );
 }
