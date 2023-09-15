@@ -220,9 +220,9 @@ export const Logo = ({
               x2="19.2146"
               y2="25.9933"
               gradientUnits="userSpaceOnUse">
-              <stop stop-color="white" />
-              <stop offset="0.5133" stop-color="#A6A8AB" />
-              <stop offset="1" stop-color="white" />
+              <stop stopColor="white" />
+              <stop offset="0.5133" stopColor="#A6A8AB" />
+              <stop offset="1" stopColor="white" />
             </linearGradient>
             <linearGradient
               id="paint1_linear_118_25"
@@ -231,9 +231,9 @@ export const Logo = ({
               x2="32.6308"
               y2="26.019"
               gradientUnits="userSpaceOnUse">
-              <stop stop-color="white" />
-              <stop offset="0.5133" stop-color="#A6A8AB" />
-              <stop offset="1" stop-color="white" />
+              <stop stopColor="white" />
+              <stop offset="0.5133" stopColor="#A6A8AB" />
+              <stop offset="1" stopColor="white" />
             </linearGradient>
             <linearGradient
               id="paint2_linear_118_25"
@@ -242,9 +242,9 @@ export const Logo = ({
               x2="48.025"
               y2="26.019"
               gradientUnits="userSpaceOnUse">
-              <stop stop-color="white" />
-              <stop offset="0.5133" stop-color="#A6A8AB" />
-              <stop offset="1" stop-color="white" />
+              <stop stopColor="white" />
+              <stop offset="0.5133" stopColor="#A6A8AB" />
+              <stop offset="1" stopColor="white" />
             </linearGradient>
             <linearGradient
               id="paint3_linear_118_25"
@@ -253,9 +253,9 @@ export const Logo = ({
               x2="12.8985"
               y2="30.4889"
               gradientUnits="userSpaceOnUse">
-              <stop stop-color="white" />
-              <stop offset="0.5133" stop-color="#E5E6E7" />
-              <stop offset="1" stop-color="white" />
+              <stop stopColor="white" />
+              <stop offset="0.5133" stopColor="#E5E6E7" />
+              <stop offset="1" stopColor="white" />
             </linearGradient>
             <linearGradient
               id="paint4_linear_118_25"
@@ -264,9 +264,9 @@ export const Logo = ({
               x2="25.5835"
               y2="30.4889"
               gradientUnits="userSpaceOnUse">
-              <stop stop-color="white" />
-              <stop offset="0.5133" stop-color="#E5E6E7" />
-              <stop offset="1" stop-color="white" />
+              <stop stopColor="white" />
+              <stop offset="0.5133" stopColor="#E5E6E7" />
+              <stop offset="1" stopColor="white" />
             </linearGradient>
             <linearGradient
               id="paint5_linear_118_25"
@@ -275,9 +275,9 @@ export const Logo = ({
               x2="39.5726"
               y2="30.4889"
               gradientUnits="userSpaceOnUse">
-              <stop stop-color="white" />
-              <stop offset="0.5133" stop-color="#E5E6E7" />
-              <stop offset="1" stop-color="white" />
+              <stop stopColor="white" />
+              <stop offset="0.5133" stopColor="#E5E6E7" />
+              <stop offset="1" stopColor="white" />
             </linearGradient>
             <linearGradient
               id="paint6_linear_118_25"
@@ -286,9 +286,9 @@ export const Logo = ({
               x2="51.7914"
               y2="18.6574"
               gradientUnits="userSpaceOnUse">
-              <stop stop-color="white" />
-              <stop offset="0.5133" stop-color="#A6A8AB" />
-              <stop offset="1" stop-color="white" />
+              <stop stopColor="white" />
+              <stop offset="0.5133" stopColor="#A6A8AB" />
+              <stop offset="1" stopColor="white" />
             </linearGradient>
             <linearGradient
               id="paint7_linear_118_25"
@@ -297,9 +297,9 @@ export const Logo = ({
               x2="48.8466"
               y2="20.2149"
               gradientUnits="userSpaceOnUse">
-              <stop stop-color="white" />
-              <stop offset="0.5133" stop-color="#E5E6E7" />
-              <stop offset="1" stop-color="white" />
+              <stop stopColor="white" />
+              <stop offset="0.5133" stopColor="#E5E6E7" />
+              <stop offset="1" stopColor="white" />
             </linearGradient>
           </defs>
         </svg>
