@@ -87,7 +87,9 @@ export default function Home() {
         </div>
 
         <div className="flex mt-8">
-          <Link href="/" className="text-primary-600 text-h5 font-semibold mx-auto font-body">
+          <Link
+            href="/"
+            className="text-primary-600 text-h5 font-semibold mx-auto font-body">
             read more
           </Link>
         </div>
@@ -122,7 +124,9 @@ export default function Home() {
         </div>
 
         <div className="flex mt-8">
-          <Link href="/" className="text-primary-600 text-h5 font-semibold mx-auto font-body">
+          <Link
+            href="/"
+            className="text-primary-600 text-h5 font-semibold mx-auto font-body">
             see all
           </Link>
         </div>
@@ -130,6 +134,16 @@ export default function Home() {
 
       {/* Testimonials */}
 
+      {/* Contact us */}
+      <section className="py-24 px-8 w-screen flex flex-col items-center">
+        <div className="text-h2 text-neutral-900 font-header font-bold">Want to have work done?</div>
+        <div className="text-h6 text-neutral-800 font-header font-bold">
+          Some more text here enticing the user to click the button below
+        </div>
+        <button className="mt-8 uppercase py-4 px-12 bg-primary-500 text-neutral-50 font-semibold text-h5 font-body">
+          Contact us
+        </button>
+      </section>
       <Footer />
     </>
   );
