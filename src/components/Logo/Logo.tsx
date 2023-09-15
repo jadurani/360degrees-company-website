@@ -83,9 +83,9 @@ export const Logo = ({
   const sizeSysCorp = transformSize(TEXT_SYSCORP_SIZE, size);
 
   return (
-    <div className={`${topDown ? 'flex-col' : 'inline-flex'} items-center gap-1 md:gap-2`}>
+    <span className={`${topDown ? 'flex-col' : 'inline-flex'} items-center gap-1 md:gap-2`}>
       {/* logo */}
-      <div hidden={!hasIcon} className={sizeLogo}>
+      <span hidden={!hasIcon} className={sizeLogo}>
         <svg
           height="100%"
           width="100%"
@@ -303,11 +303,11 @@ export const Logo = ({
             </linearGradient>
           </defs>
         </svg>
-      </div>
+      </span>
 
-      <div className={hasText ? `flex flex-col md:gap-2"}` : 'hidden'}>
+      <span className={hasText ? `flex flex-col md:gap-2"}` : 'hidden'}>
         {/* 360degrees */}
-        <div className={`${color360degrees} ${size360degrees}`}>
+        <span className={`${color360degrees} ${size360degrees}`}>
           <svg
             height="100%"
             width="100%"
@@ -355,10 +355,10 @@ export const Logo = ({
               fill="currentColor"
             />
           </svg>
-        </div>
+        </span>
 
         {/* systems corporation */}
-        <div className={`${colorSysCorp} ${sizeSysCorp} md:pt-1`}>
+        <span className={`${colorSysCorp} ${sizeSysCorp} md:pt-1`}>
           <svg
             viewBox="0 0 204 10"
             fill="none"
@@ -436,8 +436,8 @@ export const Logo = ({
               fill="currentColor"
             />
           </svg>
-        </div>
-      </div>
-    </div>
+        </span>
+      </span>
+    </span>
   );
 };
