@@ -72,15 +72,24 @@ export default function AboutUs() {
       </section>
 
       {/* mission */}
-      {/* <section className="py-14 px-8 w-screen container mx-auto max-w-6xl">
-        <h1 className="font-header text-h2 text-neutral-800 text-center font-bold">
-          Our Mission
-        </h1>
-      </section> */}
+      <section className="py-14 lg:py-24 px-8 w-screen relative text-neutral-0 bg-neutral-800">
+        <div className="relative container mx-auto max-w-6xl">
+          <h1 className="font-header text-h2 text-center font-bold mb-6">
+            Our Mission
+          </h1>
+          <div className="relative leading-9 z-10 font-semibold text-h5 font-header text-left lg:px-4 mx-16 lg:mx-32">
+            To revolutionize the construction industry by providing innovative
+            and creative solutions for corporate and commercial spaces, call
+            centers, and BPOs. We are committed to delivering reliable, fast,
+            and professional services that generate awesome and
+            partnership-driven environments for our clients.
+          </div>
+        </div>
+      </section>
 
       {/* vision */}
       <section className="py-14 px-8 w-screen container mx-auto max-w-6xl">
-        <h1 className="font-header text-h2 text-neutral-800 text-center font-bold my-6">
+        <h1 className="font-header text-h2 text-neutral-800 text-center font-bold mb-6">
           Our Vision
         </h1>
         <div className="relative mx-16 lg:mx-32">
