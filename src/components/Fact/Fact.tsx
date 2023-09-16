@@ -1,4 +1,4 @@
-type FactColor = 'primary' | 'accent'
+type FactColor = "primary" | "accent";
 
 interface FactProps {
   /**
@@ -20,52 +20,42 @@ interface FactProps {
 }
 
 const getBgColor = (color: FactColor) => {
-  if (color == 'accent') {
-    return 'text-accent-50'
+  if (color == "accent") {
+    return "text-accent-50";
   }
 
-  return 'text-primary-100'
-}
+  return "text-primary-100";
+};
 
 const getTitleColor = (color: FactColor) => {
-  if (color == 'accent') {
-    return 'text-accent-600'
+  if (color == "accent") {
+    return "text-accent-600";
   }
 
-  return 'text-primary-600'
-}
+  return "text-primary-600";
+};
 
-export const Fact = ({
-  color,
-  bgNum,
-  title,
-  description
-}: FactProps) => {
-  const bgColor = getBgColor(color)
-  const titleColor = getTitleColor(color)
+export const Fact = ({ color, bgNum, title, description }: FactProps) => {
+  const bgColor = getBgColor(color);
+  const titleColor = getTitleColor(color);
 
   return (
     <div className="relative p-4">
       {/* number at the back */}
-      <div className={`${bgColor} -z-10 absolute font-header -top-8 -left-0 font-bold text-[96px] lg:text-[128px]`}>
-      {bgNum}
-
+      <div
+        className={`${bgColor} absolute font-header -top-8 -left-0 font-bold text-[96px] lg:-top-14 lg:-left-4 lg:text-[128px]`}>
+        {bgNum}
       </div>
 
-      <div className="p-2">
-      {/* title */}
-      <h2 className={`${titleColor} text-h4 font-bold font-header`}>
-      {title}
+      <div className="p-2 relative z-10">
+        {/* title */}
+        <h2 className={`${titleColor} text-h4 font-bold font-header`}>
+          {title}
+        </h2>
 
-      </h2>
-
-      {/* description */}
-      <p className="font-body text-neutral-800">
-      {description}
-
-      </p>
-
+        {/* description */}
+        <p className="font-body text-neutral-800">{description}</p>
       </div>
     </div>
-  )
-}
+  );
+};

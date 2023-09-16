@@ -1,4 +1,3 @@
-import { NavBar } from "@components/NavBar/NavBar";
 import Image from "next/image";
 
 interface PageHeaderProps {
@@ -8,10 +7,7 @@ interface PageHeaderProps {
 
 export const PageHeader = ({ bgImageSrc, title }: PageHeaderProps) => {
   return (
-    <div className="h-full w-screen relative">
-      <div className="fixed w-full top-0 z-50">
-        <NavBar />
-      </div>
+    <div className="h-72 w-screen relative">
       <header className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30 m-auto text-h1 font-header text-neutral-50 font-bold">
         {title}
       </header>
