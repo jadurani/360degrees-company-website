@@ -4,6 +4,8 @@ import Image from "next/image";
 import passionImg from "@assets/images/unsplash_TamMbr4okv4.png";
 import { ProjectThumbnail } from "@components/ProjectThumbnail/ProjectThumbnail";
 import Link from "next/link";
+import { Testimonial } from "@components/Testimonial/Testimonial";
+import styles from "@app/Home.module.css";
 
 export default function Home() {
   const samp_client_arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
@@ -133,10 +135,36 @@ export default function Home() {
       </section>
 
       {/* Testimonials */}
+      <section
+        className={`py-14 px-8 w-screen relative ${styles.testiContainerBg}`}>
+        <div className="mx-auto mb-8">
+          <div className="my-4 font-header text-h3 text-center font-bold text-neutral-100">
+            Testimonials
+          </div>
+
+          <div className="flex gap-4 flex-wrap justify-center">
+            <Testimonial
+              person={{ name: "Full Name", company: "Company" }}
+              statement="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vulputate nibh nec nulla aliquam, at luctus ligula accumsan. Integer ullamcorper massa at ligula volutpat, at mollis sapien congue. Integer ullamcorper massa at ligula congue."
+            />
+            <Testimonial
+              person={{ name: "Full Name", company: "Company", position: "Position" }}
+              statement="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vulputate nibh nec nulla aliquam, at luctus ligula accumsan. Integer ullamcorper massa at ligula volutpat, at mollis sapien congue. Integer ullamcorper massa at ligula congue."
+            />
+            <Testimonial
+              person={{ name: "Full Name", company: "Company", position: "Position" }}
+              date="10 March 2023"
+              statement="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vulputate nibh nec nulla aliquam, at luctus ligula accumsan. Integer ullamcorper massa at ligula volutpat, at mollis sapien congue. Integer ullamcorper massa at ligula congue."
+            />
+          </div>
+        </div>
+      </section>
 
       {/* Contact us */}
       <section className="py-24 px-8 w-screen flex flex-col items-center">
-        <div className="text-h2 text-neutral-900 font-header font-bold">Want to have work done?</div>
+        <div className="text-h2 text-neutral-900 font-header font-bold">
+          Want to have work done?
+        </div>
         <div className="text-h6 text-neutral-800 font-header font-bold">
           Some more text here enticing the user to click the button below
         </div>

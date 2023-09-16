@@ -10,6 +10,7 @@ const config: Config = {
   theme: {
     colors: {
       neutral: {
+        0: "#FFFFFF",
         50: "#FAFAFA",
         100: "#F3F3F3",
         200: "#EFEFEF",
