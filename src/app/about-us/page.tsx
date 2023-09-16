@@ -4,6 +4,7 @@ import { NavBar } from "@components/NavBar/NavBar";
 import Image from "next/image";
 import teamImg from "@assets/images/unsplash_-uHVRvDr7pg.png";
 import { Fact } from "@components/Fact/Fact";
+import quoteIcon from "@assets/icons/quote.svg";
 
 const CORE_VALUES = [
   {
@@ -72,22 +73,36 @@ export default function AboutUs() {
 
       {/* mission */}
       {/* <section className="py-14 px-8 w-screen container mx-auto max-w-6xl">
-        <h1 className="font-header text-h3 text-center font-bold">
+        <h1 className="font-header text-h2 text-neutral-800 text-center font-bold">
           Our Mission
         </h1>
       </section> */}
 
       {/* vision */}
-      {/* <section className="py-14 px-8 w-screen container mx-auto max-w-6xl">
-        <h1 className="font-header text-h3 text-center font-bold">
+      <section className="py-14 px-8 w-screen container mx-auto max-w-6xl">
+        <h1 className="font-header text-h2 text-neutral-800 text-center font-bold my-6">
           Our Vision
         </h1>
-      </section> */}
+        <div className="relative mx-16 lg:mx-32">
+          <div className="relative leading-9 z-10 font-semibold text-neutral-800 text-h5 font-header text-left lg:px-4">
+            To be the global leader in the construction industry, recognized for
+            creating the best offices in the world. We envision to build a
+            future where our designs enhance work productivity, inspire
+            partnership and fun, while showcasing our professionalism.
+          </div>
+          <Image
+            src={quoteIcon}
+            alt="quote"
+            width={56}
+            className="absolute z-0 top-0 left-0"
+          />
+        </div>
+      </section>
 
       {/* core values */}
       <section className="py-14 px-8 w-screen bg-neutral-50">
         <div className="container mx-auto max-w-6xl">
-          <h1 className="font-header text-h3 text-center font-bold">
+          <h1 className="font-header text-h2 text-neutral-800 text-center font-bold">
             Our Core Values
           </h1>
 
