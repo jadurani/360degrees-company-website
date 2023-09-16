@@ -1,3 +1,4 @@
+import { NavBar } from "@components/NavBar/NavBar";
 import { FontKumbhSans, FontMontserrat } from "@lib/fonts";
 import "@styles/globals.css";
 import type { Metadata } from "next";
@@ -14,6 +15,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <div className="fixed w-full top-0 z-50">
+        <NavBar />
+      </div>
       <body className={`${FontMontserrat.variable} ${FontKumbhSans.variable}`}>{children}</body>
     </html>
   );

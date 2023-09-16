@@ -65,6 +65,7 @@ export const NavMenu = ({ toggleMenu }: NavMenuProps) => {
             <li key={idx} className="flex justify-center my-2">
               <Link
                 href={l.path}
+                onClickCapture={() => toggleMenu(false)}
                 className="text-h3 text-neutral-50/75 hover:text-neutral-50 transition-colors duration-300 font-header font-bold">
                 {l.label}
               </Link>

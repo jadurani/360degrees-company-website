@@ -1,5 +1,4 @@
 import { Footer } from "@components/Footer/Footer";
-import { NavBar } from "@components/NavBar/NavBar";
 import Image from "next/image";
 import passionImg from "@assets/images/unsplash_TamMbr4okv4.png";
 import { ProjectThumbnail } from "@components/ProjectThumbnail/ProjectThumbnail";
@@ -12,10 +11,6 @@ export default function Home() {
   const samp_client_arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   return (
     <>
-      <div className="fixed w-full top-0 z-50">
-        <NavBar />
-      </div>
-
       {/* hero section */}
       <section className="h-screen w-screen relative">
         <div className="absolute z-30 w-full top-1/2 lg:top-2/3 lg:-translate-y-1/3">
