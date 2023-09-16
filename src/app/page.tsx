@@ -4,8 +4,9 @@ import Image from "next/image";
 import passionImg from "@assets/images/unsplash_TamMbr4okv4.png";
 import { ProjectThumbnail } from "@components/ProjectThumbnail/ProjectThumbnail";
 import Link from "next/link";
-import { Testimonial } from "@components/Testimonial/Testimonial";
 import styles from "@app/Home.module.css";
+import { TestimonialSlider } from "@components/TestimonialSlider/TestimonialSlider";
+import { SAMPLE_TESTIMONIAL_LIST } from "@components/TestimonialSlider/TestimonialSlider.stories";
 
 export default function Home() {
   const samp_client_arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
@@ -143,19 +144,7 @@ export default function Home() {
           </div>
 
           <div className="flex gap-4 flex-wrap justify-center">
-            <Testimonial
-              person={{ name: "Full Name", company: "Company" }}
-              statement="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vulputate nibh nec nulla aliquam, at luctus ligula accumsan. Integer ullamcorper massa at ligula volutpat, at mollis sapien congue. Integer ullamcorper massa at ligula congue."
-            />
-            <Testimonial
-              person={{ name: "Full Name", company: "Company", position: "Position" }}
-              statement="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vulputate nibh nec nulla aliquam, at luctus ligula accumsan. Integer ullamcorper massa at ligula volutpat, at mollis sapien congue. Integer ullamcorper massa at ligula congue."
-            />
-            <Testimonial
-              person={{ name: "Full Name", company: "Company", position: "Position" }}
-              date="10 March 2023"
-              statement="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vulputate nibh nec nulla aliquam, at luctus ligula accumsan. Integer ullamcorper massa at ligula volutpat, at mollis sapien congue. Integer ullamcorper massa at ligula congue."
-            />
+            <TestimonialSlider testiList={SAMPLE_TESTIMONIAL_LIST} />
           </div>
         </div>
       </section>

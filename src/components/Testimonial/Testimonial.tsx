@@ -7,7 +7,7 @@ type Person = {
   company?: string;
 };
 
-interface TestimonialProps {
+export interface TestimonialProps {
   person: Person;
   date?: string;
   src?: string;
