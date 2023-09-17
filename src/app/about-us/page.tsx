@@ -133,6 +133,69 @@ export default function AboutUs() {
       {/* commitment */}
       {/* our team */}
       {/* our milestones */}
+      <section className="py-14 px-8 w-screen bg-gradient-to-b from-accent-50 to-neutral-0">
+        <div className="container mx-auto max-w-6xl">
+          <h1 className="font-header text-h2 text-neutral-800 text-center font-bold">
+            Our Milestones
+          </h1>
+
+          <p className="font-body">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+            quis dui posuere, euismod lorem sed, pharetra felis. Nam eleifend
+            vulputate felis et gravida. Morbi sed purus eget mauris congue
+            suscipit id at lectus. Nulla facilisis tellus ex, ac feugiat est
+            vulputate vel. Sed mollis felis est, eu laoreet enim pretium in.
+            Pellentesque vulputate dignissim sollicitudin. Sed tempus risus sed
+            lacus imperdiet, vel tempus nibh scelerisque. Suspendisse id dui
+            turpis.
+          </p>
+
+          <div className="relative my-8 py-4 text-neutral-800">
+            <div className="relative z-10 flex mt-8 flex-col">
+              <div className="font-bold my-2 font-header text-h3 solid border-2 border-neutral-800 py-2 px-8 bg-neutral-50 mx-auto">
+                2010
+              </div>
+
+              <div className="absolute left-1/2 translate-x-1/3">
+                <div className="relative min-h-[98px] flex items-center -mt-2 font-bold my-2 min-w-[200px] max-w-[350px] font-header text-h5 solid border-2 border-neutral-800 py-2 px-8 bg-neutral-50 mx-auto">
+                  Company was founded
+                  <span className="rotate-180 absolute -left-6 -ml-[2.5px] top-1/2 -translate-y-1/2">
+                    <svg
+                      width="49"
+                      height="52"
+                      viewBox="0 0 49 52"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M22.6274 48.2563L3.05176e-05 25.6289L22.6274 3.00144L45.2549 25.6289L22.6274 48.2563Z"
+                        fill="#FAFAFA"
+                      />
+                      <path
+                        d="M24.043 1.59033L24.041 1.59234L48.0573 25.6025L24.0149 49.6528L24.0086 49.6464L22.5988 51.0552V48.231L22.6036 48.2357L45.2294 25.6024L22.6251 3.00482L22.6288 3.00109V0.177002L24.043 1.59033Z"
+                        fill="#444041"
+                      />
+                    </svg>
+                  </span>
+                </div>
+
+                <div className="my-2 min-w-[200px] max-w-[350px] font-header text-h6 solid border-2 border-neutral-800 py-2 px-8 bg-neutral-50 mx-auto">
+                  Signed first fit-out project for a 2,000 sqm Cebu site
+                </div>
+              </div>
+
+              {/* <div className="font-bold my-2 min-w-[200px] max-w-[350px] text-center font-header text-h6 solid border-2 border-neutral-800 py-2 px-8 bg-neutral-50 mx-auto">
+                Company was founded
+              </div>
+
+              <div className="font-bold my-2 min-w-[200px] max-w-[350px] text-center font-header text-h6 solid border-2 border-neutral-800 py-2 px-8 bg-neutral-50 mx-auto">
+                Signed first fit-out project for a 2,000 sqm Cebu site
+              </div> */}
+            </div>
+
+            <div className="absolute z-0 h-full top-0 left-1/2 -translate-x-1/2 solid border-l-2 border-neutral-800"></div>
+          </div>
+        </div>
+      </section>
 
       <Footer />
     </>
