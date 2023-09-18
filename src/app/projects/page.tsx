@@ -25,7 +25,6 @@ export default function Projects() {
           dignissim sollicitudin.
         </p>
 
-      {/* <div className="flex flex-wrap gap-4 justify-center items-center mx-auto max-w-4xl py-6"> */}
       <div className="flex">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mx-auto max-w-4xl py-6">
           <div className="w-64 h-64">

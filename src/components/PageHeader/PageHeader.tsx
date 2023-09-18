@@ -8,7 +8,7 @@ interface PageHeaderProps {
 export const PageHeader = ({ bgImageSrc, title }: PageHeaderProps) => {
   return (
     <div className="h-72 w-screen relative">
-      <header className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30 m-auto text-h1 font-header text-neutral-50 font-bold">
+      <header className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30 m-auto text-h3 lg:text-h1 font-header text-neutral-50 font-bold">
         {title}
       </header>
 

@@ -6,11 +6,16 @@ import Link from "next/link";
 import styles from "@app/Home.module.css";
 import { TestimonialSlider } from "@components/TestimonialSlider/TestimonialSlider";
 import { SAMPLE_TESTIMONIAL_LIST } from "@components/TestimonialSlider/TestimonialSlider.stories";
+import { NavBar } from "@components/NavBar/NavBar";
 
 export default function Home() {
   const samp_client_arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   return (
     <>
+      <div className="fixed w-full top-0 z-50">
+        <NavBar />
+      </div>
+
       {/* hero section */}
       <section className="h-screen w-screen relative">
         <div className="absolute z-30 w-full top-1/2 lg:top-2/3 lg:-translate-y-1/3">

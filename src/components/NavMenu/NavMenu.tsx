@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import Link from "next/link";
 import { Dispatch, SetStateAction } from "react";
@@ -29,10 +29,11 @@ const NAV_LINKS: NavLink[] = [
     label: "Projects",
     path: "projects",
   },
-  {
-    label: "Contact Us",
-    path: "contact-us",
-  },
+  // TO DO
+  // {
+  //   label: "Contact Us",
+  //   path: "contact-us",
+  // },
 ];
 
 export const NavMenu = ({ toggleMenu }: NavMenuProps) => {
@@ -62,11 +63,12 @@ export const NavMenu = ({ toggleMenu }: NavMenuProps) => {
       <nav className="m-auto">
         <ul>
           {NAV_LINKS.map((l, idx) => (
-            <li key={idx} className="flex justify-center my-2">
-              <Link
-                href={l.path}
-                onClickCapture={() => toggleMenu(false)}
-                className="text-h3 text-neutral-50/75 hover:text-neutral-50 transition-colors duration-300 font-header font-bold">
+            <li
+              key={idx}
+              className="flex justify-center my-2 p-2
+                font-header font-bold text-h4 lg:text-h3
+                text-neutral-50/75 hover:text-neutral-50 transition-colors duration-300">
+              <Link href={l.path} onClickCapture={() => toggleMenu(false)}>
                 {l.label}
               </Link>
             </li>
