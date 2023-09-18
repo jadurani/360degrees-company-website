@@ -12,17 +12,12 @@ import ytIcon from "@assets/icons/youtube.svg";
 export const Footer = () => (
   <footer className={`w-screen bg-neutral-900 text-neutral-50 ${FontKumbhSans.variable} ${FontMontserrat.variable}`}>
     <div className="container max-w-6xl mx-auto py-6 flex flex-col lg:flex-row justify-evenly items-center lg:items-start">
-      {/* Logo */}
-      <span className="hidden lg:inline-block">
-        <Logo color="white" topDown={true} size="large" />
-      </span>
-
-      <span className="block lg:hidden">
-        <Logo color="white" topDown={false} size="default" />
-      </span>
+      <div className="self-center">
+        <Logo topDown={true} />
+      </div>
 
       {/* Bar */}
-      <span className="hidden lg:block">
+      <span className="hidden lg:block self-center">
         <svg
           width="2"
           height="145"

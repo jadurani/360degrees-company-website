@@ -4,41 +4,22 @@ import { useState } from "react";
 import { Logo } from "@components/Logo/Logo";
 import { NavMenu } from "@components/NavMenu/NavMenu";
 
-type NavBarSize = "mobile" | "desktop";
 type NavBarType = "light" | "dark";
 
 interface NavBarProps {
   color?: NavBarType;
-  size?: NavBarSize;
   /** Will only be transparent when it's at the top of the page */
   transparent?: boolean;
 }
 
-const getLogo = (size: NavBarSize, color: NavBarType) => {
-  // const sizeLogo = size == "desktop" ? "default" : "small";
-  const sizeLogo = "small";
-  const colorLogo = color == "dark" ? "white" : "default";
-  return <Logo size={sizeLogo} color={colorLogo} />;
-};
-
-export const NavBar = ({
-  color = "dark",
-  size = "desktop",
-  transparent = false,
-}: NavBarProps) => {
+export const NavBar = ({ color = "dark", transparent = false }: NavBarProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <>
       <header className="w-screen">
         <div className="container max-w-6xl mx-auto py-6 px-4 flex justify-between items-center lg:items-start">
-          <section className="inline-flex lg:hidden flex-col items-center">
-            {getLogo("mobile", color)}
-          </section>
-
-          <section className="hidden lg:inline-flex flex-col items-center">
-            {getLogo("desktop", color)}
-          </section>
+          <Logo />;
 
           <button className="my-auto" onClick={() => setIsMenuOpen(true)}>
             <svg

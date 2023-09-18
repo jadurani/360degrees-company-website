@@ -12,10 +12,6 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    color: "default",
-    hasIcon: true,
-    hasText: true,
-    size: "default",
     topDown: false
   }
 };
