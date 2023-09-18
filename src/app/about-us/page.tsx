@@ -5,39 +5,8 @@ import Image from "next/image";
 import teamImg from "@assets/images/unsplash_-uHVRvDr7pg.png";
 import { Fact } from "@components/Fact/Fact";
 import quoteIcon from "@assets/icons/quote.svg";
-
-const CORE_VALUES = [
-  {
-    title: "Innovation",
-    description:
-      "We believe in continuously evolving and improving our techniques, tools, and strategies to provide unique and creative construction solutions.",
-    bgNum: "1",
-  },
-  {
-    title: "Reliability",
-    description:
-      "We are committed to delivering on our promises, meeting deadlines, and ensuring the highest quality in our work.",
-    bgNum: "2",
-  },
-  {
-    title: "Speed",
-    description:
-      "We value our clients' time and strive to complete our projects promptly without compromising on quality.",
-    bgNum: "3",
-  },
-  {
-    title: "Partnership",
-    description:
-      "We promote a collaborative environment, working closely with our clients and stakeholders to achieve mutual success.",
-    bgNum: "4",
-  },
-  {
-    title: "Attention to Detail",
-    description:
-      "We are meticulous in our work, ensuring every detail is attended to, reflecting our family-led, ambitious culture.",
-    bgNum: "5",
-  },
-];
+import { CORE_VALUES, MILESTONE_LIST } from "./contants";
+import { MilestoneItem } from "@components/MilestoneItem/MilestoneItem";
 
 export default function AboutUs() {
   return (
@@ -134,12 +103,12 @@ export default function AboutUs() {
       {/* our team */}
       {/* our milestones */}
       <section className="py-14 px-8 w-screen bg-gradient-to-b from-accent-50 to-neutral-0">
-        <div className="container mx-auto max-w-6xl">
-          <h1 className="font-header text-h2 text-neutral-800 text-center font-bold">
+        <div className="container mx-auto max-w-6xl text-neutral-800">
+          <h1 className="font-header text-h2 text-center font-bold">
             Our Milestones
           </h1>
 
-          <p className="font-body">
+          <p className="font-body my-4">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
             quis dui posuere, euismod lorem sed, pharetra felis. Nam eleifend
             vulputate felis et gravida. Morbi sed purus eget mauris congue
@@ -151,49 +120,18 @@ export default function AboutUs() {
           </p>
 
           <div className="relative my-8 py-4 text-neutral-800">
-            <div className="relative z-10 flex mt-8 flex-col">
-              <div className="font-bold my-2 font-header text-h3 solid border-2 border-neutral-800 py-2 px-8 bg-neutral-50 mx-auto">
-                2010
+            {MILESTONE_LIST.map((m, idx) => (
+              <div key={idx} className="my-8">
+                <MilestoneItem direction={m.direction} year={m.year} mainEvent={m.mainEvent} otherEvents={m.otherEvents ?? []} />
               </div>
-
-              <div className="absolute left-1/2 translate-x-1/3">
-                <div className="relative min-h-[98px] flex items-center -mt-2 font-bold my-2 min-w-[200px] max-w-[350px] font-header text-h5 solid border-2 border-neutral-800 py-2 px-8 bg-neutral-50 mx-auto">
-                  Company was founded
-                  <span className="rotate-180 absolute -left-6 -ml-[2.5px] top-1/2 -translate-y-1/2">
-                    <svg
-                      width="49"
-                      height="52"
-                      viewBox="0 0 49 52"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M22.6274 48.2563L3.05176e-05 25.6289L22.6274 3.00144L45.2549 25.6289L22.6274 48.2563Z"
-                        fill="#FAFAFA"
-                      />
-                      <path
-                        d="M24.043 1.59033L24.041 1.59234L48.0573 25.6025L24.0149 49.6528L24.0086 49.6464L22.5988 51.0552V48.231L22.6036 48.2357L45.2294 25.6024L22.6251 3.00482L22.6288 3.00109V0.177002L24.043 1.59033Z"
-                        fill="#444041"
-                      />
-                    </svg>
-                  </span>
-                </div>
-
-                <div className="my-2 min-w-[200px] max-w-[350px] font-header text-h6 solid border-2 border-neutral-800 py-2 px-8 bg-neutral-50 mx-auto">
-                  Signed first fit-out project for a 2,000 sqm Cebu site
-                </div>
-              </div>
-
-              {/* <div className="font-bold my-2 min-w-[200px] max-w-[350px] text-center font-header text-h6 solid border-2 border-neutral-800 py-2 px-8 bg-neutral-50 mx-auto">
-                Company was founded
-              </div>
-
-              <div className="font-bold my-2 min-w-[200px] max-w-[350px] text-center font-header text-h6 solid border-2 border-neutral-800 py-2 px-8 bg-neutral-50 mx-auto">
-                Signed first fit-out project for a 2,000 sqm Cebu site
-              </div> */}
-            </div>
+            ))}
 
             <div className="absolute z-0 h-full top-0 left-1/2 -translate-x-1/2 solid border-l-2 border-neutral-800"></div>
+
+            <div className="absolute z-0 h-3 -bottom-3 left-1/2 -translate-x-1/2 border-dotted border-l-2 border-neutral-800"></div>
           </div>
+
+          <div className="-mt-3 text-h6 font-header font-bold text-center">Onwards to more exciting projects! </div>
         </div>
       </section>
 
