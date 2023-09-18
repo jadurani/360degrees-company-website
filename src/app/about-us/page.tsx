@@ -5,39 +5,8 @@ import Image from "next/image";
 import teamImg from "@assets/images/unsplash_-uHVRvDr7pg.png";
 import { Fact } from "@components/Fact/Fact";
 import quoteIcon from "@assets/icons/quote.svg";
-
-const CORE_VALUES = [
-  {
-    title: "Innovation",
-    description:
-      "We believe in continuously evolving and improving our techniques, tools, and strategies to provide unique and creative construction solutions.",
-    bgNum: "1",
-  },
-  {
-    title: "Reliability",
-    description:
-      "We are committed to delivering on our promises, meeting deadlines, and ensuring the highest quality in our work.",
-    bgNum: "2",
-  },
-  {
-    title: "Speed",
-    description:
-      "We value our clients' time and strive to complete our projects promptly without compromising on quality.",
-    bgNum: "3",
-  },
-  {
-    title: "Partnership",
-    description:
-      "We promote a collaborative environment, working closely with our clients and stakeholders to achieve mutual success.",
-    bgNum: "4",
-  },
-  {
-    title: "Attention to Detail",
-    description:
-      "We are meticulous in our work, ensuring every detail is attended to, reflecting our family-led, ambitious culture.",
-    bgNum: "5",
-  },
-];
+import { CORE_VALUES, MILESTONE_LIST } from "./contants";
+import { MilestoneItem } from "@components/MilestoneItem/MilestoneItem";
 
 export default function AboutUs() {
   return (
@@ -133,6 +102,38 @@ export default function AboutUs() {
       {/* commitment */}
       {/* our team */}
       {/* our milestones */}
+      <section className="py-14 px-8 w-screen bg-gradient-to-b from-accent-50 to-neutral-0">
+        <div className="container mx-auto max-w-6xl text-neutral-800">
+          <h1 className="font-header text-h2 text-center font-bold">
+            Our Milestones
+          </h1>
+
+          <p className="font-body my-4">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+            quis dui posuere, euismod lorem sed, pharetra felis. Nam eleifend
+            vulputate felis et gravida. Morbi sed purus eget mauris congue
+            suscipit id at lectus. Nulla facilisis tellus ex, ac feugiat est
+            vulputate vel. Sed mollis felis est, eu laoreet enim pretium in.
+            Pellentesque vulputate dignissim sollicitudin. Sed tempus risus sed
+            lacus imperdiet, vel tempus nibh scelerisque. Suspendisse id dui
+            turpis.
+          </p>
+
+          <div className="relative my-8 py-4 text-neutral-800">
+            {MILESTONE_LIST.map((m, idx) => (
+              <div key={idx} className="my-8">
+                <MilestoneItem direction={m.direction} year={m.year} mainEvent={m.mainEvent} otherEvents={m.otherEvents ?? []} />
+              </div>
+            ))}
+
+            <div className="absolute z-0 h-full top-0 left-1/2 -translate-x-1/2 solid border-l-2 border-neutral-800"></div>
+
+            <div className="absolute z-0 h-3 -bottom-3 left-1/2 -translate-x-1/2 border-dotted border-l-2 border-neutral-800"></div>
+          </div>
+
+          <div className="-mt-3 text-h6 font-header font-bold text-center">Onwards to more exciting projects! </div>
+        </div>
+      </section>
 
       <Footer />
     </>
