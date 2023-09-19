@@ -3,8 +3,8 @@ import { Testimonial } from "./Testimonial";
 
 const meta = {
   title: "Testimonial",
-  component: Testimonial
-} satisfies Meta<typeof Testimonial>
+  component: Testimonial,
+} satisfies Meta<typeof Testimonial>;
 
 export default meta;
 
@@ -13,18 +13,18 @@ type Story = StoryObj<typeof meta>;
 export const SampleTestimonial: Story = {
   args: {
     person: {
-      name: 'Full Name',
-      position: 'Position',
-      company: 'Company'
+      name: "Jadurani Davalos",
+      company: "Company",
     },
-    date: '10 March 2015',
-    statement: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vulputate nibh nec nulla aliquam, at luctus ligula accumsan. Integer ullamcorper massa at ligula volutpat, at mollis sapien congue. Integer ullamcorper massa at ligula congue.'
+    date: "10 March 2015",
+    statement:
+      "Sed volutpat convallis ipsum non aliquet. Integer cursus vitae mi ut lobortis. Sed efficitur viverra dolor ac ultrices. Cras in egestas elit, vitae fringilla nunc.",
   },
   decorators: [
     (Story) => (
       <div className="p-16">
         <Story />
       </div>
-    )
-  ]
+    ),
+  ],
 };
