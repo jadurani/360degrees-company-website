@@ -29,11 +29,10 @@ const NAV_LINKS: NavLink[] = [
     label: "Projects",
     path: "projects",
   },
-  // TO DO
-  // {
-  //   label: "Contact Us",
-  //   path: "contact-us",
-  // },
+  {
+    label: "Contact Us",
+    path: "contact-us",
+  },
 ];
 
 export const NavMenu = ({ toggleMenu }: NavMenuProps) => {
