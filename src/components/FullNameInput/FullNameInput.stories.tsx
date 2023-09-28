@@ -1,19 +1,13 @@
-import React from "react";
-import FullNameInput from "./FullNameInput";
+import React, { useState } from 'react';
+import { Meta } from '@storybook/react';
+import FullNameInput from './FullNameInput';
 
 export default {
-  title: "Input/Full Name",
   component: FullNameInput,
+  title: 'Components/FullNameInput',
+} as Meta;
+
+export const Default = () => {
+  const [fullName, setFullName] = useState<string>('');
+  return <FullNameInput onBlur={(value) => setFullName(value)} />;
 };
-
-export const Default = () => (
-  <FullNameInput value="" onChange={(value) => console.log(value)} />
-);
-
-export const WithError = () => (
-  <FullNameInput
-    value="John Doe"
-    onChange={(value) => console.log(value)}
-    error="Invalid characters"
-  />
-);
