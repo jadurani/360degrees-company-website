@@ -1,10 +1,12 @@
+'use client'
+
 import React, { useState } from 'react';
 import FullNameInput from '@components/FullNameInput/FullNameInput';
 import EmailInput from '@components/EmailInput/EmailInput';
 import MobileNumberInput from '@components/MobileNumberInput/MobileNumberInput';
 import MessageTextarea from '@components/MessageTextarea/MessageTextarea';
 
-type ContactFormData = {
+export type ContactFormData = {
   fullName: string;
   email: string;
   mobileNumber: string;
@@ -38,6 +40,10 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
 
   return (
     <form onSubmit={handleFormSubmit} className="max-w-md mx-auto">
+      <header className='text-h5 lg:text-h4 font-bold text-neutral-800 font-header mb-6 text-center'>
+        Want to have work done?
+      </header>
+
       <FullNameInput
         onBlur={(value) => setFormData({ ...formData, fullName: value })}
       />
