@@ -44,7 +44,7 @@ export const NavBar = () => {
         className={`w-screen ${isTransparent ? 'bg-opacity-90' : 'bg-neutral-900'} transition-all duration-300 ease-in-out`}
       >
         <div className={`container max-w-6xl mx-auto py-2 lg:py-6 px-4 flex justify-between items-center lg:items-start`}>
-          <Logo />;
+          <Logo />
 
           <button className="my-auto" onClick={() => setIsMenuOpen(true)}>
             <Image src={menuIcon} alt="menu icon" />
