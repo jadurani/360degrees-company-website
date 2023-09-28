@@ -8,8 +8,86 @@ import { TestimonialSlider } from "@components/TestimonialSlider/TestimonialSlid
 import { SAMPLE_TESTIMONIAL_LIST } from "@components/TestimonialSlider/TestimonialSlider.stories";
 import { NavBar } from "@components/NavBar/NavBar";
 
+const CLIENT_LOGOS = [
+  {
+    url: "/images/clients/client-curo-teknika-inc.png",
+    alt: "Curo Teknika, Inc.",
+  },
+  {
+    url: "/images/clients/client-data-analytics-ventures.png",
+    alt: "Data Analytics Ventures, Inc. (DAVI)",
+  },
+  {
+    url: "/images/clients/client-doa.png",
+    alt: "Department of Agriculture",
+  },
+  {
+    url: "/images/clients/client-enshored.png",
+    alt: "Enshored",
+  },
+  {
+    url: "/images/clients/client-esco.png",
+    alt: "ESCO Lifesciences Group | Improving Lives Through Science",
+  },
+  {
+    url: "/images/clients/client-esl.png",
+    alt: "Emphasis Services Limited",
+  },
+  {
+    url: "/images/clients/client-firstgas.png",
+    alt: "First Gas",
+  },
+  {
+    url: "/images/clients/client-jg-summit-holdings.png",
+    alt: "JG Summit Holdings Inc.",
+  },
+  {
+    url: "/images/clients/client-kmc-solutions.png",
+    alt: "KMC Solutions Co. Ltd",
+  },
+  {
+    url: "/images/clients/client-mmc.png",
+    alt: "Makati Medical Center",
+  },
+  {
+    url: "/images/clients/client-panasiatic-solutions.png",
+    alt: "Panasiatic Call Centers Inc.",
+  },
+  {
+    url: "/images/clients/client-realpage.png",
+    alt: "RealPage | Property Management Software",
+  },
+  {
+    url: "/images/clients/client-remitly.png",
+    alt: "Remitly",
+  },
+  {
+    url: "/images/clients/client-support-ninja.png",
+    alt: "SupportNinja",
+  },
+  {
+    url: "/images/clients/client-synergy-group.png",
+    alt: "Synergy Group",
+  },
+  {
+    url: "/images/clients/client-taskus.png",
+    alt: "TaskUs",
+  },
+  {
+    url: "/images/clients/client-towers-watson.png",
+    alt: "Towers Watson",
+  },
+  {
+    url: "/images/clients/client-transcom.png",
+    alt: "Transcom",
+  },
+  {
+    url: "/images/clients/client-universal-robina.png",
+    alt: "Universal Robina",
+  },
+];
+
 export default function Home() {
-  const samp_client_arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   return (
     <>
       <div className="fixed w-full top-0 z-50">
@@ -51,12 +129,12 @@ export default function Home() {
         <h1 className="font-header text-h3 text-center font-bold">
           Our Clients
         </h1>
-        <ul className="flex flex-wrap gap-4 items-center justify-center px-8 mx-auto my-4 max-w-5xl">
-          {samp_client_arr.map((i, idx) => (
+        <ul className="flex flex-wrap gap-2 md:gap-4 items-center justify-center mx-auto mt-8 max-w-6xl">
+          {CLIENT_LOGOS.map((client, idx) => (
             <li
               key={idx}
-              className="font-header text-h4 font-bold p-4 bg-neutral-400 inline">
-              client {i}
+              className="p-2 h-[100px] w-[75px] md:w-[150px] relative">
+              <Image src={client.url} alt={client.alt} fill sizes="800px" className="object-contain" />
             </li>
           ))}
         </ul>
