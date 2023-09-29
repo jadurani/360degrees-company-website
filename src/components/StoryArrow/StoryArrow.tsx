@@ -5,13 +5,16 @@ interface StoryArrowProps {
    * By default, the SVG arrow points to the left
    */
   direction: ArrowDirection;
+  handleClick: () => void
 }
 
-export const StoryArrow = ({ direction = 'left' }: StoryArrowProps) => {
+export const StoryArrow = ({ direction, handleClick }: StoryArrowProps) => {
   const directionClass = direction == 'right' ? '-scale-x-100' : ''
 
   return (
-    <button className={`${directionClass} bg-neutral-800/50  hover:bg-neutral-800 transition-colors rounded-full w-8 h-8 flex items-center justify-center`}>
+    <button
+      onClick={handleClick}
+      className={`${directionClass} bg-neutral-800/50  hover:bg-neutral-800 transition-colors rounded-full w-8 h-8 flex items-center justify-center`}>
       <svg
         width="8"
         height="14"
