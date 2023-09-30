@@ -7,6 +7,7 @@ import styles from "@app/Home.module.css";
 import { TestimonialSlider } from "@components/TestimonialSlider/TestimonialSlider";
 import { SAMPLE_TESTIMONIAL_LIST } from "@components/TestimonialSlider/TestimonialSlider.stories";
 import { NavBar } from "@components/NavBar/NavBar";
+import { COMPLETED_PROJECTS } from "./projects/completed-projects.constant";
 
 const CLIENT_LOGOS = [
   {
@@ -183,30 +184,30 @@ export default function Home() {
         <div className="flex flex-wrap gap-4 justify-center items-center mx-auto max-w-6xl py-4">
           <div className="w-64 h-64">
             <ProjectThumbnail
-              bgImageSrc="/images/hero-bg.png"
-              title="Project Title"
-              workType="type of work"
+              bgImageSrc={COMPLETED_PROJECTS[0].photoUrls[0]}
+              title={COMPLETED_PROJECTS[0].name}
+              location={COMPLETED_PROJECTS[0].location}
             />
           </div>
           <div className="w-64 h-64">
             <ProjectThumbnail
-              bgImageSrc="/images/hero-bg.png"
-              title="Project Title"
-              workType="type of work"
+              bgImageSrc={COMPLETED_PROJECTS[1].photoUrls[0]}
+              title={COMPLETED_PROJECTS[1].name}
+              location={COMPLETED_PROJECTS[1].location}
             />
           </div>
           <div className="w-64 h-64">
             <ProjectThumbnail
-              bgImageSrc="/images/hero-bg.png"
-              title="Project Title"
-              workType="type of work"
+              bgImageSrc={COMPLETED_PROJECTS[2].photoUrls[0]}
+              title={COMPLETED_PROJECTS[2].name}
+              location={COMPLETED_PROJECTS[2].location}
             />
           </div>
         </div>
 
         <div className="flex mt-8">
           <Link
-            href="/"
+            href="/projects"
             className="text-primary-600 text-h5 font-semibold mx-auto font-body">
             see all
           </Link>

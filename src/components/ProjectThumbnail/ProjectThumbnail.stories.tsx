@@ -14,7 +14,7 @@ export const ProjectSample: Story = {
   args: {
     bgImageSrc: '/images/about-us.png',
     title: 'Project Title',
-    workType: 'Type of Work'
+    location: 'Location'
   },
   decorators: [
     (Story) => (

@@ -4,9 +4,9 @@ import { StoryArrow } from "@components/StoryArrow/StoryArrow";
 import Image from "next/image";
 import mapPinIcon from "@assets/icons/map-pin.svg";
 
-interface StoryViewerProps {
+export interface StoryViewerProps {
   name: string;
-  location?: string;
+  location: string;
   /**
    * These are photo URLs
    */
@@ -68,7 +68,7 @@ export const StoryViewer = ({ name, location, photoUrls }: StoryViewerProps) => 
 
       <div className="flex gap-1 top-4 font-body text-body2 absolute text-neutral-0 drop-shadow-xl px-3 z-20">
         <Image src={mapPinIcon} alt="map icon" />
-          {location}
+        {location}
       </div>
 
       <div className="px-3 font-header font-bold text-neutral-0 drop-shadow-xl absolute z-20 bottom-3 text-h6">
