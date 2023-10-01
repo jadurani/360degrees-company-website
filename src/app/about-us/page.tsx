@@ -2,13 +2,13 @@ import { Footer } from "@components/Footer/Footer";
 import { PageHeader } from "@components/PageHeader/PageHeader";
 import { NavBar } from "@components/NavBar/NavBar";
 import Image from "next/image";
-import teamImg from "@assets/images/unsplash_-uHVRvDr7pg.png";
 import { Fact } from "@components/Fact/Fact";
 import quoteIcon from "@assets/icons/quote.svg";
 import { CORE_VALUES, MILESTONE_LIST } from "./contants";
 import { MilestoneItem } from "@components/MilestoneItem/MilestoneItem";
 import { Person } from "@components/Person/Person";
-import teamPhoto from "@assets/images/about-us-team-1.png";
+import teamPhoto1 from "@assets/images/about-us/team-photo-1.jpg";
+import teamPhoto2 from "@assets/images/about-us/team-photo-2.jpg";
 
 export default function AboutUs() {
   return (
@@ -24,25 +24,25 @@ export default function AboutUs() {
 
       {/* some intro */}
       <section className="py-14 px-8 w-screen container mx-auto max-w-6xl font-body">
-        <div>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas quis
-          dui posuere, euismod lorem sed, pharetra felis. Nam eleifend vulputate
-          felis et gravida. Morbi sed purus eget mauris congue suscipit id at
-          lectus. Nulla facilisis tellus ex, ac feugiat est vulputate vel. Sed
-          mollis felis est, eu laoreet enim pretium in. Pellentesque vulputate
-          dignissim sollicitudin.
-        </div>
+        <p className="text-justify">
+          Founded in 2010, 360DEGREES SYSTEMS CORPORATION is a Makati City-based
+          company. Comprised of a team of experts, the company specializes in
+          delivering comprehensive Turn-key Services to renowned Call Centers,
+          BPOs, Shared Services, and Corporate Offices.
+        </p>
 
-        <div className="py-8 gap-8 lg:gap-0 flex flex-wrap justify-center items-center mx-auto">
-          <Image src={teamImg} alt="sample work" className="lg:w-1/2 block" />
+        <Image src={teamPhoto1} alt="sample work" className="block my-8" />
 
-          <div className="lg:px-10 lg:w-1/2">
-            Founded in 2010, 360degrees Systems Corporation is a Makati
-            City-based company. Comprised of a team of experts, the company
-            specializes in delivering comprehensive Turn-key Services to
-            renowned Call Centers, BPOs, Shared Services, and Corporate Offices.
-          </div>
-        </div>
+        <p className="py-2 text-justify">
+          We value the trust and confidence expressed by clients through repeat
+          orders and established relationships.
+        </p>
+        <p className="py-2 text-justify">
+          We aim to continuously improve our products by working hand in hand
+          with end-users and come up with products that work best for them
+          combined with timely delivery and committed service.
+        </p>
+
       </section>
 
       {/* mission */}
@@ -210,14 +210,14 @@ export default function AboutUs() {
 
           <div className="flex flex-col-reverse lg:flex-col gap-4 max-w-2xl mx-auto mt-8">
             <div className="relative min-w-xs w-full h-full">
-              <Image src={teamPhoto} alt="360degrees team" />
+              <Image src={teamPhoto2} alt="360degrees team" />
             </div>
-            <p>
+            {/* <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
               quis dui posuere, euismod lorem sed, pharetra felis. Nam eleifend
               vulputate felis et gravida. Morbi sed purus eget mauris congue
               suscipit id at lectus.
-            </p>
+            </p> */}
           </div>
         </div>
       </section>
@@ -228,7 +228,7 @@ export default function AboutUs() {
           <h1 className="font-header text-h2 text-center font-bold">
             Our Milestones
           </h1>
-
+{/*
           <p className="font-body my-4">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
             quis dui posuere, euismod lorem sed, pharetra felis. Nam eleifend
@@ -238,7 +238,7 @@ export default function AboutUs() {
             Pellentesque vulputate dignissim sollicitudin. Sed tempus risus sed
             lacus imperdiet, vel tempus nibh scelerisque. Suspendisse id dui
             turpis.
-          </p>
+          </p> */}
 
           <div className="relative my-8 py-4 text-neutral-800">
             {MILESTONE_LIST.map((m, idx) => (
