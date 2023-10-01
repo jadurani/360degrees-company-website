@@ -83,7 +83,7 @@ export const StoryViewer = ({ name, location, photoUrls }: StoryViewerProps) => 
       {/* Story content goes here */}
       <div className="relative w-full h-full">
         <div className="z-20 h-full w-full absolute"></div>
-        <Image src={photoUrls[activeStoryIndex]} alt="header" fill className="z-10 object-cover" />
+        <Image src={photoUrls[activeStoryIndex]} alt="header" fill className="z-10 object-contain lg:object-cover" />
       </div>
     </div>
   );
