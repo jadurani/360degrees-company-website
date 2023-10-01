@@ -183,31 +183,29 @@ export default function AboutUs() {
             Our Team
           </h1>
 
-          <p className="font-body my-4 text-center">
+          {/* <p className="font-body my-4 text-center">
             Some description about the founders and the team...
-          </p>
+          </p> */}
 
           <div className="flex flex-wrap gap-7 justify-center mt-10">
-            <Person
-              name="Rafaela Santos"
-              title="Co-Founder"
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nunc tortor, viverra ut aliquam id, aliquam vitae enim."
-              photoSrc="/images/unsplash_92z4a5V7y4I.png"
-              website="https://www.360degreessystemscorporation.com/"
-              instagram="http://instagram.com/"
-              linkedin="https://linkedin.com/"
-              email="info@360degrees.com.ph"
-            />
-            <Person
-              name="Isabella Reyes"
-              title="Co-Founder"
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nunc tortor, viverra ut aliquam id, aliquam vitae enim."
-              photoSrc="/images/aiony-haust-3TLl_97HNJo-unsplash.jpg"
-              website="https://www.360degreessystemscorporation.com/"
-              instagram="http://instagram.com/"
-              linkedin="https://linkedin.com/"
-              email="info@360degrees.com.ph"
-            />
+            <div className="w-[320px]">
+              <Person
+                name="Gian Gofavis"
+                title="CEO & Founder, Sales"
+                photoSrc="/images/about-us/founder-Gian-Gofavis.jpg"
+                website="https://www.360degreessystemscorporation.com/"
+                linkedin="https://www.linkedin.com/in/gian-s-gofavis-9048739"
+              />
+            </div>
+            <div className="w-[320px]">
+              <Person
+                name="Irene Reyes"
+                title="President & Co-Founder, Operations"
+                photoSrc="/images/about-us/founder-Irene-Reyes.jpg"
+                website="https://www.360degreessystemscorporation.com/"
+                linkedin="https://www.linkedin.com/in/irene-reyes-8510961a/"
+              />
+            </div>
           </div>
 
           <div className="flex flex-col-reverse lg:flex-col gap-4 max-w-2xl mx-auto mt-8">
