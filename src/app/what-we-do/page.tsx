@@ -12,7 +12,7 @@ export default function WhatWeDo() {
         <NavBar />
       </div>
 
-      <PageHeader bgImageSrc="/images/about-us.png" title="What We Do" />
+      <PageHeader bgImageSrc="/images/page-headers/what-we-do.png" title="What We Do" />
 
       {/* some intro */}
       <section className="py-14 px-8 w-screen container mx-auto max-w-6xl font-body text-neutral-800">

@@ -17,7 +17,7 @@ export default function AboutUs() {
         <NavBar />
       </div>
 
-      <PageHeader bgImageSrc="/images/about-us.png" title="About Us" />
+      <PageHeader bgImageSrc="/images/page-headers/about-us.png" title="About Us" />
 
       {/* some intro */}
       <section className="py-14 px-8 w-screen container mx-auto max-w-6xl font-body">

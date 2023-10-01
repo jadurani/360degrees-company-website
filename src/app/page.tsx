@@ -117,8 +117,8 @@ export default function Home() {
         <div className="relative w-full h-full">
           <div className="z-20 h-full w-full absolute bg-neutral-900/75"></div>
           <Image
-            src="/images/hero-bg.png"
-            alt="sample work"
+            src="/images/page-headers/landing-page.png"
+            alt="360DEGREES SYSTEMS CORPORATION"
             fill
             className="z-10 object-cover"
           />
