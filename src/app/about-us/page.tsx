@@ -8,7 +8,7 @@ import quoteIcon from "@assets/icons/quote.svg";
 import { CORE_VALUES, MILESTONE_LIST } from "./contants";
 import { MilestoneItem } from "@components/MilestoneItem/MilestoneItem";
 import { Person } from "@components/Person/Person";
-import teamPhoto from "@assets/images/about-us-team-1.png"
+import teamPhoto from "@assets/images/about-us-team-1.png";
 
 export default function AboutUs() {
   return (
@@ -17,7 +17,10 @@ export default function AboutUs() {
         <NavBar />
       </div>
 
-      <PageHeader bgImageSrc="/images/page-headers/about-us.png" title="About Us" />
+      <PageHeader
+        bgImageSrc="/images/page-headers/about-us.png"
+        title="About Us"
+      />
 
       {/* some intro */}
       <section className="py-14 px-8 w-screen container mx-auto max-w-6xl font-body">
@@ -101,7 +104,12 @@ export default function AboutUs() {
         </div>
       </section>
 
-      {/* commitment */}
+      {/* our track record */}
+      <section className="py-14 px-8 w-screen container mx-auto max-w-6xl">
+        <h1 className="font-header text-h2 text-neutral-800 text-center font-bold mb-6">
+          Our Track Record
+        </h1>
+      </section>
 
       {/* our team */}
       <section className="py-14 px-8 w-screen bg-accent-50">

@@ -108,9 +108,9 @@ export default function Home() {
                 here
               </div>
             </div>
-            <button className="uppercase py-2 px-4 border border-solid border-neutral-50 hover:bg-neutral-50/10">
+            <Link href="/contact-us" className="font-body uppercase py-2 px-4 border border-solid border-neutral-50 hover:bg-neutral-50/10">
               Contact us
-            </button>
+            </Link>
           </div>
         </div>
 
@@ -170,7 +170,7 @@ export default function Home() {
 
         <div className="flex mt-8">
           <Link
-            href="/"
+            href="/what-we-do"
             className="text-primary-600 text-h5 font-semibold mx-auto font-body">
             read more
           </Link>
@@ -182,27 +182,27 @@ export default function Home() {
         <h1 className="font-header text-h3 text-center font-bold">Projects</h1>
 
         <div className="flex flex-wrap gap-4 justify-center items-center mx-auto max-w-6xl py-4">
-          <div className="w-64 h-64">
+          <Link href={{ pathname: 'projects', query: { projectView: COMPLETED_PROJECTS[0].slug } }} className="w-64 h-64">
             <ProjectThumbnail
               bgImageSrc={COMPLETED_PROJECTS[0].photoUrls[0]}
               title={COMPLETED_PROJECTS[0].name}
               location={COMPLETED_PROJECTS[0].location}
             />
-          </div>
-          <div className="w-64 h-64">
+          </Link>
+          <Link href={{ pathname: 'projects', query: { projectView: COMPLETED_PROJECTS[1].slug } }} className="w-64 h-64">
             <ProjectThumbnail
               bgImageSrc={COMPLETED_PROJECTS[1].photoUrls[0]}
               title={COMPLETED_PROJECTS[1].name}
               location={COMPLETED_PROJECTS[1].location}
             />
-          </div>
-          <div className="w-64 h-64">
+          </Link>
+          <Link href={{ pathname: 'projects', query: { projectView: COMPLETED_PROJECTS[2].slug } }} className="w-64 h-64">
             <ProjectThumbnail
               bgImageSrc={COMPLETED_PROJECTS[2].photoUrls[0]}
               title={COMPLETED_PROJECTS[2].name}
               location={COMPLETED_PROJECTS[2].location}
             />
-          </div>
+          </Link>
         </div>
 
         <div className="flex mt-8">
@@ -236,9 +236,9 @@ export default function Home() {
         <div className="text-h6 text-neutral-800 font-header font-bold">
           Some more text here enticing the user to click the button below
         </div>
-        <button className="mt-8 uppercase py-4 px-12 bg-primary-500 text-neutral-50 font-semibold text-h5 font-body">
+        <Link href="/contact-us" className="mt-8 uppercase py-4 px-12 bg-primary-500 text-neutral-50 font-semibold text-h5 font-body">
           Contact us
-        </button>
+        </Link>
       </section>
       <Footer />
     </>
