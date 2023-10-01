@@ -7,6 +7,7 @@ import mapPinIcon from "@assets/icons/map-pin.svg";
 export interface StoryViewerProps {
   name: string;
   location: string;
+  slug: string;
   /**
    * These are photo URLs
    */

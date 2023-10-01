@@ -19,15 +19,7 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const ProjectLumina: Story = {
-  args: {
-    name: 'Project Lumina',
-    location: 'Imus, Cavite',
-    photoUrls: [
-      '/images/project-lumina/lumina-0.png',
-      '/images/project-lumina/lumina-1.png',
-      '/images/project-lumina/lumina-2.png',
-    ],
-  }
+  args: COMPLETED_PROJECTS[2],
 };
 
 export const ProjectSupima: Story = {

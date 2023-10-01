@@ -2,7 +2,8 @@ import { Footer } from "@components/Footer/Footer";
 import { NavBar } from "@components/NavBar/NavBar";
 import { PageHeader } from "@components/PageHeader/PageHeader";
 import { ProjectThumbnail } from "@components/ProjectThumbnail/ProjectThumbnail";
-import { COMPLETED_PROJECTS } from "./completed-projects.constant";
+import { COMPLETED_PROJECTS } from "../completed-projects.constant";
+import Link from "next/link";
 
 export default function Projects() {
   return (
@@ -18,13 +19,17 @@ export default function Projects() {
         <div className="flex">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mx-auto max-w-4xl py-6">
             {COMPLETED_PROJECTS.map((project, index) => (
-              <button key={`project-${index}`} className="w-64 h-64 text-left">
+              <Link
+                key={`project-${index}`}
+                className="w-64 h-64 text-left"
+                href={`?projectView=${project.slug}`}
+                scroll={false}>
                 <ProjectThumbnail
                   bgImageSrc={project.photoUrls[0]}
                   title={project.name}
                   location={project.location}
                 />
-              </button>
+              </Link>
             ))}
           </div>
         </div>
