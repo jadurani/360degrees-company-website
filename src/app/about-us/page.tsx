@@ -109,6 +109,71 @@ export default function AboutUs() {
         <h1 className="font-header text-h2 text-neutral-800 text-center font-bold mb-6">
           Our Track Record
         </h1>
+
+        <div className="flex flex-wrap gap-4 justify-center items-center mx-auto max-w-6xl py-4">
+          {/* first item */}
+          <div className="flex flex-col items-center justify-start text-center">
+            <div className="relative w-64 h-64 mb-2">
+              <Image
+                src="/images/about-us/track-record-area.png"
+                sizes="400px"
+                fill
+                alt=""
+              />
+            </div>
+            <div className="font-header font-bold text-primary-500 text-h4">
+              130,000 sqm
+            </div>
+            <div className="font-body text-neutral-800 text-body1 font-bold uppercase w-52 leading-tight">
+              TOTAL AREA
+            </div>
+            <div className="font-body text-neutral-800 text-body2 w-52">
+              Fit-out various offices and call center facilities
+            </div>
+          </div>
+
+          {/* second item */}
+          <div className="flex flex-col items-center justify-start text-center">
+            <div className="relative w-64 h-64 mb-2">
+              <Image
+                src="/images/about-us/track-record-carpet.png"
+                sizes="400px"
+                fill
+                alt=""
+              />
+            </div>
+            <div className="font-header font-bold text-primary-500 text-h4">
+              100,000 sqm
+            </div>
+            <div className="font-body text-neutral-800 text-body1 font-bold uppercase w-52 leading-tight">
+              CUSHION-BACK CARPET
+            </div>
+            <div className="font-body text-neutral-800 text-body2 w-52">
+              Fit-out various offices and call center facilities
+            </div>
+          </div>
+
+          {/* third item */}
+          <div className="flex flex-col items-center justify-start text-center">
+            <div className="relative w-64 h-64 mb-2">
+              <Image
+                src="/images/about-us/track-record-workstation.png"
+                sizes="400px"
+                fill
+                alt=""
+              />
+            </div>
+            <div className="font-header font-bold text-primary-500 text-h4">
+              35,000 sets
+            </div>
+            <div className="font-body text-neutral-800 text-body1 font-bold uppercase w-52 leading-tight">
+              WORKSTATIONS & SEATING SYSTEMS
+            </div>
+            <div className="font-body text-neutral-800 text-body2 w-52">
+              Supply and Installation
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* our team */}
