@@ -100,15 +100,15 @@ export default function Home() {
         <div className="absolute z-30 w-full top-1/2 lg:top-2/3 lg:-translate-y-1/3">
           <div className="mx-auto max-w-6xl text-neutral-50 px-4 lg:px-8 text-center lg:text-left">
             <div className="my-4">
-              <div className="text-h2 font-bold font-header">
-                Company Tagline Here
-              </div>
-              <div className="font-body text-body1">
+              <h1 className="text-h2 font-bold font-header leading-tight pb-4">
+              Building Trust, <br />One Project at a Time
+              </h1>
+              {/* <div className="font-body text-body1">
                 some description here some description here some description
                 here
-              </div>
+              </div> */}
             </div>
-            <Link href="/contact-us" className="font-body uppercase py-2 px-4 border border-solid border-neutral-50 hover:bg-neutral-50/10">
+            <Link href="/contact-us" className="font-body text-body1 uppercase py-4 px-8 border border-solid border-neutral-50 hover:bg-neutral-50/10">
               Contact us
             </Link>
           </div>

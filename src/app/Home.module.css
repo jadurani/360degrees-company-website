@@ -1,6 +1,6 @@
 .testiContainerBg {
   position: relative;
-  background-image: linear-gradient(to bottom, rgba(165, 6, 149, .75), 50%, #FFF), url(/images/samp-proj-img-4.png);
+  background-image: linear-gradient(to bottom, rgba(165, 6, 149, .75), 50%, #FFF), url(/images/home-testimonials-bg.jpg);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;

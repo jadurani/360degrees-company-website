@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "360DEGREES SYSTEMS CORPORATION",
-  description: "Construction Website",
+  description: "Building Trust, One Project at a Time | Construction Services",
 };
 
 export default function RootLayout({
