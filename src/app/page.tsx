@@ -5,7 +5,7 @@ import { ProjectThumbnail } from "@components/ProjectThumbnail/ProjectThumbnail"
 import Link from "next/link";
 import styles from "@app/Home.module.css";
 import { TestimonialSlider } from "@components/TestimonialSlider/TestimonialSlider";
-import { SAMPLE_TESTIMONIAL_LIST } from "@components/TestimonialSlider/TestimonialSlider.stories";
+import { TESTIMONIALS } from "@components/TestimonialSlider/TestimonialSlider.stories";
 import { NavBar } from "@components/NavBar/NavBar";
 import { COMPLETED_PROJECTS } from "./projects/completed-projects.constant";
 
@@ -223,7 +223,7 @@ export default function Home() {
           </div>
 
           <div className="flex gap-4 flex-wrap justify-center">
-            <TestimonialSlider testiList={SAMPLE_TESTIMONIAL_LIST} />
+            <TestimonialSlider testiList={TESTIMONIALS} />
           </div>
         </div>
       </section>

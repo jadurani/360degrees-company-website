@@ -40,11 +40,11 @@ export const TestimonialSlider = ({
   const isLastItem = selectedOption + 1 === testiList.length
 
   return (
-    <div className="h-fit flex items-center justify-center relative">
+    <div className="h-fit flex items-stretch justify-center relative">
       <div className={`flex items-center ${ isFirstItem ? 'invisible' : '' }`}>
         <button
           onClick={() => setPrevItemIdx(selectedOption, setSelectedOption)}
-          className="text-h4 text-neutral-0 hover:bg-neutral-50/50 transition-colors p-4 rounded-full w-10 h-10 flex items-center justify-center">
+          className="text-h4 text-neutral-0 hover:bg-neutral-50/50 transition-colors p-4 rounded w-10 h-full flex items-center justify-center">
           ‹
         </button>
       </div>
@@ -60,7 +60,7 @@ export const TestimonialSlider = ({
       <div className={`flex items-center ${ isLastItem ? 'invisible' : '' }`}>
         <button
           onClick={() => setNextItemIdx(selectedOption, testiList.length, setSelectedOption)}
-          className="text-h4 text-neutral-0 hover:bg-neutral-50/50 transition-colors p-4 rounded-full w-10 h-10 flex items-center justify-center">
+          className="text-h4 text-neutral-0 hover:bg-neutral-50/50 transition-colors p-4 rounded w-10 h-full flex items-center justify-center">
           ›
         </button>
       </div>
