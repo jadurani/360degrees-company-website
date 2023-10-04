@@ -1,4 +1,5 @@
 "use client";
+
 import {
   StoryViewerProps,
 } from "@components/StoryViewer/StoryViewer";
@@ -15,8 +16,7 @@ export default function Layout(props: {
   const projectDetails: StoryViewerProps | undefined =
     getProjectFromSlug(projectViewSlug);
 
-  useEffect(() => {
-    if (projectDetails) {
+  useEffect(() => {if (projectDetails) {
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = 'auto';

@@ -1,18 +1,35 @@
 "use client";
+
 import {
   StoryViewer,
   StoryViewerProps,
 } from "@components/StoryViewer/StoryViewer";
-import { useSearchParams } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { getProjectFromSlug } from "../completed-projects.constant";
 import Link from "next/link";
+import { useEffect } from "react";
 
-// project: StoryViewerProps
 export default function IndividualProjectView() {
   const searchParams = useSearchParams();
+  const router = useRouter();
   const projectViewSlug = searchParams.get("projectView") ?? "";
   const projectDetails: StoryViewerProps | undefined =
     getProjectFromSlug(projectViewSlug);
+
+
+  useEffect(() => {
+    const handleEscapeKey = (event: KeyboardEvent) => {
+      if (event.key === "Escape" && projectDetails) {
+        router.replace('/projects')
+      }
+    };
+
+    window.addEventListener("keydown", handleEscapeKey);
+
+    return () => {
+      window.removeEventListener("keydown", handleEscapeKey);
+    };
+  }, [router, projectDetails]);
 
   if (!projectDetails) {
     return null;

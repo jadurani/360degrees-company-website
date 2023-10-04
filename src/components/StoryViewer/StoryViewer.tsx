@@ -67,7 +67,7 @@ export const StoryViewer = ({ name, location, photoUrls }: StoryViewerProps) => 
         ))}
       </div>
 
-      <div className="flex gap-1 top-4 font-body text-body2 absolute text-neutral-0 drop-shadow-xl px-3 z-20">
+      <div className="flex gap-1 top-5 font-body text-body2 absolute text-neutral-0 drop-shadow-xl px-3 z-20">
         <Image src={mapPinIcon} alt="map icon" />
         {location}
       </div>
