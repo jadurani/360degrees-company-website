@@ -31,9 +31,9 @@ export const COMPLETED_PROJECTS: StoryViewerProps[] = [
     location: 'Imus, Cavite',
     slug: 'project-lumina',
     photoUrls: [
-      '/images/project-lumina/lumina-0.png',
       '/images/project-lumina/lumina-1.png',
       '/images/project-lumina/lumina-2.png',
+      '/images/project-lumina/lumina-3.png',
     ],
   },
   {
