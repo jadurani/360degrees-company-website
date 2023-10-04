@@ -7,6 +7,7 @@ import quoteIcon from "@assets/icons/quote.svg";
 import { CORE_VALUES, MILESTONE_LIST } from "./contants";
 import { MilestoneItem } from "@components/MilestoneItem/MilestoneItem";
 import { Person } from "@components/Person/Person";
+import styles from "./AboutUs.module.css";
 import teamPhoto1 from "@assets/images/about-us/team-photo-1.jpg";
 import teamPhoto2 from "@assets/images/about-us/team-photo-2.jpg";
 
@@ -46,9 +47,9 @@ export default function AboutUs() {
       </section>
 
       {/* mission */}
-      <section className="py-14 lg:py-24 px-8 w-screen relative text-neutral-0 bg-neutral-800">
-        <div className="relative container mx-auto max-w-6xl">
-          <h1 className="font-header text-h2 text-center font-bold mb-6">
+      <section className={`py-14 lg:py-24 px-8 w-screen text-neutral-0 ${styles.missionSection}`}>
+        <div className="container mx-auto max-w-6xl">
+          <h1 className="relative font-header z-10 text-h2 text-center font-bold mb-6">
             Our Mission
           </h1>
           <div className="relative leading-9 z-10 font-semibold text-h5 font-header text-left lg:px-4 mx-16 lg:mx-32">

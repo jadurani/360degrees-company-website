@@ -1,0 +1,19 @@
+.missionSection {
+  position: relative;
+  background: url(/images/about-us/about-us-our-mission.png);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-position: top;
+}
+
+.missionSection::after {
+  content:'';
+  background-color: rgba(68, 64, 65, .75);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
