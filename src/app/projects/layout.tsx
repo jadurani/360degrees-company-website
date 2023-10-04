@@ -4,6 +4,7 @@ import {
 } from "@components/StoryViewer/StoryViewer";
 import { useSearchParams } from "next/navigation";
 import { getProjectFromSlug } from "./completed-projects.constant";
+import { useEffect } from "react";
 
 export default function Layout(props: {
   allProjects: React.ReactNode,
@@ -14,11 +15,18 @@ export default function Layout(props: {
   const projectDetails: StoryViewerProps | undefined =
     getProjectFromSlug(projectViewSlug);
 
-  if (projectDetails) {
-    document.body.style.overflow = 'hidden';
-  } else {
-    document.body.style.overflow = 'auto';
-  }
+  useEffect(() => {
+    if (projectDetails) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+
+    // Cleanup: Re-enable scrolling when the component unmounts
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, [projectDetails]);
 
   return (
     <>
