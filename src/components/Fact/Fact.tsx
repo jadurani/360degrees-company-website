@@ -54,7 +54,7 @@ export const Fact = ({ color, bgNum, title, description }: FactProps) => {
         </h2>
 
         {/* description */}
-        <p className="font-body text-neutral-800">{description}</p>
+        <p className="font-body text-neutral-800 text-justify">{description}</p>
       </div>
     </div>
   );
