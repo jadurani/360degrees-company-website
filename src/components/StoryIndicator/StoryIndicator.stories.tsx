@@ -14,7 +14,7 @@ export const Active: Story = {
   args: {
     active: true,
     idx: 1,
-    onClick: (idx) => alert(idx)
+    handleClick: (idx) => alert(idx)
   }
 };
 
@@ -22,6 +22,6 @@ export const Inactive: Story = {
   args: {
     active: false,
     idx: 2,
-    onClick: (idx) => alert(idx)
+    handleClick: (idx) => alert(idx)
   }
 };

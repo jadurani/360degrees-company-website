@@ -14,7 +14,7 @@ export const StoryArrow = ({ direction, handleClick }: StoryArrowProps) => {
   return (
     <button
       onClick={handleClick}
-      className={`${directionClass} bg-neutral-800/50  hover:bg-neutral-800 transition-colors rounded-full w-8 h-8 flex items-center justify-center`}>
+      className={`${directionClass} bg-neutral-800/80  hover:bg-neutral-700/80 transition-colors rounded-full w-8 h-8 lg:w-12 lg:h-12 flex items-center justify-center`}>
       <svg
         width="8"
         height="14"
