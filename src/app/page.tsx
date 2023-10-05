@@ -121,6 +121,7 @@ export default function Home() {
             alt="360DEGREES SYSTEMS CORPORATION"
             fill
             className="z-10 object-cover"
+            priority
           />
         </div>
       </section>

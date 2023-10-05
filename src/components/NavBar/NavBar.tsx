@@ -47,7 +47,7 @@ export const NavBar = () => {
           <Logo />
 
           <button className="my-auto" onClick={() => setIsMenuOpen(true)}>
-            <Image src={menuIcon} alt="menu icon" />
+            <Image src={menuIcon} alt="menu icon" priority />
           </button>
         </div>
       </header>

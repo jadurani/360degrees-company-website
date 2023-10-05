@@ -14,7 +14,7 @@ export const PageHeader = ({ bgImageSrc, title }: PageHeaderProps) => {
 
       <div className="relative w-full h-full">
         <div className="z-20 h-full w-full absolute bg-neutral-900/75"></div>
-        <Image src={bgImageSrc} alt="header" fill className="z-10 object-cover" />
+        <Image src={bgImageSrc} alt="header" fill className="z-10 object-cover" priority />
       </div>
     </div>
   );

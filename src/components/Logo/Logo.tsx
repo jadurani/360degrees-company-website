@@ -17,10 +17,10 @@ export const Logo = ({ topDown = false}: LogoProps) => {
     return (
       <>
         <div className="inline-block lg:hidden">
-          <Image src={logoDesktopWhite} alt="logo" />
+          <Image src={logoDesktopWhite} alt="logo" priority />
         </div>
         <div className="hidden lg:inline-block">
-          <Image src={logoFull} alt="logo" />
+          <Image src={logoFull} alt="logo" priority />
         </div>
       </>
     )
