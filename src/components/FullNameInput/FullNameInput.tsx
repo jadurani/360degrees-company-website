@@ -30,7 +30,7 @@ const FullNameInput: React.FC<FullNameInputProps> = ({ onBlur }) => {
           leading-tight focus:outline-none focus:shadow-outline ${
             error ? "border-red" : ""
           }`}
-        placeholder="John Doe"
+        placeholder="Full Name"
         onBlur={(e) => handleBlur(e.target.value)}
       />
       <p className="absolute bottom-1 pl-4 text-red text-body2">{error}</p>

@@ -32,7 +32,7 @@ const MessageTextarea: React.FC<MessageTextareaProps> = ({ onBlur }) => {
           leading-tight focus:outline-none focus:shadow-outline ${
             error ? "border-red" : ""
           }`}
-        placeholder="Enter your message..."
+        placeholder="Hi, I would like to inquire about...."
         onBlur={(e) => handleBlur(e.target.value)}
         rows={4}
       />
