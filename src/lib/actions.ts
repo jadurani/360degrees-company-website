@@ -27,8 +27,9 @@ export const saveToSpreadsheet = async (row: string[] | Record<string, string>) 
     await doc.loadInfo();
 
     const sheet = doc.sheetsByIndex[SHEET_ID];
-    const r = await sheet.addRow(row);
+    await sheet.addRow(row);
+    return { success: true, message: 'Successfully saved data'}
   } catch (e) {
-    console.error('Error: ', e);
+    return { success: false, message: 'Failed to save data'}
   }
 };

@@ -13,7 +13,7 @@ const MobileNumberInput: React.FC<MobileNumberInputProps> = ({ onBlur }) => {
 
     if (value.trim() === "") {
       setError("Mobile number is required");
-    } else if (!/^\+?\d{10,11}$/.test(value)) {
+    } else if (!/^\+?\d{10,12}$/.test(value)) {
       setError("Invalid mobile number format");
     } else {
       setError(null);
