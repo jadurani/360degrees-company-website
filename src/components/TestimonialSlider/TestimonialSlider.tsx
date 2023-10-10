@@ -51,7 +51,7 @@ export const TestimonialSlider = ({
 
       <ol className="mx-2">
         {testiList?.map((testi, idx) => (
-          <li key={idx} hidden={idx != selectedOption}>
+          <li key={idx} hidden={idx != selectedOption} className="max-w-3xl">
             <Testimonial person={testi.person} statement={testi.statement} />
           </li>
         ))}

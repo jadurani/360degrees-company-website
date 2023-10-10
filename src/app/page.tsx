@@ -226,6 +226,14 @@ export default function Home() {
           <div className="flex gap-4 flex-wrap justify-center">
             <TestimonialSlider testiList={TESTIMONIALS} />
           </div>
+
+          <div className="flex mt-8">
+          <Link
+            href="/testimonials"
+            className="text-neutral-0 text-h5 font-semibold mx-auto font-body">
+            see more
+          </Link>
+        </div>
         </div>
       </section>
 

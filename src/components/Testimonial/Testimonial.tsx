@@ -15,38 +15,23 @@ export interface TestimonialProps {
 }
 
 const getStatementEl = (statement: string) => (
-  <div className="relative">
-    <div className="relative z-10 text-center lg:text-left lg:px-4">{statement}</div>
+  <div className="relative basis-3/4">
+    <div className="relative z-10 text-justify px-4 whitespace-pre-line">{statement}</div>
     <Image src={quoteIcon} alt="quote" className="absolute z-0 top-0 left-0" />
   </div>
 );
 
-const getPositionAndCompanyStr = (person: Person) => {
-  if (person.company && person.position) {
-    return `${person.position}, ${person.company}`
-  }
-
-  if (person.company) {
-    return person.company
-  }
-
-  if (person.position) {
-    return person.position
-  }
-
-  return null
-}
-
 export const Testimonial = (props: TestimonialProps) => {
   const { person, date, statement } = props;
+  const longTestimonial = statement.length >= 300; // kind of random limit based on the sample short testimonials Rachel gave me
 
-  const positionCompany = getPositionAndCompanyStr(person);
   return (
-    <div className="w-full h-full bg-neutral-50 rounded p-6 font-body flex flex-col lg:flex-row-reverse gap-4 max-w-2xl">
+    <div className="w-full h-full bg-neutral-100 rounded p-6 font-body flex flex-col lg:flex-row-reverse gap-4">
       {getStatementEl(statement)}
-      <ul className="text-center self-center lg:text-right lg:w-4/5">
+      <ul className={`text-center ${longTestimonial ? 'lg:self-start' : 'self-center'} lg:text-right lg:basis-1/3`}>
         <li className="font-bold">{person.name}</li>
-        {positionCompany && <li>{positionCompany}</li>}
+        {person.position && <li className="text-body1">{person.position}</li>}
+        {person.company && <li className="text-body1">{person.company}</li>}
         {date && <li>{date}</li>}
       </ul>
     </div>

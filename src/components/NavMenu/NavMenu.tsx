@@ -30,6 +30,10 @@ const NAV_LINKS: NavLink[] = [
     path: "projects",
   },
   {
+    label: "Testimonials",
+    path: "testimonials",
+  },
+  {
     label: "Contact Us",
     path: "contact-us",
   },
