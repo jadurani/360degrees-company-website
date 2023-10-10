@@ -11,15 +11,24 @@ import ContactForm, {
 import atSignIcon from "@assets/icons/at-sign.svg";
 import mapIcon from "@assets/icons/map.svg";
 import phoneIcon from "@assets/icons/phone.svg";
+import { saveToSpreadsheet } from "@lib/actions";
+import { useState } from "react";
 
 export default function ContactUs() {
-  const submitted = false;
-  const success = false;
-  // const submitted = true;
-  // const success = true;
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
 
-  const handleSubmit = (formData: ContactFormData) => {
-    console.log({ formData });
+  const handleSubmit = async (formData: ContactFormData) => {
+    setLoading(true);
+    const rowData = [
+      formData.fullName,
+      formData.email,
+      formData.mobileNumber,
+      formData.message,
+    ];
+    const result = await saveToSpreadsheet(rowData);
+    setSuccess(result.success);
+    setLoading(false)
   };
 
   return (
@@ -33,12 +42,14 @@ export default function ContactUs() {
         title="Contact Us"
       />
 
-      <div className="flex justify-center items-stretch bg-neutral-50 sm:py-8 md:py-16">
+      <div className="flex justify-center items-stretch md:bg-neutral-50 sm:py-8 md:py-16">
         {/* contact details */}
         <div className="lg:relative hidden lg:block lg:w-2/5">
-        <div className="absolute w-full flex flex-col gap-4 items-center justify-center top-1/2 -translate-y-1/3 z-30 -mt-4 text-neutral-50">
+          <div className="absolute w-full flex flex-col gap-4 items-center justify-center top-1/2 -translate-y-1/3 z-30 -mt-4 text-neutral-50">
             <div className="text-h3 lg:text-h4 font-header font-bold mx-auto">
-              360DEGREES <br/>SYSTEMS <br/>CORPORATION
+              360DEGREES <br />
+              SYSTEMS <br />
+              CORPORATION
             </div>
 
             <ul className="font-body">
@@ -90,11 +101,17 @@ export default function ContactUs() {
         </div>
 
         {/* form and success  */}
-        <div className="bg-neutral-0 px-8 md:w-[450px] lg:w-2/5 py-6">
-          {!submitted && <ContactForm onSubmit={handleSubmit} />}
+        <div className="bg-neutral-0 px-8 md:w-[450px] h-[640px] py-6">
+          {loading && (
+            <div className="h-full w-full font-header font-bold text-neutral-800 flex flex-col items-center justify-center gap-1 text-center">
+              <div className="text-h4 my-1">Sending...</div>
+            </div>
+          )}
 
-          {submitted && success && (
-            <div className="font-header font-bold text-neutral-800 flex flex-col items-center justify-center gap-1 text-center">
+          {!loading && !success && <ContactForm onSubmit={handleSubmit} />}
+
+          {!loading && success && (
+            <div className="h-full w-full font-header font-bold text-neutral-800 flex flex-col items-center justify-center gap-1 text-center">
               <Image src={successCheckMark} alt="Success" />
               <div className="text-h4 my-1">Message sent!</div>
               <div className="text-h6">

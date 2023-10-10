@@ -8,9 +8,12 @@ const MobileNumberInput: React.FC<MobileNumberInputProps> = ({ onBlur }) => {
   const [error, setError] = useState<string | null>(null);
 
   const handleBlur = (value: string) => {
+    // TO DO: modify
+    // value = value.replace(/\s+/g, '')
+
     if (value.trim() === "") {
       setError("Mobile number is required");
-    } else if (!/^\d{10,11}$/.test(value)) {
+    } else if (!/^\+?\d{10,12}$/.test(value)) {
       setError("Invalid mobile number format");
     } else {
       setError(null);
@@ -19,7 +22,7 @@ const MobileNumberInput: React.FC<MobileNumberInputProps> = ({ onBlur }) => {
   };
 
   return (
-    <div className="mb-4">
+    <div className="pb-6 relative">
       <label
         className={`pl-4 block text-neutral-600 uppercase font-header font-bold mb-1 ${
           error ? "text-red" : ""
@@ -28,15 +31,15 @@ const MobileNumberInput: React.FC<MobileNumberInputProps> = ({ onBlur }) => {
         Mobile Number
       </label>
       <input
-        type="text"
+        type="tel"
         className={`appearance-none border-2 w-full py-2 px-3 text-neutral-600
           leading-tight focus:outline-none focus:shadow-outline ${
             error ? "border-red" : ""
           }`}
-        placeholder="1234567890"
+        placeholder="+639XXXXXXXXX"
         onBlur={(e) => handleBlur(e.target.value)}
       />
-      {error && <p className="pl-4 text-red text-body2">{error}</p>}
+      <p className="absolute bottom-1 pl-4 text-red text-body2">{error}</p>
     </div>
   );
 };

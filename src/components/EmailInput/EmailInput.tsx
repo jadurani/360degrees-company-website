@@ -19,7 +19,7 @@ const EmailInput: React.FC<EmailInputProps> = ({ onBlur }) => {
   };
 
   return (
-    <div className="mb-4">
+    <div className="pb-6 relative">
       <label
         className={`pl-4 block text-neutral-600 uppercase font-header font-bold mb-1 ${
           error ? "text-red" : ""
@@ -28,15 +28,15 @@ const EmailInput: React.FC<EmailInputProps> = ({ onBlur }) => {
         Email
       </label>
       <input
-        type="text"
+        type="email"
         className={`appearance-none border-2 w-full py-2 px-3 text-neutral-600
           leading-tight focus:outline-none focus:shadow-outline ${
             error ? "border-red" : ""
           }`}
-        placeholder="email@example.com"
+        placeholder="email@address.com"
         onBlur={(e) => handleBlur(e.target.value)}
       />
-      {error && <p className="pl-4 text-red text-body2">{error}</p>}
+      <p className="absolute bottom-1 pl-4 text-red text-body2">{error}</p>
     </div>
   );
 };
