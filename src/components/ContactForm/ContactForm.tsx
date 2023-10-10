@@ -19,10 +19,10 @@ interface ContactFormProps {
 
 const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
   const [formData, setFormData] = useState<ContactFormData>({
-    fullName: '',
-    email: '',
-    mobileNumber: '',
-    message: '',
+    fullName: 'jadurani',
+    email: 'asd@asd.com',
+    mobileNumber: '+639099999999',
+    message: 'alskfjdalksjdfkjs',
   });
 
   const handleFormSubmit = (e: React.FormEvent) => {

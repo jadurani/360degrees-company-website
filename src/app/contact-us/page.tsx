@@ -11,6 +11,7 @@ import ContactForm, {
 import atSignIcon from "@assets/icons/at-sign.svg";
 import mapIcon from "@assets/icons/map.svg";
 import phoneIcon from "@assets/icons/phone.svg";
+import { saveToSpreadsheet } from "@lib/actions";
 
 export default function ContactUs() {
   const submitted = false;
@@ -18,8 +19,10 @@ export default function ContactUs() {
   // const submitted = true;
   // const success = true;
 
-  const handleSubmit = (formData: ContactFormData) => {
+  const handleSubmit = async (formData: ContactFormData) => {
     console.log({ formData });
+    const rowData = [ formData.fullName, formData.email, formData.mobileNumber, formData.message ]
+    return await saveToSpreadsheet(rowData);
   };
 
   return (
