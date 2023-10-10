@@ -19,7 +19,7 @@ const MessageTextarea: React.FC<MessageTextareaProps> = ({ onBlur }) => {
   };
 
   return (
-    <div className="pb-6 relative">
+    <div className="pb-4 relative">
       <label
         className={`pl-4 block text-neutral-600 uppercase font-header font-bold mb-1 ${
           error ? "text-red" : ""
