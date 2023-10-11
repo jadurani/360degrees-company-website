@@ -32,9 +32,9 @@ export default function WhatWeDo() {
       </section>
 
       {/* Offering 1 */}
-      <section className="mb-16 w-screen flex flex-col lg:flex-row bg-neutral-100">
+      <section className="lg:mb-16 w-screen flex flex-col lg:flex-row bg-neutral-100">
         {/* description */}
-        <div className="p-8 flex items-center justify-end basis-2/5">
+        <div className="px-8 py-16 lg:min-h-[560px] flex items-center justify-end basis-2/5">
           <div className="lg:w-[450px]">
             <Fact
               bgNum="01"
@@ -45,15 +45,15 @@ export default function WhatWeDo() {
           </div>
         </div>
 
-        <div className="basis-3/5">
+        <div className="basis-3/5 lg:max-w-5xl">
           <OfferingGallery {...OFFERINGS[0]} />
         </div>
       </section>
 
       {/* Offering 2 */}
-      <section className="mb-16 w-screen flex flex-col lg:flex-row-reverse">
+      <section className="lg:mb-16 w-screen flex flex-col lg:flex-row-reverse">
         {/* description */}
-        <div className="p-8 flex items-center justify-start basis-2/5 lg:pl-16">
+        <div className="px-8 py-16 lg:min-h-[560px] flex items-center justify-start basis-2/5 lg:pl-16">
           <div className="lg:w-[450px]">
             <Fact
               bgNum="02"
@@ -64,15 +64,15 @@ export default function WhatWeDo() {
           </div>
         </div>
 
-        <div className="basis-3/5">
+        <div className="basis-3/5 lg:max-w-5xl">
           <OfferingGallery {...OFFERINGS[1]} />
         </div>
       </section>
 
       {/* Offering 3 */}
-      <section className="mb-16 w-screen flex flex-col lg:flex-row bg-neutral-100">
+      <section className="lg:mb-16 w-screen flex flex-col lg:flex-row bg-neutral-100">
         {/* description */}
-        <div className="p-8 flex items-center justify-end basis-2/5">
+        <div className="px-8 py-16 lg:min-h-[560px] flex items-center justify-end basis-2/5">
           <div className="lg:w-[450px]">
             <Fact
               bgNum="03"
@@ -83,15 +83,15 @@ export default function WhatWeDo() {
           </div>
         </div>
 
-        <div className="basis-3/5">
+        <div className="basis-3/5 lg:max-w-5xl">
           <OfferingGallery {...OFFERINGS[2]} />
         </div>
       </section>
 
       {/* Offering 2 */}
-      <section className="mb-16 w-screen flex flex-col lg:flex-row-reverse">
+      <section className="lg:mb-16 w-screen flex flex-col lg:flex-row-reverse">
         {/* description */}
-        <div className="p-8 flex items-center justify-start basis-2/5 lg:pl-16">
+        <div className="px-8 py-16 lg:min-h-[560px] flex items-center justify-start basis-2/5 lg:pl-16">
           <div className="lg:w-[450px]">
             <Fact
               bgNum="04"
@@ -102,15 +102,15 @@ export default function WhatWeDo() {
           </div>
         </div>
 
-        <div className="basis-3/5">
+        <div className="basis-3/5 lg:max-w-5xl">
           <OfferingGallery {...OFFERINGS[3]} />
         </div>
       </section>
 
       {/* Offering 5 */}
-      <section className="mb-16 w-screen flex flex-col lg:flex-row bg-neutral-100">
+      <section className="lg:mb-16 w-screen flex flex-col lg:flex-row bg-neutral-100">
         {/* description */}
-        <div className="p-8 flex items-center justify-end basis-2/5">
+        <div className="px-8 py-16 lg:min-h-[560px] flex items-center justify-end basis-2/5">
           <div className="lg:w-[450px]">
             <Fact
               bgNum="05"
@@ -121,7 +121,7 @@ export default function WhatWeDo() {
           </div>
         </div>
 
-        <div className="basis-3/5">
+        <div className="basis-3/5 lg:max-w-5xl">
           <OfferingGallery {...OFFERINGS[4]} />
         </div>
       </section>
