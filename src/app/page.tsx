@@ -1,6 +1,6 @@
 import { Footer } from "@components/Footer/Footer";
 import Image from "next/image";
-import passionImg from "@assets/images/unsplash_TamMbr4okv4.png";
+import offeringPreviewImg from "@assets/images/what-we-do-preview.jpg";
 import { ProjectThumbnail } from "@components/ProjectThumbnail/ProjectThumbnail";
 import Link from "next/link";
 import styles from "@app/Home.module.css";
@@ -8,7 +8,7 @@ import { TestimonialSlider } from "@components/TestimonialSlider/TestimonialSlid
 import { TESTIMONIALS } from "@components/TestimonialSlider/TestimonialSlider.stories";
 import { NavBar } from "@components/NavBar/NavBar";
 import { COMPLETED_PROJECTS } from "./projects/completed-projects.constant";
-import { Fact } from "@components/Fact/Fact";
+
 
 const CLIENT_LOGOS = [
   {
@@ -150,8 +150,8 @@ export default function Home() {
         </h1>
         <div className="flex mt-4 gap-4 justify-center items-center mx-auto py-4">
           <Image
-            src={passionImg}
-            alt="sample work"
+            src={offeringPreviewImg}
+            alt="What we do"
             className="hidden lg:max-w-md lg:block"
           />
 
