@@ -8,6 +8,7 @@ import { TestimonialSlider } from "@components/TestimonialSlider/TestimonialSlid
 import { TESTIMONIALS } from "@components/TestimonialSlider/TestimonialSlider.stories";
 import { NavBar } from "@components/NavBar/NavBar";
 import { COMPLETED_PROJECTS } from "./projects/completed-projects.constant";
+import { Fact } from "@components/Fact/Fact";
 
 const CLIENT_LOGOS = [
   {
@@ -147,25 +148,40 @@ export default function Home() {
         <h1 className="font-header text-h3 text-center font-bold">
           What We Do
         </h1>
-        <div className="flex gap-4 justify-center items-center mx-auto max-w-6xl py-4">
+        <div className="flex mt-4 gap-4 justify-center items-center mx-auto py-4">
           <Image
             src={passionImg}
             alt="sample work"
             className="hidden lg:max-w-md lg:block"
           />
 
-          <div className="px-4 lg:max-w-md">
-            <p className="py-4">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-              eget augue at lorem cursus ultrices a finibus enim. Fusce blandit
-              sem odio, ut maximus turpis tempor sed. Lorem ipsum dolor sit
-              amet, consectetur adipiscing elit.
-            </p>
-            <p className="py-4">
-              Fusce eget augue at lorem cursus ultrices a finibus enim. Fusce
-              blandit sem odio, ut maximus turpis tempor sed. Lorem ipsum dolor
-              sit amet, consectetur adipiscing elit.
-            </p>
+          <div className="px-4">
+            <ul>
+              <li className="flex my-2 gap-4 font-header font-bold text-h4">
+                <span className="text-primary-600 basis-1/12 text-center">01</span>
+                <span className="text-neutral-800 basis-11/12">Acoustic</span>
+              </li>
+              <li className="flex my-2 gap-4 font-header font-bold text-h4">
+                <span className="text-primary-600 basis-1/12 text-center">02</span>
+                <span className="text-neutral-800 basis-11/12">Carpets</span>
+              </li>
+              <li className="flex my-2 gap-4 font-header font-bold text-h4">
+                <span className="text-primary-600 basis-1/12 text-center">03</span>
+                <span className="text-neutral-800 basis-11/12">Accent & Seating Systems</span>
+              </li>
+              <li className="flex my-2 gap-4 font-header font-bold text-h4">
+                <span className="text-primary-600 basis-1/12 text-center">04</span>
+                <span className="text-neutral-800 basis-11/12">Systems Furniture</span>
+              </li>
+              <li className="flex my-2 gap-4 font-header font-bold text-h4">
+                <span className="text-primary-600 basis-1/12 text-center">05</span>
+                <span className="text-neutral-800 basis-11/12">Specialized Features</span>
+              </li>
+              <li className="flex my-2 gap-4 font-header font-bold text-h4">
+                <span className="text-primary-600 basis-1/12 text-center">06</span>
+                <span className="text-neutral-800 basis-11/12">Fit-Out Services</span>
+              </li>
+            </ul>
           </div>
         </div>
 
