@@ -38,9 +38,9 @@ export const Footer = () => (
             <a
               className="flex gap-2 items-center text-body2 my-1.5"
               target="_blank"
-              href="tel:+63 999 999 9999">
+              href="tel:+632 8556 6648">
               <Image src={phoneIcon} alt="tel" />
-              <span>+63 999 999 9999</span>
+              <span>+632 8556 6648</span>
             </a>
           </li>
           <li>

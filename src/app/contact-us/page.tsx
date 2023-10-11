@@ -57,9 +57,9 @@ export default function ContactUs() {
                 <a
                   className="flex gap-3 items-center text-body1 my-4"
                   target="_blank"
-                  href="tel:+63 999 999 9999">
+                  href="tel:+632 8556 6648">
                   <Image src={phoneIcon} alt="tel" />
-                  <span>+63 999 999 9999</span>
+                  <span>+632 8556 6648</span>
                 </a>
               </li>
               <li>
