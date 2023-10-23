@@ -127,22 +127,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* clients */}
-      <section className="py-14 px-8 w-screen bg-neutral-50">
-        <h1 className="font-header text-h3 text-center font-bold">
-          Our Clients
-        </h1>
-        <ul className="flex flex-wrap gap-2 md:gap-4 items-center justify-center mx-auto mt-8 max-w-6xl">
-          {CLIENT_LOGOS.map((client, idx) => (
-            <li
-              key={idx}
-              className="p-2 h-[100px] w-[75px] md:w-[150px] relative">
-              <Image src={client.url} alt={client.alt} fill sizes="800px" className="object-contain" />
-            </li>
-          ))}
-        </ul>
-      </section>
-
       {/* what we do */}
       <section className="py-14 px-8 w-screen">
         <h1 className="font-header text-h3 text-center font-bold">
@@ -253,13 +237,26 @@ export default function Home() {
         </div>
       </section>
 
+      {/* clients */}
+      <section className="py-14 px-8 w-screen bg-neutral-50">
+        <h1 className="font-header text-h3 text-center font-bold">
+          Our Clients
+        </h1>
+        <ul className="flex flex-wrap gap-2 md:gap-4 items-center justify-center mx-auto mt-8 max-w-6xl">
+          {CLIENT_LOGOS.map((client, idx) => (
+            <li
+              key={idx}
+              className="p-2 h-[100px] w-[75px] md:w-[150px] relative">
+              <Image src={client.url} alt={client.alt} fill sizes="800px" className="object-contain" />
+            </li>
+          ))}
+        </ul>
+      </section>
+
       {/* Contact us */}
       <section className="py-24 px-8 w-screen flex flex-col items-center">
         <div className="text-h2 text-neutral-900 font-header font-bold">
           Want to have work done?
-        </div>
-        <div className="text-h6 text-neutral-800 font-header font-bold">
-          Some more text here enticing the user to click the button below
         </div>
         <Link href="/contact-us" className="mt-8 uppercase py-4 px-12 bg-primary-500 text-neutral-50 font-semibold text-h5 font-body">
           Contact us
