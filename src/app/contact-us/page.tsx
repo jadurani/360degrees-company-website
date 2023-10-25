@@ -91,7 +91,7 @@ export default function ContactUs() {
           <div className="relative w-full h-full">
             <div className="z-20 h-full w-full absolute bg-neutral-900/75"></div>
             <Image
-              src="/images/contact-us-bg.png"
+              src="https://360degreessystemscorporation-25102023.imgix.net/images/contact-us-bg.png"
               alt="header"
               fill
               sizes="800px"

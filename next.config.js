@@ -16,4 +16,14 @@ module.exports = {
   experimental: {
     serverActions: true,
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "360degreessystemscorporation-25102023.imgix.net",
+        port: "",
+        pathname: "/images/**",
+      },
+    ],
+  },
 };
