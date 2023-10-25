@@ -14,7 +14,6 @@ export interface StoryViewerProps {
   photoUrls: string[];
 }
 
-
 const setNextItemIdx = (
   currIdx: number,
   arrLength: number,
@@ -44,8 +43,11 @@ const setPrevItemIdx = (
   }
 };
 
-
-export const StoryViewer = ({ name, location, photoUrls }: StoryViewerProps) => {
+export const StoryViewer = ({
+  name,
+  location,
+  photoUrls,
+}: StoryViewerProps) => {
   const [activeStoryIndex, setActiveStoryIndex] = useState(0);
   const arrLength = photoUrls.length;
 
@@ -68,24 +70,53 @@ export const StoryViewer = ({ name, location, photoUrls }: StoryViewerProps) => 
         <span style={{ textShadow: "0px 0px 16px #231F20" }}>{location}</span>
       </div>
 
-      <div className="px-3 font-header font-bold text-neutral-0 absolute z-40 bottom-3 my-2 text-h6 lg:text-h4" style={{ textShadow: "0px 0px 16px #231F20" }}>
+      <div
+        className="px-3 font-header font-bold text-neutral-0 absolute z-40 bottom-3 my-2 text-h6 lg:text-h4"
+        style={{ textShadow: "0px 0px 16px #231F20" }}>
         {name}
       </div>
 
       {/* Navigation by arrow */}
       <div className="flex gap-1 absolute z-40 bottom-3 right-3 ">
-        <StoryArrow direction="left" handleClick={() => setPrevItemIdx(activeStoryIndex, arrLength, setActiveStoryIndex)} />
-        <StoryArrow direction="right" handleClick={() => setNextItemIdx(activeStoryIndex, arrLength, setActiveStoryIndex)} />
+        <StoryArrow
+          direction="left"
+          handleClick={() =>
+            setPrevItemIdx(activeStoryIndex, arrLength, setActiveStoryIndex)
+          }
+        />
+        <StoryArrow
+          direction="right"
+          handleClick={() =>
+            setNextItemIdx(activeStoryIndex, arrLength, setActiveStoryIndex)
+          }
+        />
       </div>
 
       {/* Navigation by edge taps - mobile only */}
-      <button className="top-0 left-0 absolute z-30 h-full w-32 bg-transparent" onClick={() => setPrevItemIdx(activeStoryIndex, arrLength, setActiveStoryIndex)}></button>
-      <button className="top-0 right-0 absolute z-30 h-full w-32 bg-transparent" onClick={() => setNextItemIdx(activeStoryIndex, arrLength, setActiveStoryIndex)}></button>
+      <button
+        className="top-0 left-0 absolute z-30 h-full w-32 bg-transparent"
+        onClick={() =>
+          setPrevItemIdx(activeStoryIndex, arrLength, setActiveStoryIndex)
+        }></button>
+      <button
+        className="top-0 right-0 absolute z-30 h-full w-32 bg-transparent"
+        onClick={() =>
+          setNextItemIdx(activeStoryIndex, arrLength, setActiveStoryIndex)
+        }></button>
 
       {/* Story content goes here */}
       <div className="relative w-full h-full">
         <div className="z-20 h-full w-full absolute"></div>
-        <Image src={photoUrls[activeStoryIndex]} alt="header" fill className="z-10 object-contain lg:object-cover" />
+        {photoUrls.map((photoUrl, idx) => (
+          <Image
+            key={idx}
+            hidden={idx != activeStoryIndex}
+            src={photoUrl}
+            alt="header"
+            fill
+            className="z-10 object-contain lg:object-cover"
+          />
+        ))}
       </div>
     </div>
   );

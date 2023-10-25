@@ -58,7 +58,16 @@ export const OfferingGallery = ({ photoUrls }: OfferingGalleryProps) => {
       {/* Story content goes here */}
       <div className="relative w-full min-h-[500px] lg:min-h-full">
         <div className="z-20 h-full w-full absolute"></div>
-        <Image src={photoUrls[activeStoryIndex]} alt="" fill className="z-10 object-cover" />
+        {photoUrls.map((photoUrl, idx) => (
+          <Image
+            key={idx}
+            hidden={idx != activeStoryIndex}
+            src={photoUrl}
+            alt="header"
+            fill
+            className="z-10 object-cover"
+          />
+        ))}
       </div>
     </div>
   );
