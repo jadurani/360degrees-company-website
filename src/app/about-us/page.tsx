@@ -8,8 +8,8 @@ import { CORE_VALUES, MILESTONE_LIST } from "./contants";
 import { MilestoneItem } from "@components/MilestoneItem/MilestoneItem";
 import { Person } from "@components/Person/Person";
 import styles from "./AboutUs.module.css";
-import teamPhoto1 from "@assets/images/about-us/team-photo-1.jpg";
-import teamPhoto2 from "@assets/images/about-us/team-photo-2.jpg";
+import teamPhoto1 from "@assets/images/about-us/team-photo-1.png";
+import teamPhoto2 from "@assets/images/about-us/team-photo-2.png";
 
 export default function AboutUs() {
   return (
