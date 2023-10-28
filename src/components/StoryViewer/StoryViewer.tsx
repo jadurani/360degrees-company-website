@@ -11,7 +11,12 @@ export interface StoryViewerProps {
   /**
    * These are photo URLs
    */
-  photoUrls: string[];
+  photos: PhotoProps[];
+}
+
+export interface PhotoProps {
+  src: string;
+  blurDataUrl?: string;
 }
 
 const setNextItemIdx = (
@@ -46,16 +51,16 @@ const setPrevItemIdx = (
 export const StoryViewer = ({
   name,
   location,
-  photoUrls,
+  photos,
 }: StoryViewerProps) => {
   const [activeStoryIndex, setActiveStoryIndex] = useState(0);
-  const arrLength = photoUrls.length;
+  const arrLength = photos.length;
 
   return (
     <div className="relative w-full h-full">
       {/* Story Indicators */}
       <div className="absolute top-2 flex w-full gap-1 z-40 px-3">
-        {photoUrls.map((url, index) => (
+        {photos.map((url, index) => (
           <StoryIndicator
             key={index}
             idx={index}
@@ -107,11 +112,13 @@ export const StoryViewer = ({
       {/* Story content goes here */}
       <div className="relative w-full h-full">
         <div className="z-20 h-full w-full absolute"></div>
-        {photoUrls.map((photoUrl, idx) => (
+        {photos.map((photo, idx) => (
           <Image
             key={idx}
             hidden={idx != activeStoryIndex}
-            src={photoUrl}
+            src={photo.src}
+            placeholder="blur"
+            blurDataURL={photo.blurDataUrl}
             alt="header"
             fill
             className="z-10 object-contain lg:object-cover"

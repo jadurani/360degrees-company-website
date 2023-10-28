@@ -185,21 +185,21 @@ export default function Home() {
         <div className="flex flex-wrap gap-4 justify-center items-center mx-auto max-w-6xl py-4">
           <Link href={{ pathname: 'projects', query: { projectView: COMPLETED_PROJECTS[0].slug } }} className="w-64 h-64">
             <ProjectThumbnail
-              bgImageSrc={COMPLETED_PROJECTS[0].photoUrls[0]}
+              bgImageSrc={COMPLETED_PROJECTS[0].photos[0].src}
               title={COMPLETED_PROJECTS[0].name}
               location={COMPLETED_PROJECTS[0].location}
             />
           </Link>
           <Link href={{ pathname: 'projects', query: { projectView: COMPLETED_PROJECTS[1].slug } }} className="w-64 h-64">
             <ProjectThumbnail
-              bgImageSrc={COMPLETED_PROJECTS[1].photoUrls[0]}
+              bgImageSrc={COMPLETED_PROJECTS[1].photos[0].src}
               title={COMPLETED_PROJECTS[1].name}
               location={COMPLETED_PROJECTS[1].location}
             />
           </Link>
           <Link href={{ pathname: 'projects', query: { projectView: COMPLETED_PROJECTS[2].slug } }} className="w-64 h-64">
             <ProjectThumbnail
-              bgImageSrc={COMPLETED_PROJECTS[2].photoUrls[0]}
+              bgImageSrc={COMPLETED_PROJECTS[2].photos[0].src}
               title={COMPLETED_PROJECTS[2].name}
               location={COMPLETED_PROJECTS[2].location}
             />
