@@ -9,7 +9,7 @@ export function PreloadResources() {
 
   // React 18.3 does not yet include type definitions for ReactDOM.preload, ReactDOM.preconnect, and ReactDOM.preconnectDNS. You can use // @ts-ignore as a temporary solution to avoid type errors.
   // @ts-ignore
-  ReactDOM.preconnect(EXT_CDN);
+  ReactDOM.preconnect(EXT_CDN, { crossOrigin: 'anonymous' });
   // @ts-ignore
   ReactDOM.prefetchDNS(EXT_CDN);
 
