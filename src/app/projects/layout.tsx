@@ -6,11 +6,13 @@ import {
 import { useSearchParams } from "next/navigation";
 import { getProjectFromSlug } from "./completed-projects.constant";
 import { useEffect } from "react";
+import { PreloadResources } from "@app/preload-resources";
 
 export default function Layout(props: {
   allProjects: React.ReactNode,
   projectView: React.ReactNode
 }) {
+  PreloadResources()
   const searchParams = useSearchParams();
   const projectViewSlug = searchParams.get("projectView") ?? "";
   const projectDetails: StoryViewerProps | undefined =
