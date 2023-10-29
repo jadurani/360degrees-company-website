@@ -12,7 +12,7 @@ const getProjectPhotos = (projectPhotos: PhotoProps[]) =>
 
 async function getProjects() {
   const blurImagePromiseArray = COMPLETED_PROJECTS.map((project) =>
-    getProjectPhotos(project.photos)
+    getProjectPhotos([project.photos[0]])
   );
 
   const imagesWithBlurDataUrlsArray = await Promise.all(
@@ -35,7 +35,7 @@ async function getProjects() {
 }
 
 export default async function Projects() {
-  // const projects = await getProjects();
+  const projects = await getProjects();
 
   return (
     <>
@@ -52,7 +52,7 @@ export default async function Projects() {
       <section className="py-8 lg:py-14 px-8 w-screen container mx-auto max-w-6xl font-body text-neutral-800">
         <div className="flex">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mx-auto max-w-4xl py-6">
-            {COMPLETED_PROJECTS.map((project, index) => (
+            {projects.map((project, index) => (
               <Link
                 key={`project-${index}`}
                 className="w-64 h-64 text-left"
@@ -60,7 +60,7 @@ export default async function Projects() {
                 scroll={false}>
                 <ProjectThumbnail
                   bgImageSrc={`${project.photos[0].src}?w=512&fit=clip`}
-                  // bgImageDataURL={project.photos[0].blurDataUrl}
+                  bgImageDataURL={project.photos[0].blurDataUrl}
                   title={project.name}
                   location={project.location}
                 />
