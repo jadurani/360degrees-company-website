@@ -114,7 +114,9 @@ export const StoryViewer = ({
             src={photoUrl}
             alt="header"
             fill
+            sizes="(max-width: 1023px) 100vw, (min-width: 1024px) 1024px"
             className="z-10 object-contain lg:object-cover"
+            unoptimized
           />
         ))}
       </div>
