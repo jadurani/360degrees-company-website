@@ -11,7 +11,7 @@ import styles from "./AboutUs.module.css";
 import teamPhoto1 from "@assets/images/about-us/team-photo-1.png";
 import teamPhoto2 from "@assets/images/about-us/team-photo-2.png";
 
-export default function AboutUs() {
+export default async function AboutUs() {
   return (
     <>
       <div className="fixed w-full top-0 z-50">

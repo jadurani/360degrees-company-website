@@ -8,7 +8,7 @@ import { TestimonialSlider } from "@components/TestimonialSlider/TestimonialSlid
 import { TESTIMONIALS } from "@components/TestimonialSlider/TestimonialSlider.stories";
 import { NavBar } from "@components/NavBar/NavBar";
 import { COMPLETED_PROJECTS } from "./projects/completed-projects.constant";
-
+import getBase64ImageUrl from "@lib/generateBlurPlaceholder";
 
 const CLIENT_LOGOS = [
   {
@@ -89,7 +89,15 @@ const CLIENT_LOGOS = [
   },
 ];
 
-export default function Home() {
+
+
+export default async  function Home() {
+  const pageHeaderImage = {
+    src: '/images/page-headers/landing-page.png',
+    blurDataURL: ''
+  }
+  pageHeaderImage.blurDataURL = await getBase64ImageUrl(pageHeaderImage.src)
+
   return (
     <>
       <div className="fixed w-full top-0 z-50">
@@ -118,8 +126,10 @@ export default function Home() {
         <div className="relative w-full h-full">
           <div className="z-20 h-full w-full absolute bg-neutral-900/75"></div>
           <Image
-            src="/images/page-headers/landing-page.png"
+            src={pageHeaderImage.src}
             alt="360DEGREES SYSTEMS CORPORATION"
+            placeholder="blur"
+            blurDataURL={pageHeaderImage.blurDataURL}
             fill
             className="z-10 object-cover"
             priority
