@@ -1,15 +1,12 @@
 import logoMobileWhite from "@assets/icons/logo-mobile-white.svg";
 import logoFull from "@assets/icons/logo-full.svg";
 import logoDesktopWhite from "@assets/icons/logo-desktop-white.svg";
-// import logoDesktopDefault from "@assets/icons/logo-desktop-default.svg";
-// import logoMobileDefault from "@assets/icons/logo-mobile-default.svg";
 import Image from "next/image";
 
 
 interface LogoProps {
   topDown?: boolean;
 }
-
 
 export const Logo = ({ topDown = false}: LogoProps) => {
 
