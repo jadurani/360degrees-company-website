@@ -4,6 +4,7 @@ import globeIcon from "@assets/icons/globe.svg";
 import igIcon from "@assets/icons/instagram.svg";
 import liIcon from "@assets/icons/linkedin.svg";
 import mailIcon from "@assets/icons/mail.svg";
+import { getImageWithBlurPlaceholder } from "@lib/generateBlurPlaceholder";
 
 interface PersonProps {
   name: string;
@@ -16,14 +17,20 @@ interface PersonProps {
   linkedin?: string;
 }
 
-export const Person = (props: PersonProps) => {
+export const Person = async (props: PersonProps) => {
+  const blurDataURL = (await getImageWithBlurPlaceholder(props.photoSrc))
+    .blurDataURL;
+
   return (
     <div className="flex flex-col min-h-[570px] max-h-[670px] max-w-[320px]">
       <div className="flex-grow relative">
         <Image
           src={props.photoSrc}
           alt={props.name}
+          placeholder="blur"
+          blurDataURL={blurDataURL}
           className="object-cover"
+          sizes="(max-width: 640px) 20vw, (max-width: 1024px) 50vw, 33.3vw"
           fill
         />
       </div>

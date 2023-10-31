@@ -1,17 +1,30 @@
+import Image from "next/image";
+import quoteIcon from "@assets/icons/quote.svg";
 import { Footer } from "@components/Footer/Footer";
 import { PageHeader } from "@components/PageHeader/PageHeader";
 import { NavBar } from "@components/NavBar/NavBar";
-import Image from "next/image";
 import { Fact } from "@components/Fact/Fact";
-import quoteIcon from "@assets/icons/quote.svg";
 import { CORE_VALUES, MILESTONE_LIST } from "./contants";
 import { MilestoneItem } from "@components/MilestoneItem/MilestoneItem";
 import { Person } from "@components/Person/Person";
-import styles from "./AboutUs.module.css";
+import { getImageWithBlurPlaceholder } from "@lib/generateBlurPlaceholder";
 import teamPhoto1 from "@assets/images/about-us/team-photo-1.png";
 import teamPhoto2 from "@assets/images/about-us/team-photo-2.png";
 
 export default async function AboutUs() {
+  const trackRecordPhoto1 = await getImageWithBlurPlaceholder(
+    "https://360degreessystemscorporation-25102023.imgix.net/images/about-us/track-record-area.png?w=640&q=100&fit=clip"
+  );
+  const trackRecordPhoto2 = await getImageWithBlurPlaceholder(
+    "https://360degreessystemscorporation-25102023.imgix.net/images/about-us/track-record-carpet.png?w=640&q=100&fit=clip"
+  );
+  const trackRecordPhoto3 = await getImageWithBlurPlaceholder(
+    "https://360degreessystemscorporation-25102023.imgix.net/images/about-us/track-record-workstation.png?w=640&q=100&fit=clip"
+  );
+  const missionBgPhoto = await getImageWithBlurPlaceholder(
+    "/images/about-us/about-us-our-mission.jpg"
+  );
+
   return (
     <>
       <div className="fixed w-full top-0 z-50">
@@ -43,16 +56,15 @@ export default async function AboutUs() {
           with end-users and come up with products that work best for them
           combined with timely delivery and committed service.
         </p>
-
       </section>
 
       {/* mission */}
-      <section className={`py-14 lg:py-24 px-8 w-screen text-neutral-0 ${styles.missionSection}`}>
-        <div className="container mx-auto max-w-6xl">
-          <h1 className="relative font-header z-10 text-h2 text-center font-bold mb-6">
+      <section className="relative w-screen">
+        <div className="py-14 lg:py-24 px-8 container mx-auto max-w-6xl text-neutral-0">
+          <h1 className="relative font-header z-30 text-h2 text-center font-bold mb-6">
             Our Mission
           </h1>
-          <div className="relative leading-9 z-10 font-semibold text-h5 font-header text-left lg:px-4 mx-16 lg:mx-32">
+          <div className="relative leading-9 z-30 font-semibold text-h5 font-header text-left lg:px-4 mx-16 lg:mx-32">
             To revolutionize the construction industry by providing innovative
             and creative solutions for corporate and commercial spaces, call
             centers, and BPOs. We are committed to delivering reliable, fast,
@@ -60,6 +72,17 @@ export default async function AboutUs() {
             partnership-driven environments for our clients.
           </div>
         </div>
+
+        {/* background shade and image */}
+        <div className="top-0 left-0 z-20 h-full w-full absolute bg-neutral-900/75"></div>
+        <Image
+          {...missionBgPhoto}
+          placeholder="blur"
+          alt="360DEGREES SYSTEMS CORPORATION"
+          fill
+          className="top-0 left-0 z-10 object-cover object-top"
+          priority
+        />
       </section>
 
       {/* vision */}
@@ -116,9 +139,10 @@ export default async function AboutUs() {
           <div className="flex flex-col items-center justify-start text-center">
             <div className="relative w-64 h-64 mb-2">
               <Image
-                src="/images/about-us/track-record-area.png"
-                sizes="400px"
+                {...trackRecordPhoto1}
+                placeholder="blur"
                 fill
+                className="object-cover"
                 alt=""
               />
             </div>
@@ -137,9 +161,10 @@ export default async function AboutUs() {
           <div className="flex flex-col items-center justify-start text-center">
             <div className="relative w-64 h-64 mb-2">
               <Image
-                src="/images/about-us/track-record-carpet.png"
-                sizes="400px"
+                {...trackRecordPhoto2}
+                placeholder="blur"
                 fill
+                className="object-cover"
                 alt=""
               />
             </div>
@@ -158,9 +183,10 @@ export default async function AboutUs() {
           <div className="flex flex-col items-center justify-start text-center">
             <div className="relative w-64 h-64 mb-2">
               <Image
-                src="/images/about-us/track-record-workstation.png"
-                sizes="400px"
+                {...trackRecordPhoto3}
+                placeholder="blur"
                 fill
+                className="object-cover"
                 alt=""
               />
             </div>
@@ -210,7 +236,7 @@ export default async function AboutUs() {
           </div>
 
           <div className="flex flex-col-reverse lg:flex-col gap-4 max-w-2xl mx-auto mt-8">
-            <div className="relative min-w-xs w-full h-full">
+            <div className="relative min-w-xs w-full max-w-[680px] h-full max-h-[524px]">
               <Image src={teamPhoto2} alt="360degrees team" />
             </div>
             {/* <p>
@@ -229,7 +255,7 @@ export default async function AboutUs() {
           <h1 className="font-header text-h2 text-center font-bold">
             Our Milestones
           </h1>
-{/*
+          {/*
           <p className="font-body my-4">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
             quis dui posuere, euismod lorem sed, pharetra felis. Nam eleifend

@@ -1,4 +1,4 @@
-import getBase64ImageUrl from "@lib/generateBlurPlaceholder";
+import { getBase64ImageUrl }from "@lib/generateBlurPlaceholder";
 import Image from "next/image";
 
 interface PageHeaderProps {

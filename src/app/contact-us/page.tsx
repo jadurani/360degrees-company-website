@@ -6,8 +6,11 @@ import ContactForm from "@components/ContactForm/ContactForm";
 import atSignIcon from "@assets/icons/at-sign.svg";
 import mapIcon from "@assets/icons/map.svg";
 import phoneIcon from "@assets/icons/phone.svg";
+import { getImageWithBlurPlaceholder } from "@lib/generateBlurPlaceholder";
 
-export default function ContactUs() {
+export default async function ContactUs() {
+  const contactDetailsBGPhoto = await getImageWithBlurPlaceholder('/images/contact-us-bg.png')
+
   return (
     <>
       <div className="fixed w-full top-0 z-50">
@@ -68,7 +71,8 @@ export default function ContactUs() {
           <div className="relative w-full h-full">
             <div className="z-20 h-full w-full absolute bg-neutral-900/75"></div>
             <Image
-              src="https://360degreessystemscorporation-25102023.imgix.net/images/contact-us-bg.png"
+              {...contactDetailsBGPhoto}
+              placeholder="blur"
               alt="header"
               fill
               sizes="800px"

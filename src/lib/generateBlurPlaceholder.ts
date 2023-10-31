@@ -3,7 +3,22 @@ import { getPlaiceholder } from 'plaiceholder'
 
 const cache = new Map<string, string>()
 
-export default async function getBase64ImageUrl(imageSrc: string): Promise<string> {
+type ImageProps = {
+  src: string;
+  blurDataURL?: string;
+}
+
+export async function getImageWithBlurPlaceholder(imageSrc: string): Promise<ImageProps> {
+  const blurDataURL = await getBase64ImageUrl(imageSrc)
+
+  return {
+    src: imageSrc,
+    blurDataURL
+  }
+}
+
+
+export async function getBase64ImageUrl(imageSrc: string): Promise<string> {
   try {
     let url = cache.get(imageSrc)
     if (url) {

@@ -8,7 +8,7 @@ import { TestimonialSlider } from "@components/TestimonialSlider/TestimonialSlid
 import { TESTIMONIALS } from "@components/TestimonialSlider/TestimonialSlider.stories";
 import { NavBar } from "@components/NavBar/NavBar";
 import { COMPLETED_PROJECTS } from "./projects/completed-projects.constant";
-import getBase64ImageUrl from "@lib/generateBlurPlaceholder";
+import { getBase64ImageUrl }from "@lib/generateBlurPlaceholder";
 
 const CLIENT_LOGOS = [
   {
@@ -88,8 +88,6 @@ const CLIENT_LOGOS = [
     alt: "Universal Robina",
   },
 ];
-
-
 
 export default async  function Home() {
   const pageHeaderImage = {
