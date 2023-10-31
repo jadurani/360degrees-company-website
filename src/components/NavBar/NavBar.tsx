@@ -58,8 +58,8 @@ export const NavBar = () => {
 
       <div
         className={`
-          ${isMenuOpen ? "top-0" : "-top-full"}
-          fixed left-0 w-screen h-screen transition-all duration-700 ease-in-out overflow-hidden z-10`}>
+          ${isMenuOpen ? "top-0" : "-top-[120%]"}
+          fixed left-0 w-screen h-screen transition-[top] duration-700 ease-in-out overflow-hidden z-10`}>
         <NavMenu toggleMenu={setIsMenuOpen} />
       </div>
     </>
