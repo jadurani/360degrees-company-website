@@ -4,10 +4,15 @@ import { NavBar } from "@components/NavBar/NavBar";
 import { OfferingGallery } from "@components/OfferingGallery/OfferingGallery";
 import { PageHeader } from "@components/PageHeader/PageHeader";
 import { OFFERINGS } from "./offerings.constant";
-import { ImageProps, getImageWithBlurPlaceholder } from "@lib/generateBlurPlaceholder";
+import {
+  ImageProps,
+  getImageWithBlurPlaceholder,
+} from "@lib/generateBlurPlaceholder";
 
 const getPhotoPromises = (photos: ImageProps[]) =>
-  photos.map((photo) => getImageWithBlurPlaceholder(`${photo.src}?w=1024&fit=clip&q=100`));
+  photos.map((photo) =>
+    getImageWithBlurPlaceholder(`${photo.src}?w=1024&fit=clip&q=100`)
+  );
 
 const getOfferingsWithPlaceholders = async () => {
   const blurImagePromiseArray = OFFERINGS.map((offering) =>
@@ -24,16 +29,16 @@ const getOfferingsWithPlaceholders = async () => {
     return {
       ...offering,
       photos: offering.photos.map((photo, idx2) => ({
-        ...imagesWithBlur[idx][idx2]
+        ...imagesWithBlur[idx][idx2],
       })),
     };
   });
 
   return updatedOfferings;
-}
+};
 
 export default async function WhatWeDo() {
-  const offerings = await getOfferingsWithPlaceholders()
+  const offerings = await getOfferingsWithPlaceholders();
 
   return (
     <>

@@ -116,31 +116,47 @@ export const OFFERINGS: OfferingGalleryProps[] = [
     slug: 'offering-furniture',
     photos: [
       {
-        src: 'https://360degreessystemscorporation-25102023.imgix.net/images/offering-furniture/furniture-1.png',
+        src: 'https://360degreessystemscorporation-25102023.imgix.net/images/offering-furniture/30.jpg',
         blurDataURL: ''
       },
       {
-        src: 'https://360degreessystemscorporation-25102023.imgix.net/images/offering-furniture/furniture-2.png',
+        src: 'https://360degreessystemscorporation-25102023.imgix.net/images/offering-furniture/366-015.jpg',
         blurDataURL: ''
       },
       {
-        src: 'https://360degreessystemscorporation-25102023.imgix.net/images/offering-furniture/furniture-3.png',
+        src: 'https://360degreessystemscorporation-25102023.imgix.net/images/offering-furniture/366-028.jpg',
         blurDataURL: ''
       },
       {
-        src: 'https://360degreessystemscorporation-25102023.imgix.net/images/offering-furniture/furniture-4.png',
+        src: 'https://360degreessystemscorporation-25102023.imgix.net/images/offering-furniture/366-035.jpg',
         blurDataURL: ''
       },
       {
-        src: 'https://360degreessystemscorporation-25102023.imgix.net/images/offering-furniture/furniture-5.png',
+        src: 'https://360degreessystemscorporation-25102023.imgix.net/images/offering-furniture/366-042.jpg',
         blurDataURL: ''
       },
       {
-        src: 'https://360degreessystemscorporation-25102023.imgix.net/images/offering-furniture/furniture-6.png',
+        src: 'https://360degreessystemscorporation-25102023.imgix.net/images/offering-furniture/366-05.jpg',
         blurDataURL: ''
       },
       {
-        src: 'https://360degreessystemscorporation-25102023.imgix.net/images/offering-furniture/furniture-7.png',
+        src: 'https://360degreessystemscorporation-25102023.imgix.net/images/offering-furniture/DHL2.jpg',
+        blurDataURL: ''
+      },
+      {
+        src: 'https://360degreessystemscorporation-25102023.imgix.net/images/offering-furniture/MT-GAEA-Z-F008A-OK-C.jpg',
+        blurDataURL: ''
+      },
+      {
+        src: 'https://360degreessystemscorporation-25102023.imgix.net/images/offering-furniture/PT-H6-09.jpg',
+        blurDataURL: ''
+      },
+      {
+        src: 'https://360degreessystemscorporation-25102023.imgix.net/images/offering-furniture/Picture13.jpg',
+        blurDataURL: ''
+      },
+      {
+        src: 'https://360degreessystemscorporation-25102023.imgix.net/images/offering-furniture/raffles27f12.jpg',
         blurDataURL: ''
       },
     ]
