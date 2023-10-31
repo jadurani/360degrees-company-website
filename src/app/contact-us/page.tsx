@@ -1,36 +1,13 @@
-"use client";
-
 import { Footer } from "@components/Footer/Footer";
 import { NavBar } from "@components/NavBar/NavBar";
 import { PageHeader } from "@components/PageHeader/PageHeader";
-import successCheckMark from "@assets/icons/icon-checkmark-success.svg";
 import Image from "next/image";
-import ContactForm, {
-  ContactFormData,
-} from "@components/ContactForm/ContactForm";
+import ContactForm from "@components/ContactForm/ContactForm";
 import atSignIcon from "@assets/icons/at-sign.svg";
 import mapIcon from "@assets/icons/map.svg";
 import phoneIcon from "@assets/icons/phone.svg";
-import { saveToSpreadsheet } from "@lib/actions";
-import { useState } from "react";
 
 export default function ContactUs() {
-  const [loading, setLoading] = useState(false);
-  const [success, setSuccess] = useState(false);
-
-  const handleSubmit = async (formData: ContactFormData) => {
-    setLoading(true);
-    const rowData = [
-      formData.fullName,
-      formData.email,
-      formData.mobileNumber,
-      formData.message,
-    ];
-    const result = await saveToSpreadsheet(rowData);
-    setSuccess(result.success);
-    setLoading(false)
-  };
-
   return (
     <>
       <div className="fixed w-full top-0 z-50">
@@ -100,26 +77,8 @@ export default function ContactUs() {
           </div>
         </div>
 
-        {/* form and success  */}
-        <div className="bg-neutral-0 px-8 md:w-[450px] h-[640px] py-6">
-          {loading && (
-            <div className="h-full w-full font-header font-bold text-neutral-800 flex flex-col items-center justify-center gap-1 text-center">
-              <div className="text-h4 my-1">Sending...</div>
-            </div>
-          )}
 
-          {!loading && !success && <ContactForm onSubmit={handleSubmit} />}
-
-          {!loading && success && (
-            <div className="h-full w-full font-header font-bold text-neutral-800 flex flex-col items-center justify-center gap-1 text-center">
-              <Image src={successCheckMark} alt="Success" />
-              <div className="text-h4 my-1">Message sent!</div>
-              <div className="text-h6">
-                Our team will contact you as soon as possible.
-              </div>
-            </div>
-          )}
-        </div>
+        <ContactForm />
       </div>
 
       <Footer />

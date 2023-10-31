@@ -1,5 +1,10 @@
-/** @type {import('next').NextConfig} */
-module.exports = {
+// @ts-check
+import withPlaiceholder from "@plaiceholder/next";
+
+/**
+ * @type {import('next').NextConfig}
+ */
+const config = {
   webpack: (config, { isServer }) => {
     if (!isServer) {
       config.resolve.fallback.fs = false;
@@ -11,6 +16,7 @@ module.exports = {
     return config;
   },
   env: {
+    // @ts-ignore
     GOOGLE_SERVICE_PRIVATE_KEY: process.env.GOOGLE_SERVICE_PRIVATE_KEY,
   },
   experimental: {
@@ -27,3 +33,5 @@ module.exports = {
     ],
   },
 };
+
+export default withPlaiceholder(config);
