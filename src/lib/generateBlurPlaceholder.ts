@@ -3,7 +3,7 @@ import { getPlaiceholder } from 'plaiceholder'
 
 const cache = new Map<string, string>()
 
-type ImageProps = {
+export type ImageProps = {
   src: string;
   blurDataURL?: string;
 }

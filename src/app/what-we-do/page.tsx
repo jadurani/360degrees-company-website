@@ -4,8 +4,37 @@ import { NavBar } from "@components/NavBar/NavBar";
 import { OfferingGallery } from "@components/OfferingGallery/OfferingGallery";
 import { PageHeader } from "@components/PageHeader/PageHeader";
 import { OFFERINGS } from "./offerings.constant";
+import { ImageProps, getImageWithBlurPlaceholder } from "@lib/generateBlurPlaceholder";
 
-export default function WhatWeDo() {
+const getPhotoPromises = (photos: ImageProps[]) =>
+  photos.map((photo) => getImageWithBlurPlaceholder(`${photo.src}?w=1024&fit=clip&q=100`));
+
+const getOfferingsWithPlaceholders = async () => {
+  const blurImagePromiseArray = OFFERINGS.map((offering) =>
+    getPhotoPromises(offering.photos)
+  );
+
+  const imagesWithBlur = await Promise.all(
+    blurImagePromiseArray.map((innerPromiseArray) =>
+      Promise.all(innerPromiseArray)
+    )
+  );
+
+  const updatedOfferings = OFFERINGS.map((offering, idx) => {
+    return {
+      ...offering,
+      photos: offering.photos.map((photo, idx2) => ({
+        ...imagesWithBlur[idx][idx2]
+      })),
+    };
+  });
+
+  return updatedOfferings;
+}
+
+export default async function WhatWeDo() {
+  const offerings = await getOfferingsWithPlaceholders()
+
   return (
     <>
       <div className="fixed w-full top-0 z-50">
@@ -46,7 +75,7 @@ export default function WhatWeDo() {
         </div>
 
         <div className="basis-3/5 lg:max-w-5xl">
-          <OfferingGallery {...OFFERINGS[0]} />
+          <OfferingGallery {...offerings[0]} />
         </div>
       </section>
 
@@ -65,7 +94,7 @@ export default function WhatWeDo() {
         </div>
 
         <div className="basis-3/5 lg:max-w-5xl">
-          <OfferingGallery {...OFFERINGS[1]} />
+          <OfferingGallery {...offerings[1]} />
         </div>
       </section>
 
@@ -84,7 +113,7 @@ export default function WhatWeDo() {
         </div>
 
         <div className="basis-3/5 lg:max-w-5xl">
-          <OfferingGallery {...OFFERINGS[2]} />
+          <OfferingGallery {...offerings[2]} />
         </div>
       </section>
 
@@ -103,7 +132,7 @@ export default function WhatWeDo() {
         </div>
 
         <div className="basis-3/5 lg:max-w-5xl">
-          <OfferingGallery {...OFFERINGS[3]} />
+          <OfferingGallery {...offerings[3]} />
         </div>
       </section>
 
@@ -122,7 +151,7 @@ export default function WhatWeDo() {
         </div>
 
         <div className="basis-3/5 lg:max-w-5xl">
-          <OfferingGallery {...OFFERINGS[4]} />
+          <OfferingGallery {...offerings[4]} />
         </div>
       </section>
 
