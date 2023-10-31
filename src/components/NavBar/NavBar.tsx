@@ -43,10 +43,9 @@ export const NavBar = () => {
     <>
       <header
         className={`w-screen ${
-          isTransparent ? "bg-opacity-90" : "bg-neutral-900"
-        } transition-all duration-300 ease-in-out`}>
-        <div
-          className={`container max-w-6xl mx-auto py-2 lg:py-6 px-4 flex justify-between items-center lg:items-start`}>
+          isTransparent ? "bg-neutral-900/0" : "bg-neutral-900"
+        } transition-colors duration-300 ease-in-out`}>
+        <div className="container max-w-6xl mx-auto py-2 lg:py-6 px-4 flex justify-between items-center lg:items-start">
           <Link href="/">
             <Logo />
           </Link>

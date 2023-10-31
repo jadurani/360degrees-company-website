@@ -24,7 +24,7 @@ export const Logo = ({ topDown = false }: LogoProps) => {
     <Image
       src={logoDesktopWhite}
       alt="logo"
-      sizes="(max-width: 1023px) 147px 40px, (min-width: 1024px) 257px 56px"
+      className="max-w-[147px] max-h-[40px] lg:max-w-[257px] lg:max-h-[56px]"
       priority
     />
   );
