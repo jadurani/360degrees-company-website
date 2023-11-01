@@ -1,3 +1,5 @@
+"use client";
+
 import React, { Dispatch, SetStateAction, useState } from "react";
 import { StoryIndicator } from "@components/StoryIndicator/StoryIndicator";
 import { StoryArrow } from "@components/StoryArrow/StoryArrow";

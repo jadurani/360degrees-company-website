@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { StoryViewer } from "./StoryViewer";
-import { COMPLETED_PROJECTS } from "@app/projects/completed-projects.constant";
+import { COMPLETED_PROJECTS } from "@app/projects-bak/completed-projects.constant";
 
 const meta = {
   title: "StoryViewer",
