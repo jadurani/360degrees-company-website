@@ -8,7 +8,8 @@ import { TestimonialSlider } from "@components/TestimonialSlider/TestimonialSlid
 import { TESTIMONIALS } from "@components/TestimonialSlider/TestimonialSlider.stories";
 import { NavBar } from "@components/NavBar/NavBar";
 import { COMPLETED_PROJECTS } from "./projects/completed-projects.constant";
-import { getBase64ImageUrl }from "@lib/generateBlurPlaceholder";
+import { getBase64ImageUrl } from "@lib/generateBlurPlaceholder";
+import teamPhoto1 from "@assets/images/about-us/team-photo-1.png";
 
 const CLIENT_LOGOS = [
   {
@@ -89,12 +90,12 @@ const CLIENT_LOGOS = [
   },
 ];
 
-export default async  function Home() {
+export default async function Home() {
   const pageHeaderImage = {
-    src: '/images/page-headers/landing-page.png',
-    blurDataURL: ''
-  }
-  pageHeaderImage.blurDataURL = await getBase64ImageUrl(pageHeaderImage.src)
+    src: "/images/page-headers/landing-page.png",
+    blurDataURL: "",
+  };
+  pageHeaderImage.blurDataURL = await getBase64ImageUrl(pageHeaderImage.src);
 
   return (
     <>
@@ -108,14 +109,17 @@ export default async  function Home() {
           <div className="mx-auto max-w-6xl text-neutral-50 px-4 lg:px-8 text-center lg:text-left">
             <div className="my-4">
               <h1 className="text-h2 font-bold font-header leading-tight pb-4">
-              Building Trust, <br />One Project at a Time
+                Building Trust, <br />
+                One Project at a Time
               </h1>
               {/* <div className="font-body text-body1">
                 some description here some description here some description
                 here
               </div> */}
             </div>
-            <Link href="/contact-us" className="font-body text-body1 uppercase py-4 px-8 border border-solid border-neutral-50 hover:bg-neutral-50/10">
+            <Link
+              href="/contact-us"
+              className="font-body text-body1 uppercase py-4 px-8 border border-solid border-neutral-50 hover:bg-neutral-50/10">
               Contact us
             </Link>
           </div>
@@ -135,6 +139,28 @@ export default async  function Home() {
         </div>
       </section>
 
+      <section className="py-14 px-8 w-screen bg-neutral-50">
+        <div className="container mx-auto max-w-6xl">
+          <h1 className="font-header text-h3 text-center font-bold">
+            About Us
+          </h1>
+          <p className="text-justify pt-8">
+            Founded in 2010, 360DEGREES SYSTEMS CORPORATION is a Makati
+            City-based company. Comprised of a team of experts, the company
+            specializes in delivering comprehensive Turn-key Services to
+            renowned Call Centers, BPOs, Shared Services, and Corporate Offices.
+          </p>
+          <Image src={teamPhoto1} alt="sample work" className="block my-8" />
+          <div className="flex mt-8">
+            <Link
+              href="/what-we-do"
+              className="text-primary-600 text-h5 font-semibold mx-auto font-body">
+              read more
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* what we do */}
       <section className="py-14 px-8 w-screen">
         <h1 className="font-header text-h3 text-center font-bold">
@@ -150,28 +176,48 @@ export default async  function Home() {
           <div className="px-4">
             <ul>
               <li className="flex my-2 gap-4 font-header font-bold text-h4">
-                <span className="text-primary-600 basis-1/12 text-center">01</span>
+                <span className="text-primary-600 basis-1/12 text-center">
+                  01
+                </span>
                 <span className="text-neutral-800 basis-11/12">Acoustic</span>
               </li>
               <li className="flex my-2 gap-4 font-header font-bold text-h4">
-                <span className="text-primary-600 basis-1/12 text-center">02</span>
+                <span className="text-primary-600 basis-1/12 text-center">
+                  02
+                </span>
                 <span className="text-neutral-800 basis-11/12">Carpets</span>
               </li>
               <li className="flex my-2 gap-4 font-header font-bold text-h4">
-                <span className="text-primary-600 basis-1/12 text-center">03</span>
-                <span className="text-neutral-800 basis-11/12">Accent & Seating Systems</span>
+                <span className="text-primary-600 basis-1/12 text-center">
+                  03
+                </span>
+                <span className="text-neutral-800 basis-11/12">
+                  Accent & Seating Systems
+                </span>
               </li>
               <li className="flex my-2 gap-4 font-header font-bold text-h4">
-                <span className="text-primary-600 basis-1/12 text-center">04</span>
-                <span className="text-neutral-800 basis-11/12">Systems Furniture</span>
+                <span className="text-primary-600 basis-1/12 text-center">
+                  04
+                </span>
+                <span className="text-neutral-800 basis-11/12">
+                  Systems Furniture
+                </span>
               </li>
               <li className="flex my-2 gap-4 font-header font-bold text-h4">
-                <span className="text-primary-600 basis-1/12 text-center">05</span>
-                <span className="text-neutral-800 basis-11/12">Specialized Features</span>
+                <span className="text-primary-600 basis-1/12 text-center">
+                  05
+                </span>
+                <span className="text-neutral-800 basis-11/12">
+                  Specialized Features
+                </span>
               </li>
               <li className="flex my-2 gap-4 font-header font-bold text-h4">
-                <span className="text-primary-600 basis-1/12 text-center">06</span>
-                <span className="text-neutral-800 basis-11/12">Fit-Out Services</span>
+                <span className="text-primary-600 basis-1/12 text-center">
+                  06
+                </span>
+                <span className="text-neutral-800 basis-11/12">
+                  Fit-Out Services
+                </span>
               </li>
             </ul>
           </div>
@@ -181,7 +227,7 @@ export default async  function Home() {
           <Link
             href="/what-we-do"
             className="text-primary-600 text-h5 font-semibold mx-auto font-body">
-            read more
+            know more
           </Link>
         </div>
       </section>
@@ -191,21 +237,36 @@ export default async  function Home() {
         <h1 className="font-header text-h3 text-center font-bold">Projects</h1>
 
         <div className="flex flex-wrap gap-4 justify-center items-center mx-auto max-w-6xl py-4">
-          <Link href={{ pathname: 'projects', query: { projectView: COMPLETED_PROJECTS[0].slug } }} className="w-64 h-64">
+          <Link
+            href={{
+              pathname: "projects",
+              query: { projectView: COMPLETED_PROJECTS[0].slug },
+            }}
+            className="w-64 h-64">
             <ProjectThumbnail
               bgImageSrc={COMPLETED_PROJECTS[0].photoUrls[0]}
               title={COMPLETED_PROJECTS[0].name}
               location={COMPLETED_PROJECTS[0].location}
             />
           </Link>
-          <Link href={{ pathname: 'projects', query: { projectView: COMPLETED_PROJECTS[1].slug } }} className="w-64 h-64">
+          <Link
+            href={{
+              pathname: "projects",
+              query: { projectView: COMPLETED_PROJECTS[1].slug },
+            }}
+            className="w-64 h-64">
             <ProjectThumbnail
               bgImageSrc={COMPLETED_PROJECTS[1].photoUrls[0]}
               title={COMPLETED_PROJECTS[1].name}
               location={COMPLETED_PROJECTS[1].location}
             />
           </Link>
-          <Link href={{ pathname: 'projects', query: { projectView: COMPLETED_PROJECTS[2].slug } }} className="w-64 h-64">
+          <Link
+            href={{
+              pathname: "projects",
+              query: { projectView: COMPLETED_PROJECTS[2].slug },
+            }}
+            className="w-64 h-64">
             <ProjectThumbnail
               bgImageSrc={COMPLETED_PROJECTS[2].photoUrls[0]}
               title={COMPLETED_PROJECTS[2].name}
@@ -236,12 +297,12 @@ export default async  function Home() {
           </div>
 
           <div className="flex mt-8">
-          <Link
-            href="/testimonials"
-            className="text-neutral-0 text-h5 font-semibold mx-auto font-body">
-            see more
-          </Link>
-        </div>
+            <Link
+              href="/testimonials"
+              className="text-neutral-0 text-h5 font-semibold mx-auto font-body">
+              see more
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -255,7 +316,13 @@ export default async  function Home() {
             <li
               key={idx}
               className="p-2 h-[100px] w-[75px] md:w-[150px] relative">
-              <Image src={client.url} alt={client.alt} fill sizes="800px" className="object-contain" />
+              <Image
+                src={client.url}
+                alt={client.alt}
+                fill
+                sizes="800px"
+                className="object-contain"
+              />
             </li>
           ))}
         </ul>
@@ -266,7 +333,9 @@ export default async  function Home() {
         <div className="text-h2 text-neutral-900 font-header font-bold">
           Want to have work done?
         </div>
-        <Link href="/contact-us" className="mt-8 uppercase py-4 px-12 bg-primary-500 text-neutral-50 font-semibold text-h5 font-body">
+        <Link
+          href="/contact-us"
+          className="mt-8 uppercase py-4 px-12 bg-primary-500 text-neutral-50 font-semibold text-h5 font-body">
           Contact us
         </Link>
       </section>
