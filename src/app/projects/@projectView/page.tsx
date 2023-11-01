@@ -41,7 +41,7 @@ export default function IndividualProjectView() {
         {/* backdrop */}
         <Link
           href={{ pathname: "projects", query: null }}
-          className="absolute top-0 h-screen w-screen bg-neutral-900 lg:bg-neutral-900/90"></Link>
+          className="absolute top-0 h-screen w-screen bg-neutral-900 lg:bg-neutral-900/95"></Link>
         {/* content */}
         <div className="flex items-center justify-center w-screen h-screen">
           <div className="w-screen h-screen lg:w-[768px] lg:h-[520px]">
