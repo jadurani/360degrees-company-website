@@ -1,15 +1,19 @@
-import { Footer } from "@components/Footer/Footer";
 import Image from "next/image";
-import offeringPreviewImg from "@assets/images/what-we-do-preview.jpg";
-import { ProjectThumbnail } from "@components/ProjectThumbnail/ProjectThumbnail";
 import Link from "next/link";
+
+import offeringPreviewImg from "@assets/images/what-we-do-preview.jpg";
+import teamPhoto1 from "@assets/images/about-us/team-photo-1.png";
+import rightArrowIcon from "@assets/icons/arrow-right.svg";
 import styles from "@app/Home.module.css";
+
+import { Footer } from "@components/Footer/Footer";
+import { ProjectThumbnail } from "@components/ProjectThumbnail/ProjectThumbnail";
 import { TestimonialSlider } from "@components/TestimonialSlider/TestimonialSlider";
 import { TESTIMONIALS } from "@components/TestimonialSlider/TestimonialSlider.stories";
 import { NavBar } from "@components/NavBar/NavBar";
-import { COMPLETED_PROJECTS } from "./projects/completed-projects.constant";
 import { getBase64ImageUrl } from "@lib/generateBlurPlaceholder";
-import teamPhoto1 from "@assets/images/about-us/team-photo-1.png";
+
+import { COMPLETED_PROJECTS } from "./projects/completed-projects.constant";
 
 const CLIENT_LOGOS = [
   {
@@ -154,8 +158,8 @@ export default async function Home() {
           <div className="flex mt-8">
             <Link
               href="/what-we-do"
-              className="text-primary-600 text-h5 font-semibold mx-auto font-body">
-              read more
+              className="text-primary-600 text-h5 font-semibold mx-auto font-body inline-flex items-center gap-2 group">
+              read more <Image src={rightArrowIcon} alt="" className="group-hover:translate-x-1 transition-transform duration-500" />
             </Link>
           </div>
         </div>
@@ -226,8 +230,8 @@ export default async function Home() {
         <div className="flex mt-8">
           <Link
             href="/what-we-do"
-            className="text-primary-600 text-h5 font-semibold mx-auto font-body">
-            know more
+            className="text-primary-600 text-h5 font-semibold mx-auto font-body inline-flex items-center gap-2 group">
+            know more <Image src={rightArrowIcon} alt="" className="group-hover:translate-x-1 transition-transform duration-500" />
           </Link>
         </div>
       </section>
@@ -278,8 +282,8 @@ export default async function Home() {
         <div className="flex mt-8">
           <Link
             href="/projects"
-            className="text-primary-600 text-h5 font-semibold mx-auto font-body">
-            see all
+            className="text-primary-600 text-h5 font-semibold mx-auto font-body inline-flex items-center gap-2 group">
+            see all <Image src={rightArrowIcon} alt="" className="group-hover:translate-x-1 transition-transform duration-500" />
           </Link>
         </div>
       </section>
@@ -299,8 +303,20 @@ export default async function Home() {
           <div className="flex mt-8">
             <Link
               href="/testimonials"
-              className="text-neutral-0 text-h5 font-semibold mx-auto font-body">
-              see more
+              className="text-neutral-0 text-h5 font-semibold mx-auto font-body inline-flex items-center gap-2 group">
+              <span>see more</span>
+              <svg
+                className="group-hover:translate-x-1 transition-transform duration-500"
+                width="14"
+                height="16"
+                viewBox="0 0 14 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M1 7C0.447715 7 0 7.44772 0 8C0 8.55228 0.447715 9 1 9V7ZM13.7071 8.70711C14.0976 8.31658 14.0976 7.68342 13.7071 7.29289L7.34315 0.928932C6.95262 0.538408 6.31946 0.538408 5.92893 0.928932C5.53841 1.31946 5.53841 1.95262 5.92893 2.34315L11.5858 8L5.92893 13.6569C5.53841 14.0474 5.53841 14.6805 5.92893 15.0711C6.31946 15.4616 6.95262 15.4616 7.34315 15.0711L13.7071 8.70711ZM1 9H13V7H1V9Z"
+                  fill="#fff"
+                />
+              </svg>
             </Link>
           </div>
         </div>
