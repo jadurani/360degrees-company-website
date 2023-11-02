@@ -31,7 +31,7 @@ export default async function PhotoModal({ params: { slug } }: PhotoPageProps) {
 
   return (
     <Modal>
-      <StoryViewer {...projectDetails}></StoryViewer>
+      <StoryViewer {...projectDetails} isFullScreen={true}></StoryViewer>
     </Modal>
   );
 }

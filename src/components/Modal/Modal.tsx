@@ -44,7 +44,6 @@ export default function Modal({ children }: { children: React.ReactNode }) {
     };
   }, []);
 
-
   return (
     <div className="fixed z-[100] h-screen w-screen top-0 left-0">
       <div className="relative">
@@ -52,13 +51,13 @@ export default function Modal({ children }: { children: React.ReactNode }) {
         <div
           ref={overlay}
           onClick={onClick}
-          className="absolute top-0 h-screen w-screen bg-neutral-900 lg:bg-neutral-900/90"></div>
+          className="absolute top-0 h-screen w-screen bg-neutral-900 md:bg-neutral-900/90"></div>
 
         {/* content */}
         <div className="flex items-center justify-center w-screen h-screen">
           <div
             ref={wrapper}
-            className="w-screen h-screen lg:w-[768px] lg:h-[520px]">
+            className="w-screen h-screen md:w-[768px] md:h-[520px] lg:w-[1024px] lg:h-[768px]">
             {children}
           </div>
         </div>

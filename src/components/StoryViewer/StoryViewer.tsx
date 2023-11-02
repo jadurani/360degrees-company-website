@@ -12,6 +12,7 @@ export interface StoryViewerProps {
   location: string;
   slug: string;
   photos: ImageProps[];
+  isFullScreen?: boolean;
 }
 
 const setNextItemIdx = (
@@ -113,7 +114,11 @@ export const StoryViewer = (props: StoryViewerProps) => {
             placeholder="blur"
             fill
             sizes="(max-width: 1023px) 100vw, (min-width: 1024px) 1024px"
-            className="z-10 object-contain lg:object-cover"
+            className={
+              props.isFullScreen
+                ? "z-10 object-contain md:object-cover"
+                : "z-10 object-cover"
+            }
             unoptimized
           />
         ))}

@@ -47,7 +47,13 @@ export default async function PhotoPage({ params: { slug } }: PhotoPageProps) {
 
       {/* content */}
       <div className="flex items-center justify-center w-screen my-8 lg:my-16">
-        <div className="w-[768px] h-[520px]">
+        <div
+          className="
+          w-[320px] h-[250px]
+          sm:w-[640px] sm:h-[480px]
+          md:w-[768px] md:h-[520px]
+          lg:w-[1024px] lg:h-[768px]
+          ">
           <StoryViewer {...projectDetails}></StoryViewer>
         </div>
       </div>
@@ -56,7 +62,11 @@ export default async function PhotoPage({ params: { slug } }: PhotoPageProps) {
         <Link
           href="/projects"
           className="text-primary-600 text-h5 font-semibold mx-auto font-body inline-flex items-center gap-2 group">
-            <Image src={rightArrowIcon} alt="" className="group-hover:-translate-x-1 rotate-180 transition-transform duration-500" />
+          <Image
+            src={rightArrowIcon}
+            alt=""
+            className="group-hover:-translate-x-1 rotate-180 transition-transform duration-500"
+          />
           <span>see all projects</span>
         </Link>
       </div>
