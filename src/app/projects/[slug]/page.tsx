@@ -41,9 +41,9 @@ export default async function PhotoPage({ params: { slug } }: PhotoPageProps) {
       </div>
 
       <PageHeader
-        bgImageSrc="/images/page-headers/projects.png"
-        title="Completed Projects"
-      />
+        bgImageSrc={projectDetails.photos[0].src}
+        title={projectDetails.name}
+        />
 
       {/* content */}
       <div className="flex items-center justify-center w-screen my-8 lg:my-16">
@@ -52,7 +52,6 @@ export default async function PhotoPage({ params: { slug } }: PhotoPageProps) {
           w-[320px] h-[250px]
           sm:w-[640px] sm:h-[480px]
           md:w-[768px] md:h-[520px]
-          lg:w-[1024px] lg:h-[768px]
           ">
           <StoryViewer {...projectDetails}></StoryViewer>
         </div>
