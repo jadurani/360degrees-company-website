@@ -25,7 +25,7 @@ export default function Projects() {
                 href={`/projects/${project.slug}`}
                 scroll={false}>
                 <ProjectThumbnail
-                  bgImageSrc={project.photoUrls[0]}
+                  bgImageSrc={project.photos[0].src}
                   title={project.name}
                   location={project.location}
                 />
