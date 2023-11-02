@@ -1,10 +1,15 @@
 import Link from "next/link";
+import rightArrowIcon from "@assets/icons/arrow-right.svg";
 import {
   StoryViewer,
   StoryViewerProps,
 } from "@components/StoryViewer/StoryViewer";
 import { getProjectFromSlug } from "../completed-projects.constant";
 import { getImageWithBlurPlaceholder } from "@lib/generateBlurPlaceholder";
+import { NavBar } from "@components/NavBar/NavBar";
+import { PageHeader } from "@components/PageHeader/PageHeader";
+import Image from "next/image";
+import { Footer } from "@components/Footer/Footer";
 
 interface PhotoPageProps {
   params: { slug: string };
@@ -30,17 +35,33 @@ export default async function PhotoPage({ params: { slug } }: PhotoPageProps) {
   }));
 
   return (
-    <div className="fixed z-[100] h-screen w-screen">
-      <div className="relative">
-        {/* backdrop */}
-        <div className="absolute top-0 h-screen w-screen bg-neutral-900 lg:bg-neutral-900/95"></div>
-        {/* content */}
-        <div className="flex items-center justify-center w-screen h-screen">
-          <div className="w-screen h-screen lg:w-[768px] lg:h-[520px]">
-            <StoryViewer {...projectDetails}></StoryViewer>
-          </div>
+    <>
+      <div className="fixed w-full top-0 z-50">
+        <NavBar />
+      </div>
+
+      <PageHeader
+        bgImageSrc="/images/page-headers/projects.png"
+        title="Completed Projects"
+      />
+
+      {/* content */}
+      <div className="flex items-center justify-center w-screen my-8 lg:my-16">
+        <div className="w-[768px] h-[520px]">
+          <StoryViewer {...projectDetails}></StoryViewer>
         </div>
       </div>
-    </div>
+
+      <div className="flex mb-8 lg:mb-16">
+        <Link
+          href="/projects"
+          className="text-primary-600 text-h5 font-semibold mx-auto font-body inline-flex items-center gap-2 group">
+            <Image src={rightArrowIcon} alt="" className="group-hover:-translate-x-1 rotate-180 transition-transform duration-500" />
+          <span>see all projects</span>
+        </Link>
+      </div>
+
+      <Footer />
+    </>
   );
 }
