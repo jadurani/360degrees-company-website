@@ -241,37 +241,36 @@ export default async function Home() {
         <h1 className="font-header text-h3 text-center font-bold">Projects</h1>
 
         <div className="flex flex-wrap gap-4 justify-center items-center mx-auto max-w-6xl py-4">
-
-          <Link href={`/projects/${COMPLETED_PROJECTS[0].slug}`} scroll={false}>{`/projects/${COMPLETED_PROJECTS[0].slug}`}</Link>
-          {/* <Link
+          <Link
             href={`/projects/${COMPLETED_PROJECTS[0].slug}`}
+            scroll={false}
             className="w-64 h-64">
             <ProjectThumbnail
               bgImageSrc={COMPLETED_PROJECTS[0].photos[0].src}
               title={COMPLETED_PROJECTS[0].name}
               location={COMPLETED_PROJECTS[0].location}
             />
-          </Link> */}
-          <Link href={`/projects/${COMPLETED_PROJECTS[1].slug}`} scroll={false}>{`/projects/${COMPLETED_PROJECTS[1].slug}`}</Link>
-          {/* <Link
+          </Link>
+          <Link
             href={`/projects/${COMPLETED_PROJECTS[1].slug}`}
+            scroll={false}
             className="w-64 h-64">
             <ProjectThumbnail
               bgImageSrc={COMPLETED_PROJECTS[1].photos[0].src}
               title={COMPLETED_PROJECTS[1].name}
               location={COMPLETED_PROJECTS[1].location}
             />
-          </Link> */}
-          <Link href={`/projects/${COMPLETED_PROJECTS[2].slug}`} scroll={false}>{`/projects/${COMPLETED_PROJECTS[2].slug}`}</Link>
-          {/* <Link
+          </Link>
+          <Link
             href={`/projects/${COMPLETED_PROJECTS[2].slug}`}
+            scroll={false}
             className="w-64 h-64">
             <ProjectThumbnail
               bgImageSrc={COMPLETED_PROJECTS[2].photos[0].src}
               title={COMPLETED_PROJECTS[2].name}
               location={COMPLETED_PROJECTS[2].location}
             />
-          </Link> */}
+          </Link>
         </div>
 
         <div className="flex mt-8">
