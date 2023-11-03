@@ -11,17 +11,15 @@ import { getImageWithBlurPlaceholder } from "@lib/generateBlurPlaceholder";
 import teamPhoto1 from "@assets/images/about-us/team-photo-1.jpg";
 import teamPhoto2 from "@assets/images/about-us/team-photo-2.jpg";
 
-const IMGIX_URL = process.env?.NEXT_PUBLIC_IMGIX_URL || ''
-
 export default async function AboutUs() {
   const trackRecordPhoto1 = await getImageWithBlurPlaceholder(
-    `${IMGIX_URL}/images/about-us/track-record-area.jpg?w=640&q=100&fit=clip`
+    "/images/about-us/track-record-area.jpg"
   );
   const trackRecordPhoto2 = await getImageWithBlurPlaceholder(
-    `${IMGIX_URL}/images/about-us/track-record-carpet.jpg?w=640&q=100&fit=clip`
+    "/images/about-us/track-record-carpet.jpg"
   );
   const trackRecordPhoto3 = await getImageWithBlurPlaceholder(
-    `${IMGIX_URL}/images/about-us/track-record-workstation.jpg?w=640&q=100&fit=clip`
+    "/images/about-us/track-record-workstation.jpg"
   );
   const missionBgPhoto = await getImageWithBlurPlaceholder(
     "/images/about-us/about-us-our-mission.jpg"
