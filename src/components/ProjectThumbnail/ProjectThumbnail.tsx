@@ -27,6 +27,7 @@ export const ProjectThumbnail = async ({
           placeholder="blur"
           blurDataURL={blurDataURL}
           fill
+          sizes="(min-width: 320px) 100vw"
           className="z-10 object-cover object-center group-hover:scale-105 transition-transform duration-500"
         />
       </div>
