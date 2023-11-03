@@ -424,4 +424,23 @@ export const COMPLETED_PROJECTS: StoryViewerProps[] = [
       },
     ],
   },
+  {
+    name: 'Project Synergy',
+    location: 'Makati, Metro Manila',
+    slug: 'project-synergy',
+    photos: [
+      {
+        src: `${IMGIX_URL}/images/project-synergy/Picture1.jpg`,
+      },
+      {
+        src: `${IMGIX_URL}/images/project-synergy/Picture13.jpg`,
+      },
+      {
+        src: `${IMGIX_URL}/images/project-synergy/Picture14.jpg`,
+      },
+      {
+        src: `${IMGIX_URL}/images/project-synergy/Picture4.jpg`,
+      },
+    ]
+  }
 ]
