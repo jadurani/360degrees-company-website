@@ -11,7 +11,7 @@ import {
 
 const getPhotoPromises = (photos: ImageProps[]) =>
   photos.map((photo) =>
-    getImageWithBlurPlaceholder(`${photo.src}?w=1024&fit=clip&q=100`)
+    getImageWithBlurPlaceholder(`${photo.src}?w=2048&fit=clip&q=100`)
   );
 
 const getOfferingsWithPlaceholders = async () => {

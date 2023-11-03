@@ -85,6 +85,7 @@ export const OfferingGallery = (props: OfferingGalleryProps) => {
             alt="header"
             fill
             className="z-10 object-cover"
+            unoptimized
           />
         ))}
       </div>
