@@ -8,18 +8,20 @@ import { CORE_VALUES, MILESTONE_LIST } from "./contants";
 import { MilestoneItem } from "@components/MilestoneItem/MilestoneItem";
 import { Person } from "@components/Person/Person";
 import { getImageWithBlurPlaceholder } from "@lib/generateBlurPlaceholder";
-import teamPhoto1 from "@assets/images/about-us/team-photo-1.png";
-import teamPhoto2 from "@assets/images/about-us/team-photo-2.png";
+import teamPhoto1 from "@assets/images/about-us/team-photo-1.jpg";
+import teamPhoto2 from "@assets/images/about-us/team-photo-2.jpg";
+
+const IMGIX_URL = process.env?.NEXT_PUBLIC_IMGIX_URL || ''
 
 export default async function AboutUs() {
   const trackRecordPhoto1 = await getImageWithBlurPlaceholder(
-    "https://360degreessystemscorporation-25102023.imgix.net/images/about-us/track-record-area.png?w=640&q=100&fit=clip"
+    `${IMGIX_URL}/images/about-us/track-record-area.jpg?w=640&q=100&fit=clip`
   );
   const trackRecordPhoto2 = await getImageWithBlurPlaceholder(
-    "https://360degreessystemscorporation-25102023.imgix.net/images/about-us/track-record-carpet.png?w=640&q=100&fit=clip"
+    `${IMGIX_URL}/images/about-us/track-record-carpet.jpg?w=640&q=100&fit=clip`
   );
   const trackRecordPhoto3 = await getImageWithBlurPlaceholder(
-    "https://360degreessystemscorporation-25102023.imgix.net/images/about-us/track-record-workstation.png?w=640&q=100&fit=clip"
+    `${IMGIX_URL}/images/about-us/track-record-workstation.jpg?w=640&q=100&fit=clip`
   );
   const missionBgPhoto = await getImageWithBlurPlaceholder(
     "/images/about-us/about-us-our-mission.jpg"
@@ -32,7 +34,7 @@ export default async function AboutUs() {
       </div>
 
       <PageHeader
-        bgImageSrc="/images/page-headers/about-us.png"
+        bgImageSrc="/images/page-headers/about-us.jpg"
         title="About Us"
       />
 

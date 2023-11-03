@@ -9,7 +9,7 @@ import phoneIcon from "@assets/icons/phone.svg";
 import { getImageWithBlurPlaceholder } from "@lib/generateBlurPlaceholder";
 
 export default async function ContactUs() {
-  const contactDetailsBGPhoto = await getImageWithBlurPlaceholder('/images/contact-us-bg.png')
+  const contactDetailsBGPhoto = await getImageWithBlurPlaceholder('/images/contact-us-bg.jpg')
 
   return (
     <>
@@ -18,7 +18,7 @@ export default async function ContactUs() {
       </div>
 
       <PageHeader
-        bgImageSrc="/images/page-headers/contact-us.png"
+        bgImageSrc="/images/page-headers/contact-us.jpg"
         title="Contact Us"
       />
 

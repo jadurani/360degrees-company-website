@@ -12,7 +12,7 @@ export default function Projects() {
         <NavBar />
       </div>
 
-      <PageHeader bgImageSrc="/images/page-headers/projects.png" title="Completed Projects" />
+      <PageHeader bgImageSrc="/images/page-headers/projects.jpg" title="Completed Projects" />
 
       {/* some intro */}
       <section className="py-8 lg:py-14 px-8 w-screen container mx-auto max-w-6xl font-body text-neutral-800">

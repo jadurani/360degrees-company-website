@@ -12,7 +12,7 @@ type Story = StoryObj<typeof meta>;
 
 export const ProjectSample: Story = {
   args: {
-    bgImageSrc: '/images/page-header/about-us.png',
+    bgImageSrc: '/images/page-header/about-us.jpg',
     title: 'Project Title',
     location: 'Location'
   },

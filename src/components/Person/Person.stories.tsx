@@ -16,7 +16,7 @@ export const RafaelaSantos: Story = {
     title: "Co-Founder",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nunc tortor, viverra ut aliquam id, aliquam vitae enim.",
-    photoSrc: "/images/unsplash_92z4a5V7y4I.png",
+    photoSrc: "/images/unsplash_92z4a5V7y4I.jpg",
     website: "https://www.360degreessystemscorporation.com/",
     instagram: "http://instagram.com/",
     linkedin: "https://linkedin.com/",

@@ -47,7 +47,7 @@ export default async function WhatWeDo() {
       </div>
 
       <PageHeader
-        bgImageSrc="/images/page-headers/what-we-do.png"
+        bgImageSrc="/images/page-headers/what-we-do.jpg"
         title="What We Do"
       />
 

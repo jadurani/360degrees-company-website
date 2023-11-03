@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import offeringPreviewImg from "@assets/images/what-we-do-preview.jpg";
-import teamPhoto1 from "@assets/images/about-us/team-photo-1.png";
+import teamPhoto1 from "@assets/images/about-us/team-photo-1.jpg";
 import rightArrowIcon from "@assets/icons/arrow-right.svg";
 import styles from "@app/Home.module.css";
 
@@ -96,7 +96,7 @@ const CLIENT_LOGOS = [
 
 export default async function Home() {
   const pageHeaderImage = {
-    src: "/images/page-headers/landing-page.png",
+    src: "/images/page-headers/landing-page.jpg",
     blurDataURL: "",
   };
   pageHeaderImage.blurDataURL = await getBase64ImageUrl(pageHeaderImage.src);
