@@ -13,7 +13,7 @@ import { TESTIMONIALS } from "@components/TestimonialSlider/TestimonialSlider.st
 import { NavBar } from "@components/NavBar/NavBar";
 import { getBase64ImageUrl } from "@lib/generateBlurPlaceholder";
 
-import { COMPLETED_PROJECTS } from "./projects-bak/completed-projects.constant";
+import { COMPLETED_PROJECTS } from "./projects/completed-projects.constant";
 
 const CLIENT_LOGOS = [
   {

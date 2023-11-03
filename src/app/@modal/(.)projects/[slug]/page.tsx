@@ -2,7 +2,7 @@ import {
   StoryViewer,
   StoryViewerProps,
 } from "@components/StoryViewer/StoryViewer";
-import { getProjectFromSlug } from "../../../projects/completed-projects.constant";
+import { getProjectFromSlug } from "@app/projects/completed-projects.constant";
 import { getImageWithBlurPlaceholder } from "@lib/generateBlurPlaceholder";
 import Modal from "@components/Modal/Modal";
 
