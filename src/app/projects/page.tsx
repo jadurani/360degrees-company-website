@@ -2,7 +2,7 @@ import { Footer } from "@components/Footer/Footer";
 import { NavBar } from "@components/NavBar/NavBar";
 import { PageHeader } from "@components/PageHeader/PageHeader";
 import { ProjectThumbnail } from "@components/ProjectThumbnail/ProjectThumbnail";
-import { COMPLETED_PROJECTS } from "../completed-projects.constant";
+import { COMPLETED_PROJECTS } from "./completed-projects.constant";
 import Link from "next/link";
 
 export default function Projects() {
@@ -22,10 +22,10 @@ export default function Projects() {
               <Link
                 key={`project-${index}`}
                 className="w-64 h-64 text-left"
-                href={`?projectView=${project.slug}`}
+                href={`/projects/${project.slug}`}
                 scroll={false}>
                 <ProjectThumbnail
-                  bgImageSrc={project.photoUrls[0]}
+                  bgImageSrc={`${project.photos[0].src}?w=512&fit=clip`}
                   title={project.name}
                   location={project.location}
                 />

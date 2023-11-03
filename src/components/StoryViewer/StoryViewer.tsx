@@ -1,17 +1,18 @@
+"use client";
+
 import React, { Dispatch, SetStateAction, useState } from "react";
 import { StoryIndicator } from "@components/StoryIndicator/StoryIndicator";
 import { StoryArrow } from "@components/StoryArrow/StoryArrow";
 import Image from "next/image";
 import mapPinIcon from "@assets/icons/map-pin.svg";
+import { ImageProps } from "@lib/generateBlurPlaceholder";
 
 export interface StoryViewerProps {
   name: string;
   location: string;
   slug: string;
-  /**
-   * These are photo URLs
-   */
-  photoUrls: string[];
+  photos: ImageProps[];
+  isFullScreen?: boolean;
 }
 
 const setNextItemIdx = (
@@ -43,19 +44,16 @@ const setPrevItemIdx = (
   }
 };
 
-export const StoryViewer = ({
-  name,
-  location,
-  photoUrls,
-}: StoryViewerProps) => {
+export const StoryViewer = (props: StoryViewerProps) => {
+  const { name, location, photos } = props;
   const [activeStoryIndex, setActiveStoryIndex] = useState(0);
-  const arrLength = photoUrls.length;
+  const arrLength = photos.length;
 
   return (
     <div className="relative w-full h-full">
       {/* Story Indicators */}
       <div className="absolute top-2 flex w-full gap-1 z-40 px-3">
-        {photoUrls.map((url, index) => (
+        {photos.map((url, index) => (
           <StoryIndicator
             key={index}
             idx={index}
@@ -107,15 +105,20 @@ export const StoryViewer = ({
       {/* Story content goes here */}
       <div className="relative w-full h-full">
         <div className="z-20 h-full w-full absolute"></div>
-        {photoUrls.map((photoUrl, idx) => (
+        {photos.map((photo, idx) => (
           <Image
             key={idx}
             hidden={idx != activeStoryIndex}
-            src={photoUrl}
-            alt="header"
+            {...photo}
+            alt=""
+            placeholder="blur"
             fill
             sizes="(max-width: 1023px) 100vw, (min-width: 1024px) 1024px"
-            className="z-10 object-contain lg:object-cover"
+            className={
+              props.isFullScreen
+                ? "z-10 object-contain md:object-cover"
+                : "z-10 object-cover"
+            }
             unoptimized
           />
         ))}

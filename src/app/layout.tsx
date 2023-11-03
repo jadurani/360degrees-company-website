@@ -10,14 +10,19 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  modal
 }: {
   children: React.ReactNode;
+  modal: React.ReactNode;
 }) {
   PreloadResources()
 
   return (
     <html lang="en">
-      <body className={`${FontMontserrat.variable} ${FontKumbhSans.variable}`}>{children}</body>
+      <body className={`${FontMontserrat.variable} ${FontKumbhSans.variable}`}>
+        {children}
+        {modal}
+      </body>
     </html>
   );
 }
