@@ -19,23 +19,23 @@ const NAV_LINKS: NavLink[] = [
   },
   {
     label: "About Us",
-    path: "about-us",
+    path: "/about-us",
   },
   {
     label: "What We Do",
-    path: "what-we-do",
+    path: "/what-we-do",
   },
   {
     label: "Projects",
-    path: "projects",
+    path: "/projects",
   },
   {
     label: "Testimonials",
-    path: "testimonials",
+    path: "/testimonials",
   },
   {
     label: "Contact Us",
-    path: "contact-us",
+    path: "/contact-us",
   },
 ];
 
