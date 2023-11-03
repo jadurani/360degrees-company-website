@@ -246,7 +246,7 @@ export default async function Home() {
             scroll={false}
             className="w-64 h-64">
             <ProjectThumbnail
-              bgImageSrc={COMPLETED_PROJECTS[0].photos[0].src}
+              bgImageSrc={`${COMPLETED_PROJECTS[0].photos[0].src}?w=512&fit=clip`}
               title={COMPLETED_PROJECTS[0].name}
               location={COMPLETED_PROJECTS[0].location}
             />
@@ -256,7 +256,7 @@ export default async function Home() {
             scroll={false}
             className="w-64 h-64">
             <ProjectThumbnail
-              bgImageSrc={COMPLETED_PROJECTS[1].photos[0].src}
+              bgImageSrc={`${COMPLETED_PROJECTS[1].photos[0].src}?w=512&fit=clip`}
               title={COMPLETED_PROJECTS[1].name}
               location={COMPLETED_PROJECTS[1].location}
             />
@@ -266,7 +266,7 @@ export default async function Home() {
             scroll={false}
             className="w-64 h-64">
             <ProjectThumbnail
-              bgImageSrc={COMPLETED_PROJECTS[2].photos[0].src}
+              bgImageSrc={`${COMPLETED_PROJECTS[2].photos[0].src}?w=512&fit=clip`}
               title={COMPLETED_PROJECTS[2].name}
               location={COMPLETED_PROJECTS[2].location}
             />
