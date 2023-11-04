@@ -6,7 +6,7 @@ import { COMPLETE_TESTIMONIALS } from "@components/TestimonialSlider/Testimonial
 
 export default function TestimonialsPage() {
   return (
-    <>
+    <div className="bg-gradient-to-r from-cyan-500 to-blue-500">
       <div className="fixed w-full top-0 z-50">
         <NavBar />
       </div>
@@ -24,6 +24,6 @@ export default function TestimonialsPage() {
         ))}
       </ul>
       <Footer />
-    </>
+    </div>
   );
 }
