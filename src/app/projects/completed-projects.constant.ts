@@ -425,6 +425,25 @@ export const COMPLETED_PROJECTS: StoryViewerProps[] = [
     ],
   },
   {
+    name: 'Project Rizal',
+    location: 'Antipolo, Rizal',
+    slug: 'project-rizal',
+    photos: [
+      { src: `${IMGIX_URL}/images/project-rizal/22DEB2F2-1D10-4CCD-A556-23EEDAA6A217_1_201_a.jpg`, },
+      { src: `${IMGIX_URL}/images/project-rizal/2C01F0DB-7795-4A38-A1E3-F935D6AE0E87_1_201_a.jpg`, },
+      { src: `${IMGIX_URL}/images/project-rizal/2D2EC3D4-E625-44E6-A0DF-80FF5CD6828D_1_201_a.jpg`, },
+      { src: `${IMGIX_URL}/images/project-rizal/5DE73C14-412B-4288-8C54-538A395F89DA_1_201_a.jpg`, },
+      { src: `${IMGIX_URL}/images/project-rizal/76E5A2AA-93DE-4F7E-BC07-130E294EBC73_1_201_a.jpg`, },
+      { src: `${IMGIX_URL}/images/project-rizal/9F50EBA5-AA04-4C69-A2C1-678F940D1D16_1_201_a.jpg`, },
+      { src: `${IMGIX_URL}/images/project-rizal/IMG_3464.jpg`, },
+      { src: `${IMGIX_URL}/images/project-rizal/Picture17.jpg`, },
+      { src: `${IMGIX_URL}/images/project-rizal/Rizal_2F.2.jpg`, },
+      { src: `${IMGIX_URL}/images/project-rizal/Rizal_2F.3.jpg`, },
+      { src: `${IMGIX_URL}/images/project-rizal/Rizal_2F.jpg`, },
+      { src: `${IMGIX_URL}/images/project-rizal/rizal.jpg`, },
+    ]
+  },
+  {
     name: 'Project Synergy',
     location: 'Makati, Metro Manila',
     slug: 'project-synergy',
@@ -442,5 +461,5 @@ export const COMPLETED_PROJECTS: StoryViewerProps[] = [
         src: `${IMGIX_URL}/images/project-synergy/Picture4.jpg`,
       },
     ]
-  }
+  },
 ]
