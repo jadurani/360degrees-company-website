@@ -19,9 +19,6 @@ const config = {
     // @ts-ignore
     GOOGLE_SERVICE_PRIVATE_KEY: process.env.GOOGLE_SERVICE_PRIVATE_KEY,
   },
-  experimental: {
-    serverActions: true,
-  },
   images: {
     remotePatterns: [
       {
