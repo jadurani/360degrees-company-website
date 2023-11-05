@@ -157,7 +157,7 @@ export default async function Home() {
           <Image src={teamPhoto1} alt="sample work" className="block my-8" />
           <div className="flex mt-8">
             <Link
-              href="/what-we-do"
+              href="/about-us"
               className="text-primary-600 text-h5 font-semibold mx-auto font-body inline-flex items-center gap-2 group">
               read more <Image src={rightArrowIcon} alt="" className="group-hover:translate-x-1 transition-transform duration-500" />
             </Link>
