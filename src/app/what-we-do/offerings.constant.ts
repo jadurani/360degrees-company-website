@@ -122,10 +122,6 @@ export const OFFERINGS: OfferingGalleryProps[] = [
         blurDataURL: ''
       },
       {
-        src: `${IMGIX_URL}/images/offering-furniture/366-015.jpg`,
-        blurDataURL: ''
-      },
-      {
         src: `${IMGIX_URL}/images/offering-furniture/366-028.jpg`,
         blurDataURL: ''
       },
@@ -143,10 +139,6 @@ export const OFFERINGS: OfferingGalleryProps[] = [
       },
       {
         src: `${IMGIX_URL}/images/offering-furniture/DHL2.jpg`,
-        blurDataURL: ''
-      },
-      {
-        src: `${IMGIX_URL}/images/offering-furniture/MT-GAEA-Z-F008A-OK-C.jpg`,
         blurDataURL: ''
       },
       {
