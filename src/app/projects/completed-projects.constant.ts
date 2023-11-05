@@ -436,11 +436,6 @@ export const COMPLETED_PROJECTS: StoryViewerProps[] = [
       { src: `${IMGIX_URL}/images/project-rizal/76E5A2AA-93DE-4F7E-BC07-130E294EBC73_1_201_a.jpg`, },
       { src: `${IMGIX_URL}/images/project-rizal/9F50EBA5-AA04-4C69-A2C1-678F940D1D16_1_201_a.jpg`, },
       { src: `${IMGIX_URL}/images/project-rizal/IMG_3464.jpg`, },
-      { src: `${IMGIX_URL}/images/project-rizal/Picture17.jpg`, },
-      { src: `${IMGIX_URL}/images/project-rizal/Rizal_2F.2.jpg`, },
-      { src: `${IMGIX_URL}/images/project-rizal/Rizal_2F.3.jpg`, },
-      { src: `${IMGIX_URL}/images/project-rizal/Rizal_2F.jpg`, },
-      { src: `${IMGIX_URL}/images/project-rizal/rizal.jpg`, },
     ]
   },
   {
