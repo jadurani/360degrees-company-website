@@ -82,7 +82,7 @@ export const OfferingGallery = (props: OfferingGalleryProps) => {
             hidden={idx != activeStoryIndex}
             {...photo}
             placeholder="blur"
-            alt="header"
+            alt=""
             fill
             className="z-10 object-cover"
             unoptimized

@@ -23,7 +23,7 @@ export const ProjectThumbnail = async ({
         <div className="z-20 h-full w-full absolute bg-neutral-900/50 group-hover:bg-neutral-900/25 transition-colors duration-500"></div>
         <Image
           src={bgImageSrc}
-          alt="header"
+          alt={title}
           placeholder="blur"
           blurDataURL={blurDataURL}
           fill

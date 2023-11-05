@@ -17,7 +17,7 @@ export const PageHeader = async ({ bgImageSrc, title }: PageHeaderProps) => {
 
       <div className="relative w-full h-full">
         <div className="z-20 h-full w-full absolute bg-neutral-900/75"></div>
-        <Image src={bgImageSrc} placeholder="blur" blurDataURL={blurDataURL} alt="header" fill className="z-10 object-cover" priority />
+        <Image src={bgImageSrc} placeholder="blur" blurDataURL={blurDataURL} alt="" fill className="z-10 object-cover" priority />
       </div>
     </div>
   );
