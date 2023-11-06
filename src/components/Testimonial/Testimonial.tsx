@@ -40,8 +40,16 @@ export const Testimonial = (props: TestimonialProps) => {
           longTestimonial ? "lg:self-start" : "self-center"
         } lg:text-right lg:basis-1/3`}>
         <li className="font-bold">{person.name}</li>
-        {person.position && <li className="text-body1">{person.position}</li>}
-        {person.company && <li className="text-body1">{person.company}</li>}
+        {person.position && (
+          <li
+            className="text-body1"
+            dangerouslySetInnerHTML={createMarkup(person.position)}></li>
+        )}
+        {person.company && (
+          <li
+            className="text-body1"
+            dangerouslySetInnerHTML={createMarkup(person.company)}></li>
+        )}
         {date && <li>{date}</li>}
       </ul>
     </div>
