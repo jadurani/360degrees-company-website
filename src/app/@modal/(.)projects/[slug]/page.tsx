@@ -20,7 +20,7 @@ export default async function PhotoModal({ params: { slug } }: PhotoPageProps) {
   }
 
   const blurImagePromiseArray = projectDetails.photos.map((photo) =>
-    getImageWithBlurPlaceholder(`${photo.src}?w=2048&fit=clip&q=100`)
+    getImageWithBlurPlaceholder(`${photo.src}?w=2048&fit=clip&q=95`)
   );
 
   const imagesWithBlur = await Promise.all(blurImagePromiseArray);
