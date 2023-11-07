@@ -84,7 +84,7 @@ export const TESTIMONIALS = [
     statement:
       "You always kept me informed and you were very fair when unexpected issues came up. Your high-quality work and your excellent service gave us the results we expected. It is pricy but it paid off with high integrity, good quality, unique designs, and high value work.",
     person: {
-      name: "Phoebe",
+      name: "Phoebe Baczynski",
       position: "Head of Finance and Admin Department",
       company: "SynergyGroup Operations Inc.",
     },
@@ -122,7 +122,7 @@ export const COMPLETE_TESTIMONIALS = [
   {
     statement: `On behalf of Synergygroup Operations Inc, We would like to thank you, 360Degrees Systems Corporation for the outstanding work done for our office. Your professional and practical approach to detail and service has proved to be efficient. <span class="text-primary-500">You always kept me informed and you were very fair when unexpected issues came up. Your high-quality work and your excellent service gave us the results we expected. It is pricy but it paid off with high integrity, good quality, unique designs, and high value work.</span> We truly appreciate your commitment on this project, you proved to be wonderful at listening to our needs, understanding our priorities and communicating with us about our options. The quality and timeliness of the work was very good, your customer service skills are first-rate. It has been a pleasure to work with you again. We would recommend your company to anyone!`,
     person: {
-      name: "Phoebe",
+      name: "Phoebe Baczynski",
       position: `Head of Finance and <br class="hidden lg:inline" />Admin Department`,
       company: "SynergyGroup Operations Inc.",
     },
