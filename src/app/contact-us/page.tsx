@@ -73,7 +73,7 @@ export default async function ContactUs() {
             <Image
               {...contactDetailsBGPhoto}
               placeholder="blur"
-              alt="header"
+              alt=""
               fill
               sizes="800px"
               className="z-10 object-cover"
