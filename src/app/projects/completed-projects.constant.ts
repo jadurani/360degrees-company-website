@@ -454,4 +454,17 @@ export const COMPLETED_PROJECTS: StoryViewerProps[] = [
       },
     ]
   },
+  {
+    name: 'Another Project',
+    location: 'Makati, Metro Manila',
+    slug: 'project-another',
+    photos: [
+      {
+        src: `${IMGIX_URL}/images/another-project/Picture1.jpg`,
+      },
+      {
+        src: `${IMGIX_URL}/images/another-project/Picture13.jpg`,
+      },
+    ]
+  },
 ]
