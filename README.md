@@ -5,7 +5,7 @@
 
 ## Author
 
-Designed and Developed with :heart: by Jadurani Davalos (jadurani.davalos@gmail.com)
+Designed and Developed with :heart: by Jadurani Davalos ([jadurani.davalos@gmail.com](mailto:jadurani.davalos@gmail.com))
 
 ## Systems & Subscriptions
 
@@ -30,7 +30,8 @@ These are accounts and services introduced by [@jadurani](https://github.com/jad
   - email: `dev.360degrees@gmail.com`
   - password: `(same as cpanel password)`
 - Github
-  - email: `https://github.com/dev360degrees`
+  - username: `dev360degrees`
+  - email: `dev.360degrees@gmail.com`
   - password: `(same as cpanel password)`
 - Imgix
   - Visual media solution / image optimization
@@ -44,6 +45,10 @@ These are accounts and services introduced by [@jadurani](https://github.com/jad
   - For the high-fidelity mockups:
     - [Desktop](https://www.figma.com/proto/cumZUZPTpe42jceQhSJySr/360Degrees-Website-Revamp?type=design&node-id=144-2050&t=7qRXSLEjISPZxM2a-1&scaling=scale-down&page-id=101%3A2&starting-point-node-id=144%3A2050&mode=design)
     - [Mobile](https://www.figma.com/proto/cumZUZPTpe42jceQhSJySr/360Degrees-Website-Revamp?type=design&node-id=144-1439&t=MvLKhpYls9GhDakw-1&scaling=scale-down&page-id=148%3A3836&starting-point-node-id=144%3A1439&mode=design)
+
+## How to add a new project
+
+Reach out to [partners@montageconsultancy.com](mailto:partners@montageconsultancy.com?subject=%5B360degrees%5D%20How%20to%20add%20a%20new%20project) to request the video recording of adding / updating projects and images
 
 ## Issues encountered
 
