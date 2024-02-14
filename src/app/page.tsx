@@ -109,10 +109,10 @@ export default async function Home() {
 
       {/* hero section */}
       <section className="h-screen w-screen relative">
-        <div className="absolute z-30 w-full top-1/2 lg:top-2/3 lg:-translate-y-1/3">
+        <div className="absolute z-30 w-full top-1/2 -translate-y-1/3 lg:top-2/3">
           <div className="mx-auto max-w-6xl text-neutral-50 px-4 lg:px-8 text-center lg:text-left">
             <div className="my-4">
-              <h1 className="text-h2 font-bold font-header leading-tight pb-4">
+              <h1 className="text-h4 sm:text-h3 md:text-h2 font-bold font-header md:leading-tight pb-4">
                 Building Trust, <br />
                 One Project at a Time
               </h1>
@@ -123,7 +123,7 @@ export default async function Home() {
             </div>
             <Link
               href="/contact-us"
-              className="font-body text-body1 uppercase py-4 px-8 border border-solid border-neutral-50 hover:bg-neutral-50/10">
+              className="font-body text-body2 md:text-body1 uppercase py-2 md:py-4 px-8 border border-solid border-neutral-50 hover:bg-neutral-50/10">
               Contact us
             </Link>
           </div>
@@ -159,7 +159,12 @@ export default async function Home() {
             <Link
               href="/about-us"
               className="text-primary-600 text-h5 font-semibold mx-auto font-body inline-flex items-center gap-2 group">
-              read more <Image src={rightArrowIcon} alt="" className="group-hover:translate-x-1 transition-transform duration-500" />
+              read more{" "}
+              <Image
+                src={rightArrowIcon}
+                alt=""
+                className="group-hover:translate-x-1 transition-transform duration-500"
+              />
             </Link>
           </div>
         </div>
@@ -231,7 +236,12 @@ export default async function Home() {
           <Link
             href="/what-we-do"
             className="text-primary-600 text-h5 font-semibold mx-auto font-body inline-flex items-center gap-2 group">
-            know more <Image src={rightArrowIcon} alt="" className="group-hover:translate-x-1 transition-transform duration-500" />
+            know more{" "}
+            <Image
+              src={rightArrowIcon}
+              alt=""
+              className="group-hover:translate-x-1 transition-transform duration-500"
+            />
           </Link>
         </div>
       </section>
@@ -277,7 +287,12 @@ export default async function Home() {
           <Link
             href="/projects"
             className="text-primary-600 text-h5 font-semibold mx-auto font-body inline-flex items-center gap-2 group">
-            see all <Image src={rightArrowIcon} alt="" className="group-hover:translate-x-1 transition-transform duration-500" />
+            see all{" "}
+            <Image
+              src={rightArrowIcon}
+              alt=""
+              className="group-hover:translate-x-1 transition-transform duration-500"
+            />
           </Link>
         </div>
       </section>
