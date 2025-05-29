@@ -39,7 +39,7 @@ export default async function ContactUs() {
                   target="_blank"
                   href="tel:+632 8556 6648">
                   <Image src={phoneIcon} alt="tel" />
-                  <span>+632 8556 6648</span>
+                  <span>+632 8703 8376</span>
                 </a>
               </li>
               <li>
