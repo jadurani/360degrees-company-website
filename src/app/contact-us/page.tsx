@@ -37,9 +37,9 @@ export default async function ContactUs() {
                 <a
                   className="flex gap-3 items-center text-body1 my-4"
                   target="_blank"
-                  href="tel:+632 8556 6648">
+                  href="tel:+632 8703 8376">
                   <Image src={phoneIcon} alt="tel" />
-                  <span>+632 8556 6648</span>
+                  <span>+632 8703 8376</span>
                 </a>
               </li>
               <li>
