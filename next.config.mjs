@@ -23,7 +23,7 @@ const config = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: process.env.NEXT_PUBLIC_IMGIX_HOSTNAME || "360degreessystemscorporation-25102023.imgix.net",
+        hostname: process.env.NEXT_PUBLIC_IMGIX_HOSTNAME || "360degreessystemscorporation-01042026.imgix.net",
         port: "",
         pathname: "/images/**",
       },
