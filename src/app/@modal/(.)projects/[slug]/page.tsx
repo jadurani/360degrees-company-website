@@ -2,12 +2,16 @@ import {
   StoryViewer,
   StoryViewerProps,
 } from "@components/StoryViewer/StoryViewer";
-import { getProjectFromSlug } from "@app/projects/completed-projects.constant";
+import { COMPLETED_PROJECTS, getProjectFromSlug } from "@app/projects/completed-projects.constant";
 import { getImageWithBlurPlaceholder } from "@lib/generateBlurPlaceholder";
 import Modal from "@components/Modal/Modal";
 
 interface PhotoPageProps {
   params: { slug: string };
+}
+
+export async function generateStaticParams() {
+  return COMPLETED_PROJECTS.map((project) => ({ slug: project.slug }));
 }
 
 export default async function PhotoModal({ params: { slug } }: PhotoPageProps) {

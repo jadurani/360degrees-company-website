@@ -4,7 +4,7 @@ import {
   StoryViewer,
   StoryViewerProps,
 } from "@components/StoryViewer/StoryViewer";
-import { getProjectFromSlug } from "../completed-projects.constant";
+import { COMPLETED_PROJECTS, getProjectFromSlug } from "../completed-projects.constant";
 import { getImageWithBlurPlaceholder } from "@lib/generateBlurPlaceholder";
 import { NavBar } from "@components/NavBar/NavBar";
 import { PageHeader } from "@components/PageHeader/PageHeader";
@@ -13,6 +13,10 @@ import { Footer } from "@components/Footer/Footer";
 
 interface PhotoPageProps {
   params: { slug: string };
+}
+
+export async function generateStaticParams() {
+  return COMPLETED_PROJECTS.map((project) => ({ slug: project.slug }));
 }
 
 export default async function PhotoPage({ params: { slug } }: PhotoPageProps) {
