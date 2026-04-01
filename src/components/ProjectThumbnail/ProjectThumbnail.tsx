@@ -29,6 +29,7 @@ export const ProjectThumbnail = async ({
           fill
           sizes="(min-width: 320px) 100vw"
           className="z-10 object-cover object-center group-hover:scale-105 transition-transform duration-500"
+          unoptimized
         />
       </div>
       <div className="absolute bottom-0 p-4 text-neutral-50 z-20">
