@@ -35,7 +35,18 @@ export async function getBase64ImageUrl(imageSrc: string): Promise<string> {
   }
 }
 
+const IMGIX_HOSTNAME = process.env.NEXT_PUBLIC_IMGIX_HOSTNAME || ''
+
 const fetchImage = async (imageSrc: string) => {
+  if (IMGIX_HOSTNAME && imageSrc.includes(IMGIX_HOSTNAME)) {
+    // Strip query params and Imgix hostname to get the local public/ path
+    const localPath = imageSrc.split('?')[0].replace(`https://${IMGIX_HOSTNAME}`, '')
+    try {
+      return await fetchLocalImage(localPath)
+    } catch {
+      // Image not available locally, fall back to remote
+    }
+  }
   if (imageSrc.includes('http')) {
     return fetchRemoteImage(imageSrc)
   }
