@@ -426,13 +426,13 @@ export const COMPLETED_PROJECTS: StoryViewerProps[] = [
     location: 'Antipolo, Rizal',
     slug: 'project-rizal',
     photos: [
-      { src: `${IMGIX_URL}/images/project-rizal/22DEB2F2-1D10-4CCD-A556-23EEDAA6A217_1_201_a.jpg`, },
-      { src: `${IMGIX_URL}/images/project-rizal/2C01F0DB-7795-4A38-A1E3-F935D6AE0E87_1_201_a.jpg`, },
-      { src: `${IMGIX_URL}/images/project-rizal/2D2EC3D4-E625-44E6-A0DF-80FF5CD6828D_1_201_a.jpg`, },
-      { src: `${IMGIX_URL}/images/project-rizal/5DE73C14-412B-4288-8C54-538A395F89DA_1_201_a.jpg`, },
-      { src: `${IMGIX_URL}/images/project-rizal/76E5A2AA-93DE-4F7E-BC07-130E294EBC73_1_201_a.jpg`, },
-      { src: `${IMGIX_URL}/images/project-rizal/9F50EBA5-AA04-4C69-A2C1-678F940D1D16_1_201_a.jpg`, },
-      { src: `${IMGIX_URL}/images/project-rizal/IMG_3464.jpg`, },
+      { src: `${IMGIX_URL}/images/project-rizal/rizal-1.jpg`, },
+      { src: `${IMGIX_URL}/images/project-rizal/rizal-2.jpg`, },
+      { src: `${IMGIX_URL}/images/project-rizal/rizal-3.jpg`, },
+      { src: `${IMGIX_URL}/images/project-rizal/rizal-4.jpg`, },
+      { src: `${IMGIX_URL}/images/project-rizal/rizal-5.jpg`, },
+      { src: `${IMGIX_URL}/images/project-rizal/rizal-6.jpg`, },
+      { src: `${IMGIX_URL}/images/project-rizal/rizal-7.jpg`, },
     ]
   },
   {
@@ -441,16 +441,16 @@ export const COMPLETED_PROJECTS: StoryViewerProps[] = [
     slug: 'project-synergy',
     photos: [
       {
-        src: `${IMGIX_URL}/images/project-synergy/Picture1.jpg`,
+        src: `${IMGIX_URL}/images/project-synergy/synergy-1.jpg`,
       },
       {
-        src: `${IMGIX_URL}/images/project-synergy/Picture13.jpg`,
+        src: `${IMGIX_URL}/images/project-synergy/synergy-2.jpg`,
       },
       {
-        src: `${IMGIX_URL}/images/project-synergy/Picture14.jpg`,
+        src: `${IMGIX_URL}/images/project-synergy/synergy-3.jpg`,
       },
       {
-        src: `${IMGIX_URL}/images/project-synergy/Picture4.jpg`,
+        src: `${IMGIX_URL}/images/project-synergy/synergy-4.jpg`,
       },
     ]
   },
