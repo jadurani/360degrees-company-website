@@ -67,6 +67,9 @@ export const COMPLETED_PROJECTS: StoryViewerProps[] = [
         src: `${IMGIX_URL}/images/project-lumina/lumina-5.jpg`,
       },
       {
+        src: `${IMGIX_URL}/images/project-lumina/lumina-6.jpg`,
+      },
+      {
         src: `${IMGIX_URL}/images/project-lumina/lumina-7.jpg`,
       },
       {
