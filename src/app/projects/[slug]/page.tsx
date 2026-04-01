@@ -24,15 +24,16 @@ export default async function PhotoPage({ params: { slug } }: PhotoPageProps) {
     return null;
   }
 
-  const blurImagePromiseArray = projectDetails.photos.map((photo) =>
-    getImageWithBlurPlaceholder(`${photo.src}?w=2048&fit=clip&q=95`)
+  const imagesWithBlur = await Promise.all(
+    projectDetails.photos.map((photo) =>
+      getImageWithBlurPlaceholder(`${photo.src}?w=2048&fit=clip&q=95`)
+    )
   );
 
-  const imagesWithBlur = await Promise.all(blurImagePromiseArray);
-
-  projectDetails.photos = projectDetails.photos.map((photo, idx) => ({
-    ...imagesWithBlur[idx],
-  }));
+  projectDetails = {
+    ...projectDetails,
+    photos: imagesWithBlur,
+  };
 
   return (
     <>
