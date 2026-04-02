@@ -103,7 +103,7 @@ export const StoryViewer = (props: StoryViewerProps) => {
         }></button>
 
       {/* Story content goes here */}
-      <div className="relative w-full h-full">
+      <div className="relative w-full h-full bg-neutral-800">
         <div className="z-20 h-full w-full absolute"></div>
         {photos.map((photo, idx) => (
           <Image
