@@ -111,7 +111,7 @@ export const StoryViewer = (props: StoryViewerProps) => {
             hidden={idx != activeStoryIndex}
             {...photo}
             alt=""
-            placeholder="blur"
+            placeholder={photo.blurDataURL ? "blur" : "empty"}
             fill
             sizes="(max-width: 1023px) 100vw, (min-width: 1024px) 1024px"
             className={
